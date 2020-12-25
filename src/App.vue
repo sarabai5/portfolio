@@ -1,12 +1,22 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
+    <Nav />
+    <keep-alive>
+      <router-view />
+    </keep-alive>
   </div>
 </template>
+
+<script>
+import Nav from "@/components/nav.vue";
+
+export default {
+  name: "App",
+  components: {
+    Nav
+  }
+};
+</script>
 
 <style lang="scss">
 #app {
@@ -17,16 +27,23 @@
   color: #2c3e50;
 }
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+button:hover {
+  animation-name: buttonHover;
+  animation-duration: 0.5s;
+  animation-fill-mode: backwards;
+  transform: scale(1.05);
+  box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.5);
 }
+
+// @keyframes buttonHover {
+//   from {
+//     transform: scale(1);
+//     box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.3);
+//   }
+
+//   to {
+//     transform: scale(1.05);
+//     box-shadow: 3px 3px 7.5px 0px rgba(0, 0, 0, 0.4);
+//   }
+// }
 </style>
