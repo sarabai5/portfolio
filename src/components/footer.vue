@@ -1,5 +1,5 @@
 <template>
-  <div class="footer">
+  <div class="footer fade-content">
     <div class="footer--l">
       <div class="desc-1">If you would like to..</div>
       <div class="desc-2">

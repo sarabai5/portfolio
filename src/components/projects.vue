@@ -1,5 +1,5 @@
 <template>
-  <div class="projects">
+  <div class="projects fade-content">
     <div
       class="project"
       v-for="(item, i) in projects"
@@ -22,6 +22,42 @@ export default {
   data: () => {
     return {
       projects: [
+        {
+          name: "StaySound",
+          desc: "UI / UX Design | Individual Project",
+          img:
+            "https://imageproxy.themaven.net//https%3A%2F%2Fwww.history.com%2F.image%2FMTYyNDg1MjE3MTI1Mjc5Mzk4%2Ftopic-london-gettyimages-760251843-promo.jpg"
+        },
+        {
+          name: "StaySound",
+          desc: "UI / UX Design | Individual Project",
+          img:
+            "https://imageproxy.themaven.net//https%3A%2F%2Fwww.history.com%2F.image%2FMTYyNDg1MjE3MTI1Mjc5Mzk4%2Ftopic-london-gettyimages-760251843-promo.jpg"
+        },
+        {
+          name: "StaySound",
+          desc: "UI / UX Design | Individual Project",
+          img:
+            "https://imageproxy.themaven.net//https%3A%2F%2Fwww.history.com%2F.image%2FMTYyNDg1MjE3MTI1Mjc5Mzk4%2Ftopic-london-gettyimages-760251843-promo.jpg"
+        },
+        {
+          name: "StaySound",
+          desc: "UI / UX Design | Individual Project",
+          img:
+            "https://imageproxy.themaven.net//https%3A%2F%2Fwww.history.com%2F.image%2FMTYyNDg1MjE3MTI1Mjc5Mzk4%2Ftopic-london-gettyimages-760251843-promo.jpg"
+        },
+        {
+          name: "StaySound",
+          desc: "UI / UX Design | Individual Project",
+          img:
+            "https://imageproxy.themaven.net//https%3A%2F%2Fwww.history.com%2F.image%2FMTYyNDg1MjE3MTI1Mjc5Mzk4%2Ftopic-london-gettyimages-760251843-promo.jpg"
+        },
+        {
+          name: "StaySound",
+          desc: "UI / UX Design | Individual Project",
+          img:
+            "https://imageproxy.themaven.net//https%3A%2F%2Fwww.history.com%2F.image%2FMTYyNDg1MjE3MTI1Mjc5Mzk4%2Ftopic-london-gettyimages-760251843-promo.jpg"
+        },
         {
           name: "StaySound",
           desc: "UI / UX Design | Individual Project",
