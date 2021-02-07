@@ -1,17 +1,17 @@
 <template>
   <div class="nav">
     <div class="nav-fixed" :class="showNav ? 'showNav' : 'hideNav'">
-      <div class="icon">[ S ]</div>
+      <button class="icon" @click="clickHome()">[ S ]</button>
       <div class="links">
-        <div
+        <button
           class="links-item"
           v-for="(item, i) in links"
           :key="i"
           :class="active == item.name ? 'links-item--active' : ''"
-          @click="clickItem(item.name)"
+          @click="clickItem(item.path)"
         >
           {{ item.name }}
-        </div>
+        </button>
       </div>
     </div>
   </div>
@@ -25,13 +25,16 @@ export default {
       showNav: true,
       links: [
         {
-          name: "Works"
+          name: "Works",
+          path: "/Works"
         },
         {
-          name: "Sides"
+          name: "Sides",
+          path: "/Sides"
         },
         {
-          name: "Resume"
+          name: "Resume",
+          path: "/Resume"
         }
       ],
       offset: 0,
@@ -68,6 +71,9 @@ export default {
         console.log("down");
         this.showNav = false;
       }
+    },
+    clickHome() {
+      this.$router.push("/");
     },
     clickItem(name) {
       this.$router.push(name);

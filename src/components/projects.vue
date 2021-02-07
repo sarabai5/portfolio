@@ -5,7 +5,7 @@
       v-for="(item, i) in projects"
       :key="i"
       :class="active == i ? 'links-item--active' : ''"
-      @click="clickItem(i)"
+      @click="clickItem(i, item.path)"
     >
       <img class="project-img" :src="item.img" />
       <div class="project-content">
@@ -26,13 +26,15 @@ export default {
           name: "StaySound",
           desc: "UI / UX Design | Individual Project",
           img:
-            "https://imageproxy.themaven.net//https%3A%2F%2Fwww.history.com%2F.image%2FMTYyNDg1MjE3MTI1Mjc5Mzk4%2Ftopic-london-gettyimages-760251843-promo.jpg"
+            "https://imageproxy.themaven.net//https%3A%2F%2Fwww.history.com%2F.image%2FMTYyNDg1MjE3MTI1Mjc5Mzk4%2Ftopic-london-gettyimages-760251843-promo.jpg",
+          path: "/works/MovingBox"
         },
         {
           name: "StaySound",
           desc: "UI / UX Design | Individual Project",
           img:
-            "https://imageproxy.themaven.net//https%3A%2F%2Fwww.history.com%2F.image%2FMTYyNDg1MjE3MTI1Mjc5Mzk4%2Ftopic-london-gettyimages-760251843-promo.jpg"
+            "https://imageproxy.themaven.net//https%3A%2F%2Fwww.history.com%2F.image%2FMTYyNDg1MjE3MTI1Mjc5Mzk4%2Ftopic-london-gettyimages-760251843-promo.jpg",
+          path: "/works/RoomSmart"
         },
         {
           name: "StaySound",
@@ -99,8 +101,9 @@ export default {
     };
   },
   methods: {
-    clickItem(i) {
+    clickItem(i, path) {
       this.active = i;
+      this.$router.push(path);
     }
   }
 };
@@ -117,6 +120,7 @@ export default {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
 }
 
 .project {

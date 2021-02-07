@@ -4,16 +4,19 @@
     <keep-alive>
       <router-view />
     </keep-alive>
+    <Footer />
   </div>
 </template>
 
 <script>
 import Nav from "@/components/nav.vue";
+import Footer from "@/components/footer.vue";
 
 export default {
   name: "App",
   components: {
-    Nav
+    Nav,
+    Footer
   },
   mounted() {
     var window_bottom = window.pageYOffset + window.screen.height;
@@ -50,14 +53,37 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  transition-duration: 4s;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  outline: none;
 }
 
 button:hover {
-  animation-name: buttonHover;
-  animation-duration: 0.5s;
-  animation-fill-mode: backwards;
-  transform: scale(1.05);
-  box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.5);
+  animation: 200ms ease-in-out 0s normal forwards 1 running buttonHover;
+}
+
+@keyframes buttonHover {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.1);
+  }
+}
+
+.page {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .fade-content--in {

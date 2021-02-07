@@ -1,0 +1,634 @@
+<template>
+  <div class="page">
+    <!-- <div class="head">
+      <img class="cover" src="/assets/works/movingbox/1.png" />
+      <div class="info">
+        <div class="title">The Moving Boxes</div>
+        <div class="subtitle">Multi-functional Architectural Installation</div>
+        <div class="desc">
+          <div class="desc-title">Award</div>
+          <div class="desc-content">Finalist of 3 with $200 reward</div>
+
+          <div class="desc-title" style="margin: 10px 0 0 0;">Teammates</div>
+          <div class="desc-content">Shuang Bi, Neng Zhu</div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-item">
+        <div class="title">Installation Location</div>
+        <div class="desc">
+          Gallery space in Sophomore architecture studio, UIUC
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="title">Stakeholders</div>
+        <div class="desc">
+          Schools of Architecture, sophomore architecture students, professors
+        </div>
+      </div>
+      <div class="section-item">
+        <div class="title">Goal</div>
+        <div class="desc">
+          Design a problem-solver installation for daily users and build it
+          within budget
+        </div>
+      </div>
+    </div> -->
+
+    <div class="sk-ab sk-Project6_RoomSmart">
+      <!-- <div class="sk-asset sk-Group-21-EAC77F28-15E3-4022-AF6B-E004B94E1AB6">
+        <div class="sk-asset sk-Group-31-91E99C86-E257-4296-A67E-9E7AF2A1211B">
+          <div
+            class="sk-asset sk-Group-2-Copy-7F0453C1-27A5-4609-9438-CB30902B641E"
+          >
+            <div
+              class="sk-asset sk-Rectangle-BCA64D19-FC4E-419A-B356-0A4B4CBF5902"
+            ></div>
+            <div
+              class="sk-asset sk-Previous-Virtual-Ca-A7446F94-D6A0-4B83-912B-4E0686FF413E"
+            >
+              <span class="span1"
+                >Previous: Virtual Career Fair Product Opportunity Study</span
+              >
+            </div>
+            <div
+              class="sk-asset sk-Path-6-BAF1429A-24D0-4298-83BC-92C229B89703"
+            ></div>
+          </div>
+          <div
+            class="sk-asset sk-Path-7-34BC9D21-287C-486F-9EE1-989C3E2B6D1D"
+          ></div>
+        </div>
+        <div class="sk-asset sk-Group-32-12EF35E8-325A-4FFC-928F-F36560D50CB7">
+          <div
+            class="sk-asset sk-Group-2-Copy-2-03350361-EE46-43E6-9F88-F7686128568F"
+          >
+            <div
+              class="sk-asset sk-Rectangle-D0113DA0-36E4-4C3F-BFA3-68BB2B98791C"
+            ></div>
+            <div
+              class="sk-asset sk-Next-UX-Product-o-A640DDD5-CBF2-4B43-B352-A2F19AE86FB1"
+            >
+              <span class="span1"
+                >Next: UX & Product of FurGo Pet Tracker & Device
+              </span>
+            </div>
+            <div
+              class="sk-asset sk-Path-6-11B6CE91-0091-4A11-8312-FC1B15A2BA37"
+            ></div>
+          </div>
+          <div
+            class="sk-asset sk-Path-7-Copy-CA89FF49-3A71-49E5-9FCE-5368094B60C7"
+          ></div>
+        </div>
+        <div class="sk-asset sk-Group-17-47E49BA7-D1A5-417E-A75F-9660E1BD763C">
+          <div
+            class="sk-asset sk-Group-12-D07B9B20-CE1C-4513-B64D-A0529A77C2D2"
+          >
+            <div
+              class="sk-asset sk-Group-4-AF61EC60-CCC6-45EA-AACA-AA5527D50EE9"
+            ></div>
+            <div
+              class="sk-asset sk-Group-7-E142382C-56B1-405C-889D-93385A235DD1"
+            ></div>
+            <div
+              class="sk-asset sk-Group-2-454190F3-7FBE-499C-99B7-9DBEBEB912D7"
+            ></div>
+          </div>
+          <div
+            class="sk-asset sk-If-you-would-like-to-317E8168-B077-45E3-B550-8A53D4F13821"
+          >
+            <span class="span1"
+              >If you would like to work with an enthutiastic individual, grab a
+              coffee with a big cat lover, talk about the crazy stuff going on
+              in this world…</span
+            >
+          </div>
+          <div class="sk-asset sk--40C478D4-0E65-4C5E-9EF3-E98D7B227B5C">
+            <span class="span1">👇</span>
+          </div>
+          <div
+            class="sk-asset sk-Connect-with-me-FE8EE853-E77E-49B2-880A-867DC74D6ECE"
+          >
+            <span class="span1">Connect with me: </span>
+          </div>
+        </div>
+      </div> -->
+      <div class="sk-asset sk-Group-30-3019A69E-0F8C-46C6-AA51-A7FCCBE94E8B">
+        <div
+          class="sk-asset sk-Iphone-X-Mockup-BE6BA788-D12D-486D-9C27-6A040F9FDA65"
+        ></div>
+        <div
+          class="sk-asset sk-Academic-Project-Arc-553BDC6E-924E-44C2-8A73-E7AC5699B2D3"
+        >
+          <span class="span1"
+            >Academic Project <br />Architectural Design | UI/UX Design</span
+          >
+        </div>
+        <div
+          class="sk-asset sk-App-for-Room-Reserva-975B6F71-ED26-4510-9F23-D784C4362ED0"
+        >
+          <span class="span1"
+            >App for Room Reservation and Resources <br /><br />Honor Students
+            Building at UIUC</span
+          >
+        </div>
+        <div
+          class="sk-asset sk-based-on-and-inspire-499A6009-783B-415F-9336-D9AE3EB94645"
+        >
+          <span class="span1">based on and inspired from</span>
+        </div>
+        <div
+          class="sk-asset sk-Roomsmart-for-Isola-A01C3E32-9B99-4CF6-A88B-254E5A4C76DF"
+        >
+          <span class="span1">Roomsmart for ‘Isolation & Bridges’ </span>
+        </div>
+      </div>
+      <div class="sk-asset sk-Group-29-5F77C0C1-5226-4CCE-A3E7-2523492DE7C3">
+        <div
+          class="sk-asset sk-Targeted-Users-D83EE54D-4888-4B49-8469-979AF84F1303"
+        >
+          <span class="span1">Targeted Users</span>
+        </div>
+        <div
+          class="sk-asset sk-Product-Opportunity-29DD5E60-9FDA-4258-952D-ED5D201EEA08"
+        >
+          <span class="span1">Product Opportunity</span>
+        </div>
+        <div
+          class="sk-asset sk-College-students-at-78354379-CB4B-4131-8A58-55A75BD93A87"
+        >
+          <span class="span1"
+            >College students at UIUC and potentially students aross many
+            universities</span
+          >
+        </div>
+        <div
+          class="sk-asset sk-How-might-we-organiz-A91FF75E-993F-44F3-8196-72CE8F81DF67"
+        >
+          <span class="span1"
+            >How might we organize the scattered information about university
+            facility resources and enourage students to fully utilize
+            them?</span
+          >
+        </div>
+        <div
+          class="sk-asset sk-Rectangle-ABAE130B-7C3F-49A5-985E-DB5AE33CBC6F"
+        ></div>
+        <div
+          class="sk-asset sk-Rectangle-Copy-49799CC2-D376-40D6-BD83-D8FD673034C7"
+        ></div>
+        <div
+          class="sk-asset sk-Iphone-7-White2x-42704B74-2945-4397-97A1-6E08A291631B"
+        ></div>
+        <div
+          class="sk-asset sk-Iphone-7-White2x-Copy-100F1FC9-E1C3-498A-92C0-725B9CF7F24E"
+        ></div>
+        <div
+          class="sk-asset sk-Asset-1-Copy-6E74C98C-DDE7-4591-AD4B-3BB90EEDE079"
+        ></div>
+        <div
+          class="sk-asset sk-Integrated-Informati-7B77E2BC-7253-425A-98A3-B2FBC27EC12F"
+        >
+          <span class="span1"
+            >Integrated Information of University Facilities</span
+          >
+        </div>
+        <div
+          class="sk-asset sk-2Click-Room-Reserva-5773F4AA-A48F-4DD4-9031-0BC8FB68E984"
+        >
+          <span class="span1">2-Click Room Reservation </span>
+        </div>
+        <div
+          class="sk-asset sk-Solve-for-the-Pain-P-1D402FF9-0E5C-4725-83F3-5A87EB333A4C"
+        >
+          <span class="span1">Solve for the Pain Point </span>
+        </div>
+        <div
+          class="sk-asset sk-Inclusiveness-Conv-15767FC5-71C6-4287-AD97-2EA44CB45941"
+        >
+          <span class="span1">Inclusiveness & Convenience</span>
+        </div>
+        <div
+          class="sk-asset sk-No-More-Learning-Cur-C67A6746-7AB0-4E42-8487-4BF58FAF15A0"
+        >
+          <span class="span1">No More Learning Curve</span>
+        </div>
+        <div
+          class="sk-asset sk-Scattered-informatio-2D75E4C6-4B37-499C-9DDB-34862BB9D5D5"
+        >
+          <span class="span1"
+            >Scattered information about university facility resources caused
+            inconvenience and impeded full utilization from more students.</span
+          >
+        </div>
+        <div
+          class="sk-asset sk-Facility-recources-t-6E5FA1BD-3F99-48F7-8BB7-0B9CF6374E58"
+        >
+          <span class="span1"
+            >Facility recources that are available to student use are abundant
+            but hiden in corner of each department’s website. With information
+            of all the usable and reservable space in one app not only saves
+            time finding appropriate space but also inclusively invite all
+            students to ustilize university resources to their benefits,
+            avoiding exclusiveness from information discrepency among student
+            groups.</span
+          >
+        </div>
+        <div
+          class="sk-asset sk-As-currently-studen-8568CE8E-413D-4FE6-8775-56690A7FABE9"
+        >
+          <span class="span1"
+            >As currently, students make reservations on different pages of
+            department, thus going through a different and sometimes annoying
+            reservation process as each requires learning and familiarizing the
+            process.<br /><br />This app delivers the 2-click easy reservation
+            process to students by doing the work of connecting ports of other
+            departments. Familirizing with one simple platform saves the effort
+            of learning all.
+          </span>
+        </div>
+        <div
+          class="sk-asset sk-Asset-1-1109FB84-7BDC-4C61-BF6A-1634FFF6A76C"
+        ></div>
+        <div
+          class="sk-asset sk-Artboard-82x-1389FFA5-C06D-43D1-8F2E-2A7297A8F6F2"
+        ></div>
+      </div>
+      <div class="sk-asset sk-Group-9-E8AFBAFC-8094-43EB-9111-6CAB3854BF98">
+        <div class="sk-asset sk-Group-8-C70E6544-086B-4EFB-BC8B-C55A795AAB89">
+          <div
+            class="sk-asset sk-story-5-440F6FB1-4DF1-49DF-861A-08DD8E3D85F1"
+          ></div>
+          <div
+            class="sk-asset sk-Bitmap-1D8EC6B8-C027-455A-A0E8-59247DB3DCE2"
+          ></div>
+        </div>
+        <div class="sk-asset sk-Group-3-0CF5E135-DDF1-406A-8C6F-A790F91F7473">
+          <div
+            class="sk-asset sk-story1-2A244603-12CF-4889-BFCE-F871F0ED3404"
+          ></div>
+          <div
+            class="sk-asset sk-Small-group-40E3FA2F-1E61-47CC-97AC-7A2C85AD5B38"
+          >
+            <span class="span1">Small group</span>
+          </div>
+          <div class="sk-asset sk-Ok-E4E3C5F5-E382-4EA1-8739-2E7905EE50AB">
+            <span class="span1">Ok</span>
+          </div>
+          <div
+            class="sk-asset sk-Need-a-room-for-meet-E9839E98-42B7-465C-9DE2-F94528DE8F43"
+          >
+            <span class="span1">Need a room for meeting next week</span>
+          </div>
+        </div>
+        <div class="sk-asset sk-Group-6-F68389AD-8DB2-4278-9756-FEA5654D6A67">
+          <div
+            class="sk-asset sk-story3-9EE234F1-E97A-4036-AD68-FC381922EFD4"
+          ></div>
+          <div class="sk-asset sk-Ok-490B0F71-6809-4BB3-9BD7-ABA7CFBDF3EB">
+            <span class="span1">Ok</span>
+          </div>
+          <div
+            class="sk-asset sk-UGLs-full-Lets-ju-034CE976-5716-4BA3-8D37-9C408C95A169"
+          >
+            <span class="span1"
+              >UGL‘s full. Let’s just meet in our school atrium.</span
+            >
+          </div>
+        </div>
+        <div
+          class="sk-asset sk-story4-F2DE6878-0E15-46BA-9403-19E4782B0739"
+        ></div>
+        <div class="sk-asset sk-Group-5-A9BD9B8E-9202-42DE-BC74-B99EB73686E8">
+          <div
+            class="sk-asset sk-UGL-is-full-Emmw-F8C96A19-BFE0-471E-901F-054E1B6E7AD4"
+          >
+            <span class="span1"
+              >UGL is full. Emm...where can I find other rooms?</span
+            >
+          </div>
+          <div
+            class="sk-asset sk-story2-226762D7-FE21-4333-A4F5-65F945FF7986"
+          ></div>
+          <div class="sk-asset sk--14FE9B12-895C-40B9-8EA8-E2555CE120CA">
+            <span class="span1">???</span>
+          </div>
+          <div class="sk-asset sk--6BDE1F3C-8280-4585-8757-49D876F8A323">
+            <span class="span1">??</span>
+          </div>
+          <div class="sk-asset sk--3F14D9CD-17A7-4859-8881-F89DC8EC8D8D">
+            <span class="span1">?</span>
+          </div>
+          <div class="sk-asset sk--3021CF1E-2893-4D75-BB8A-0FF662CED909">
+            <span class="span1">??</span>
+          </div>
+        </div>
+        <div
+          class="sk-asset sk-Meeting-in-noise-wit-241E8AE9-91DA-4B02-9A2C-5B19FD4F765C"
+        >
+          <span class="span1">Meeting in noise with frustration</span>
+        </div>
+      </div>
+      <div class="sk-asset sk-STORYBOARD-50652A8C-9B7A-49AD-9262-0D12AA879948">
+        <span class="span1">STORYBOARD</span>
+      </div>
+      <div class="sk-asset sk-Group-10-E9D9D0DC-C3B8-4E8C-82B2-BAB6E1C76A82">
+        <div
+          class="sk-asset sk-FUNCTIONALITY-RESEAR-DF51209F-20C6-4EAF-9522-E92BE891C30B"
+        >
+          <span class="span1"
+            >FUNCTIONALITY RESEARCH & INFORMATION ARCHITECTURE</span
+          >
+        </div>
+        <div
+          class="sk-asset sk-sitemap-FBAA9608-7A7C-4806-A8CB-4185048630E7"
+        ></div>
+        <div
+          class="sk-asset sk-CONTENT-REQUIREMENTS--B3D5F083-F63E-47E5-9765-AA816F2BF51A"
+        >
+          <span class="span1">CONTENT REQUIREMENTS </span>
+        </div>
+        <div
+          class="sk-asset sk-from-school-research-result-4A8C2EE9-2F1E-4E1A-816D-7BEC6444CEB7"
+        >
+          <span class="span1">from school research result</span>
+        </div>
+        <div
+          class="sk-asset sk-1-Building-names-2-C7755819-D55E-4B73-B700-C3308E6AB9F4"
+        >
+          <span class="span1"
+            >1. Building names<br />2. room specific location<br />3. Room types
+            and numbers<br />4. Availability--time slot<br />5.
+            Contact--address, phone number, email<br />6. Room features/uses<br />7.
+            Room equipment<br />8. Reservation policies and guidelines<br />9.
+            Room use policy<br />10. My NetID account<br />11. Information
+            regarding technical or NetID help</span
+          >
+        </div>
+        <div
+          class="sk-asset sk-FUNCTIONALITY-REQUIREMENTS-13BC7955-ED57-432D-99F1-C6F42C04BA75"
+        >
+          <span class="span1">FUNCTIONALITY REQUIREMENTS</span>
+        </div>
+        <div class="sk-asset sk---DACF5EE0-5211-47DC-A7F0-18F95A8BFE3B">
+          <span class="span1"> </span>
+        </div>
+        <div
+          class="sk-asset sk-from-school-research-result-D200C055-C2C1-45F7-975F-C53E33EC1957"
+        >
+          <span class="span1">from school research result</span>
+        </div>
+        <div
+          class="sk-asset sk-1-Search-for-rooms-32652C5A-0342-4172-9AF1-ED565DA7AC00"
+        >
+          <span class="span1"
+            >1. Search for rooms using name and filter<br />2. Contact
+            corresponding information center<br />3. See room pictures and
+            features<br />4. Read reservation related information<br />5.
+            Reserve rooms<br />6. Edit/cancel reservation<br />7. Technical
+            help<br />8. Send emails within the app<br />9. View existing
+            bookings</span
+          >
+        </div>
+      </div>
+      <div class="sk-asset sk-WIREFRAME-7D808D87-9ED8-458B-B273-64E9F15D4D5D">
+        <span class="span1">WIREFRAME</span>
+      </div>
+      <div
+        class="sk-asset sk-The-app-gives-inclus-6B9F4724-766A-4670-9ABB-4BD74495C73F"
+      >
+        <span class="span1"
+          >The app gives inclusive reservable options to students, where they
+          can find information on all reservable spaces aross the campus. Each
+          department deals with the reservation requests all on one simple
+          platform.<br />Students can quickly reserve a space on both bulding
+          page, or reserve after viewing detailed information about a room on
+          the room page. Students can easily view and cancel their reservataion
+          from their phone.</span
+        >
+      </div>
+      <div
+        class="sk-asset sk-Group-39-4087725F-8F03-4DCD-8ABA-3920DCAEABEA"
+      ></div>
+      <div
+        class="sk-asset sk-PROTOTYPE-DESIGN-AD150A32-BCD7-473C-A2C7-F004B88443EB"
+      >
+        <span class="span1">PROTOTYPE DESIGN</span>
+      </div>
+      <div
+        class="sk-asset sk-Group-27-D40E2368-FC88-4B4E-BA59-4B246587F002"
+      ></div>
+      <div
+        class="sk-asset sk-Group-33-E461AD76-E067-4596-88E8-D7CA2D4F8126"
+      ></div>
+      <div
+        class="sk-asset sk-Group-34-EAD3DF32-9078-44C6-AA8A-C29FB3D827BC"
+      ></div>
+      <div class="sk-asset sk-UI-Design-0BBDD381-5E10-41E8-8201-6B17A13CDC31">
+        <span class="span1">UI Design</span>
+      </div>
+      <div
+        class="sk-asset sk-Facility-Information-860CDFFE-EC5A-4F50-9F4A-0BA6061E7B93"
+      >
+        <span class="span1">Facility Information All in One</span>
+      </div>
+      <div
+        class="sk-asset sk-Reservation-Userflow-589F8B46-B749-4E17-9140-B51D8002F716"
+      >
+        <span class="span1">Reservation Userflow </span>
+      </div>
+      <div
+        class="sk-asset sk-Color-palatte-is-bas-00F06621-9090-461D-930D-3FA2A7CAB3A5"
+      >
+        <span class="span1"
+          >Color palatte is based on University spirit color orange and blue
+          with a twist for a more clean look and delighted mood.</span
+        >
+      </div>
+      <div
+        class="sk-asset sk-This-app-allows-stud-9D769B3C-3E60-4235-8408-4933B57622B4"
+      >
+        <span class="span1"
+          >This app allows students to browse information about all reservable
+          and usable space cross the campus, and find availibility of each
+          space.</span
+        >
+      </div>
+      <div
+        class="sk-asset sk-Students-can-find-de-13BADF52-19EA-4ACB-9B54-09D2D16A6E8E"
+      >
+        <span class="span1"
+          >Students can find details about a space including locations,
+          policies, etc., and make reservation of any facility in 2 clicks. They
+          can also find all contact information and details in history page with
+          easy clicks.</span
+        >
+      </div>
+      <div class="sk-asset sk-Group-11-B6F178D9-F107-459C-A228-E39C7FC29AAC">
+        <div
+          class="sk-asset sk-CURRENT-PROBLEM-ANAL-6AB509B2-74CC-41E5-8658-B7AA54EBDFC4"
+        >
+          <span class="span1">CURRENT PROBLEM ANALYSIS</span>
+        </div>
+        <div
+          class="sk-asset sk-How-was-I-inspired-B7AD66D5-B598-44ED-9C21-ACB06F88A861"
+        >
+          <span class="span1">How was I inspired?</span>
+        </div>
+        <div
+          class="sk-asset sk-A-different-room-requesting-form-A6164D1A-CDC4-46C3-ACA4-3B6FB7FE0B64"
+        ></div>
+        <div
+          class="sk-asset sk-A-public-space-reser-6FEDF2A1-D6F3-45CC-890C-100A269D47F1"
+        ></div>
+        <div
+          class="sk-asset sk-The-main-form-that-c-5A9485C4-65E0-4AAA-A378-727FB769F4B1"
+        ></div>
+        <div
+          class="sk-asset sk-Each-schoolbuilding-55EC8341-BA4F-4728-AF5C-B382067696AB"
+        >
+          <span class="span1"
+            >Each school/building requires students to reserve rooms through
+            their department website several years ago. <br />A new room
+            reservation website was developed recently but includes only library
+            rooms. There are many other spaces of various functions in other
+            academic buildings, but currently requiring students to reserve
+            through their seperate online forms. <br />Space resouces cost time
+            to find information on and figure out how to reserve. University
+            website does not have a uniform structure and layout, and therefore
+            information is scattered here and there. Website takes on different
+            UI designs for room reservation of different buildings, making it
+            difficult for users to quickly reserve a room without studying the
+            website and the reservation chart.<br />Students want to know what
+            rooms on campus they can reserve for their specific use, and choose
+            based on what they look like and what functions they serve, but the
+            current website does not provide comprehensive information.</span
+          >
+        </div>
+        <div
+          class="sk-asset sk-Rec-Bullet-CF073E20-F5E5-4FA9-B268-2E77AED3B7EC"
+        ></div>
+        <div
+          class="sk-asset sk-Rec-Bullet-Copy-6C6EF3D3-D21F-40B1-BA7F-61EA298F4A8E"
+        ></div>
+        <div
+          class="sk-asset sk-Rec-Bullet-Copy-2-B1882271-D5A7-43E5-A294-82FED4DFE6B8"
+        ></div>
+        <div
+          class="sk-asset sk-Rec-Bullet-Copy-3-9ABA2DED-C978-4B74-B1F0-9021F171DB0F"
+        ></div>
+        <div
+          class="sk-asset sk-Image-1-42829387-B4A2-4CE2-BFD1-7A42F6D9F354"
+        ></div>
+        <div
+          class="sk-asset sk-Image-3-E410DC35-FDF0-44D5-9AAF-B88EF09BD42B"
+        ></div>
+        <div
+          class="sk-asset sk-Image-5-2D4368B8-285E-4AF6-8FE7-472DCC948D2A"
+        ></div>
+        <div
+          class="sk-asset sk-The-student-honor-bu-B2EBA3A0-77E4-460C-81E8-354C5EFF82C9"
+        >
+          <span class="span1"
+            >The student honor building project requires us to design a building
+            that embrace the surrounding while providing an open environment for
+            honor students’ daily use, therefore having many rooms that students
+            can reserve, such as art studio, outdoor event space and library
+            rooms. I was reminded of our time at UIUC having difficulty of
+            finding information on reserving rooms, and inspired to design an
+            app that includes all resersable rooms and facility information for
+            convenience of students.</span
+          >
+        </div>
+      </div>
+      <div
+        class="sk-asset sk-Int-Rendering-1-FF4A8DC7-6C18-4F3E-84DB-EE89E2205B5A"
+      ></div>
+      <div
+        class="sk-asset sk-Architecture-Design-B33B3391-83A9-47B7-8DBB-D645A94976DD"
+      >
+        <span class="span1">Architecture Design COMING SOON...</span>
+      </div>
+      <div
+        class="sk-asset sk-374-Project-1int-2-6B8D0C91-DAFA-4D53-91A8-3109CA7CD503"
+      ></div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "MovingBox"
+};
+</script>
+
+<style lang="scss" scoped>
+.page {
+  text-align: left;
+}
+
+@import url("/assets/works/RoomSmart/styles.css");
+
+// .head {
+//   position: relative;
+//   width: 100%;
+//   box-sizing: border-box;
+//   padding: 0 90px 0 121px;
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-between;
+//   align-items: center;
+
+//   .cover {
+//     width: 687px;
+//     height: 369px;
+//   }
+
+//   .info {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: flex-start;
+//     align-items: flex-start;
+
+//     .title {
+//       color: #ce7182;
+//       font-size: 36px;
+//       font-family: "TsukuARdGothic-Bold", serif;
+//       font-weight: bold;
+//     }
+
+//     .subtitle {
+//       margin: 25px 0 0 0;
+//       width: 404px;
+//       color: #101010;
+//       font-size: 36px;
+//       font-family: "DINAlternate-Bold", serif;
+//       font-weight: bold;
+//       text-align: left;
+//     }
+
+//     .desc {
+//       margin: 40px 0 0 0;
+//       display: flex;
+//       flex-direction: column;
+//       justify-content: flex-start;
+//       align-items: flex-start;
+
+//       &-title {
+//         color: #101010;
+//         font-size: 18px;
+//         font-family: "TsukuARdGothic-Bold", serif;
+//         font-weight: bold;
+//       }
+
+//       &-content {
+//         color: #101010;
+//         font-size: 18px;
+//         font-family: "TsukuARdGothic-Regular", serif;
+//       }
+//     }
+//   }
+// }
+</style>

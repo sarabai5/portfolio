@@ -4,12 +4,15 @@ import Home from "../views/Home.vue";
 import Resume from "../views/Resume.vue";
 import Sides from "../views/Sides.vue";
 
+import MovingBox from "../views/works/MovingBox.vue";
+import RoomSmart from "../views/works/RoomSmart.vue";
+
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
-    name: "Works",
+    name: "/",
     component: Home
   },
   {
@@ -26,6 +29,16 @@ const routes = [
     path: "/Resume",
     name: "Resume",
     component: Resume
+  },
+  {
+    path: "/works/MovingBox",
+    name: "MovingBox",
+    component: MovingBox
+  },
+  {
+    path: "/works/RoomSmart",
+    name: "RoomSmart",
+    component: RoomSmart
   }
   // {
   //   path: "/resume",

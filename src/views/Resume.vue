@@ -9,31 +9,32 @@
         <p class="content-row-2">
           I’m a <span class="content-row-2--job">UX designer</span>/ a former
           architect who’s pursuing a master’s degree in product and service
-          design <span class="content-row-2--major">MIIPS@CMU</span>. I’m
-          passionate about creating enjoyable and meaningful human experience
-          with the surrounded digital world.
+          design
+          <a
+            href="https://www.cmu.edu/iii/degrees/miips/index.html"
+            class="content-row-2--major"
+            >MIIPS@CMU</a
+          >. I’m passionate about creating enjoyable and meaningful human
+          experience with the surrounded digital world.
         </p>
         <div class="content-row-3">
           <button class="download" @click="open(0)">Download My CV</button>
-          <div class="email" @click="open(1)">
+          <button class="email" @click="open(1)">
             <img class="email-icon" src="/assets/icons/resume_email.png" />
             <p class="email-link">jinfanb@andrew.cmu.edu</p>
-          </div>
+          </button>
         </div>
       </div>
     </div>
-    <img class="resume" src="assets/info/resume.jpg" />
-    <Footer />
+    <img class="resume" src="/assets/info/resume.jpg" />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import Footer from "@/components/footer.vue";
 
 export default {
   name: "Resume",
-  components: { Footer },
   methods: {
     open(index) {
       if (index == 1) {
@@ -48,7 +49,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .resume {
   width: 100%;
   display: flex;

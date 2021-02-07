@@ -10,24 +10,21 @@
       </div>
     </div>
     <Projects />
-    <Footer />
   </div>
 </template>
 
 <script>
 import Projects from "@/components/projects.vue";
-import Footer from "@/components/footer.vue";
 
 export default {
   name: "Home",
   components: {
-    Projects,
-    Footer
+    Projects
   }
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .home {
   width: 100%;
   display: flex;
