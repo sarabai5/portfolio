@@ -24,29 +24,29 @@ export default {
         {
           name: "Roomsmart",
           desc: "UI / UX Design / Architecture | Individual Project",
-          img: "/assets/works/covers/project 1.png",
+          img: "/assets/works/covers/project_1.png",
           path: "/works/RoomSmart"
         },
         {
           name: "Moving Boxes",
           desc: "Product Design | Individual Project",
-          img: "/assets/works/covers/project 2.png",
+          img: "/assets/works/covers/project_2.png",
           path: "/works/MovingBoxes"
         },
         {
           // name: "StaySound",
           // desc: "UI / UX Design | Individual Project",
-          img: "/assets/works/covers/project 3.png"
+          img: "/assets/works/covers/project_3.png"
         },
         {
           // name: "StaySound",
           // desc: "UI / UX Design | Individual Project",
-          img: "/assets/works/covers/project 4.png"
+          img: "/assets/works/covers/project_4.png"
         },
         {
           // name: "StaySound",
           // desc: "UI / UX Design | Individual Project",
-          img: "/assets/works/covers/project 5.png"
+          img: "/assets/works/covers/project_5.png"
         }
       ]
     };
