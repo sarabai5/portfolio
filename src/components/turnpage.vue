@@ -11,14 +11,16 @@
       @click="clickItem(previous.name)"
     >
       <!-- Graphic -->
-      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="28">
-        <path
-          d="M 14 1 L 1 13.5 L 14 27"
-          fill="transparent"
-          stroke="rgba(146,129,236,1)"
-          stroke-miterlimit="10"
-        ></path>
-      </svg>
+      <div class="arrow">
+        <svg width="100%" height="100%" viewBox="0,0,15,28">
+          <path
+            d="M 14 1 L 1 13.5 L 14 27"
+            fill="transparent"
+            stroke="rgba(146,129,236,1)"
+            stroke-miterlimit="10"
+          ></path>
+        </svg>
+      </div>
       <div class="turnpage-title" style="margin: 0 0 0 10px ">
         Previous: {{ previous.title }}
       </div>
@@ -29,14 +31,16 @@
       <div class="turnpage-title" style="margin: 0 10px 0 0">
         Next: {{ next.title }}
       </div>
-      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="28">
-        <path
-          d="M 1 1 L 14 13.5 L 1 27"
-          fill="transparent"
-          stroke="rgba(146,129,236,1)"
-          stroke-miterlimit="10"
-        ></path>
-      </svg>
+      <div class="arrow">
+        <svg width="100%" height="100%" viewBox="0,0,15,28">
+          <path
+            d="M 1 1 L 14 13.5 L 1 27"
+            fill="transparent"
+            stroke="rgba(146,129,236,1)"
+            stroke-miterlimit="10"
+          ></path>
+        </svg>
+      </div>
     </button>
   </div>
 </template>
@@ -98,6 +102,15 @@ export default {
     font-family: "AndaleMono", monospace;
     text-align: center;
     letter-spacing: -1px;
+  }
+
+  .arrow {
+    position: relative;
+    width: 15px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 </style>

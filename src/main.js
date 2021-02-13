@@ -1,19 +1,21 @@
 import Vue from "vue";
 import App from "./App.vue";
-import "./registerServiceWorker";
+// import "./registerServiceWorker";
 import router from "./router";
 import store from "./store";
 
 import "./utils/rem";
 
-Vue.config.productionTip = false;
+// uninstall serviceWorker
+if (window.navigator && navigator.serviceWorker) {
+  navigator.serviceWorker.getRegistrations().then(function(registrations) {
+    for (let registration of registrations) {
+      registration.unregister();
+    }
+  });
+}
 
-// Vue.mixin({
-//   created: function() {
-//     console.log("created");
-//     window.scrollTo(0, 0);
-//   }
-// });
+Vue.config.productionTip = false;
 
 new Vue({
   router,
