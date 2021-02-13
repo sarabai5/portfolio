@@ -8,6 +8,13 @@ import "./utils/rem";
 
 Vue.config.productionTip = false;
 
+// Vue.mixin({
+//   created: function() {
+//     console.log("created");
+//     window.scrollTo(0, 0);
+//   }
+// });
+
 new Vue({
   router,
   store,

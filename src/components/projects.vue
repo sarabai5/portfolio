@@ -4,11 +4,10 @@
       class="project"
       v-for="(item, i) in projects"
       :key="i"
-      :class="active == i ? 'links-item--active' : ''"
-      @click="clickItem(i, item.path)"
+      @click="clickItem(item.path)"
     >
       <img class="project-img" :src="item.img" />
-      <div class="project-content">
+      <div v-if="item.name" class="project-content">
         <div class="project-name">{{ item.name }}</div>
         <div class="project-desc">{{ item.desc }}</div>
       </div>
@@ -23,87 +22,38 @@ export default {
     return {
       projects: [
         {
-          name: "StaySound",
-          desc: "UI / UX Design | Individual Project",
-          img:
-            "https://imageproxy.themaven.net//https%3A%2F%2Fwww.history.com%2F.image%2FMTYyNDg1MjE3MTI1Mjc5Mzk4%2Ftopic-london-gettyimages-760251843-promo.jpg",
-          path: "/works/MovingBox"
-        },
-        {
-          name: "StaySound",
-          desc: "UI / UX Design | Individual Project",
-          img:
-            "https://imageproxy.themaven.net//https%3A%2F%2Fwww.history.com%2F.image%2FMTYyNDg1MjE3MTI1Mjc5Mzk4%2Ftopic-london-gettyimages-760251843-promo.jpg",
+          name: "Roomsmart",
+          desc: "UI / UX Design / Architecture | Individual Project",
+          img: "/assets/works/covers/project 1.png",
           path: "/works/RoomSmart"
         },
         {
-          name: "StaySound",
-          desc: "UI / UX Design | Individual Project",
-          img:
-            "https://imageproxy.themaven.net//https%3A%2F%2Fwww.history.com%2F.image%2FMTYyNDg1MjE3MTI1Mjc5Mzk4%2Ftopic-london-gettyimages-760251843-promo.jpg"
+          name: "Moving Boxes",
+          desc: "Product Design | Individual Project",
+          img: "/assets/works/covers/project 2.png",
+          path: "/works/MovingBoxes"
         },
         {
-          name: "StaySound",
-          desc: "UI / UX Design | Individual Project",
-          img:
-            "https://imageproxy.themaven.net//https%3A%2F%2Fwww.history.com%2F.image%2FMTYyNDg1MjE3MTI1Mjc5Mzk4%2Ftopic-london-gettyimages-760251843-promo.jpg"
+          // name: "StaySound",
+          // desc: "UI / UX Design | Individual Project",
+          img: "/assets/works/covers/project 3.png"
         },
         {
-          name: "StaySound",
-          desc: "UI / UX Design | Individual Project",
-          img:
-            "https://imageproxy.themaven.net//https%3A%2F%2Fwww.history.com%2F.image%2FMTYyNDg1MjE3MTI1Mjc5Mzk4%2Ftopic-london-gettyimages-760251843-promo.jpg"
+          // name: "StaySound",
+          // desc: "UI / UX Design | Individual Project",
+          img: "/assets/works/covers/project 4.png"
         },
         {
-          name: "StaySound",
-          desc: "UI / UX Design | Individual Project",
-          img:
-            "https://imageproxy.themaven.net//https%3A%2F%2Fwww.history.com%2F.image%2FMTYyNDg1MjE3MTI1Mjc5Mzk4%2Ftopic-london-gettyimages-760251843-promo.jpg"
-        },
-        {
-          name: "StaySound",
-          desc: "UI / UX Design | Individual Project",
-          img:
-            "https://imageproxy.themaven.net//https%3A%2F%2Fwww.history.com%2F.image%2FMTYyNDg1MjE3MTI1Mjc5Mzk4%2Ftopic-london-gettyimages-760251843-promo.jpg"
-        },
-        {
-          name: "StaySound",
-          desc: "UI / UX Design | Individual Project",
-          img:
-            "https://imageproxy.themaven.net//https%3A%2F%2Fwww.history.com%2F.image%2FMTYyNDg1MjE3MTI1Mjc5Mzk4%2Ftopic-london-gettyimages-760251843-promo.jpg"
-        },
-        {
-          name: "StaySound",
-          desc: "UI / UX Design | Individual Project",
-          img:
-            "https://imageproxy.themaven.net//https%3A%2F%2Fwww.history.com%2F.image%2FMTYyNDg1MjE3MTI1Mjc5Mzk4%2Ftopic-london-gettyimages-760251843-promo.jpg"
-        },
-        {
-          name: "StaySound",
-          desc: "UI / UX Design | Individual Project",
-          img:
-            "https://imageproxy.themaven.net//https%3A%2F%2Fwww.history.com%2F.image%2FMTYyNDg1MjE3MTI1Mjc5Mzk4%2Ftopic-london-gettyimages-760251843-promo.jpg"
-        },
-        {
-          name: "StaySound",
-          desc: "UI / UX Design | Individual Project",
-          img:
-            "https://imageproxy.themaven.net//https%3A%2F%2Fwww.history.com%2F.image%2FMTYyNDg1MjE3MTI1Mjc5Mzk4%2Ftopic-london-gettyimages-760251843-promo.jpg"
-        },
-        {
-          name: "StaySound",
-          desc: "UI / UX Design | Individual Project",
-          img:
-            "https://imageproxy.themaven.net//https%3A%2F%2Fwww.history.com%2F.image%2FMTYyNDg1MjE3MTI1Mjc5Mzk4%2Ftopic-london-gettyimages-760251843-promo.jpg"
+          // name: "StaySound",
+          // desc: "UI / UX Design | Individual Project",
+          img: "/assets/works/covers/project 5.png"
         }
-      ],
-      active: 0
+      ]
     };
   },
   methods: {
-    clickItem(i, path) {
-      this.active = i;
-      this.$router.push(path);
+    clickItem(path) {
+      if (path) this.$router.push(path);
     }
   }
 };
@@ -124,23 +74,31 @@ export default {
 }
 
 .project {
+  position: relative;
   margin: 49px 0 0 0;
   width: 564px;
   height: 479px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
   border-radius: 30px;
   overflow: hidden;
   box-shadow: 0px 2px 8px 4px rgba(0, 0, 0, 0.1);
 
   &-img {
+    // width: 100%;
+    // height: 348px;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 348px;
+    height: 100%;
   }
 
   &-content {
+    z-index: 1;
+    position: relative;
     width: 100%;
     height: 132px;
     box-sizing: border-box;
@@ -159,6 +117,7 @@ export default {
   }
 
   &-desc {
+    margin: 5px 0 0 0;
     height: 38px;
     color: #101010;
     font-size: 16px;

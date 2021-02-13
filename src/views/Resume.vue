@@ -42,7 +42,7 @@ export default {
           "https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&source=mailto&to=jinfanb@andrew.cmu.edu"
         );
       } else {
-        window.open("/assets/info/Sara Bai's Resume 2.pdf");
+        window.open("/assets/info/Sara Bai's Resume.pdf");
       }
     }
   }

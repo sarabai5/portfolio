@@ -1,0 +1,103 @@
+<template>
+  <div
+    class="turnpage"
+    :style="{
+      'justify-content': previous && next ? 'space-between' : 'flex-end'
+    }"
+  >
+    <button
+      v-if="previous"
+      class="turnpage-item"
+      @click="clickItem(previous.name)"
+    >
+      <!-- Graphic -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="28">
+        <path
+          d="M 14 1 L 1 13.5 L 14 27"
+          fill="transparent"
+          stroke="rgba(146,129,236,1)"
+          stroke-miterlimit="10"
+        ></path>
+      </svg>
+      <div class="turnpage-title" style="margin: 0 0 0 10px ">
+        Previous: {{ previous.title }}
+      </div>
+    </button>
+    <button class="turnpage-item" @click="clickItem(next.name)">
+      <!-- Graphic -->
+
+      <div class="turnpage-title" style="margin: 0 10px 0 0">
+        Next: {{ next.title }}
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="28">
+        <path
+          d="M 1 1 L 14 13.5 L 1 27"
+          fill="transparent"
+          stroke="rgba(146,129,236,1)"
+          stroke-miterlimit="10"
+        ></path>
+      </svg>
+    </button>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "turnpage",
+  props: {
+    previous: {
+      type: Object,
+      default: null
+    },
+    next: {
+      type: Object,
+      default: null
+    }
+  },
+  methods: {
+    clickItem(name) {
+      this.$router.push({
+        name: name
+      });
+    }
+  }
+};
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped lang="scss">
+.turnpage {
+  margin: 300px 0 0 0;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 90px;
+  // padding: 325px 0 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  &-item {
+    height: 58px;
+    box-sizing: border-box;
+    padding: 0 20px;
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.3);
+    background-color: #ffffff;
+    border-radius: 20px;
+    border: 1px solid #826feb;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-title {
+    color: #826feb;
+    font-size: 18px;
+    font-family: "AndaleMono", monospace;
+    text-align: center;
+    letter-spacing: -1px;
+  }
+}
+</style>

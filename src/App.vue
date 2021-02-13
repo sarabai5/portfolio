@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <Nav />
-    <keep-alive>
-      <router-view />
-    </keep-alive>
+    <!-- <keep-alive> -->
+    <router-view />
+    <!-- </keep-alive> -->
     <Footer />
   </div>
 </template>
@@ -54,6 +54,10 @@ export default {
   text-align: center;
   color: #2c3e50;
   transition-duration: 4s;
+}
+
+body {
+  margin: 0;
 }
 
 button {

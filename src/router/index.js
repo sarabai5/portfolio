@@ -4,7 +4,7 @@ import Home from "../views/Home.vue";
 import Resume from "../views/Resume.vue";
 import Sides from "../views/Sides.vue";
 
-import MovingBox from "../views/works/MovingBox.vue";
+import MovingBoxes from "../views/works/MovingBoxes.vue";
 import RoomSmart from "../views/works/RoomSmart.vue";
 
 Vue.use(VueRouter);
@@ -12,7 +12,7 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
-    name: "/",
+    name: "Works",
     component: Home
   },
   {
@@ -31,9 +31,9 @@ const routes = [
     component: Resume
   },
   {
-    path: "/works/MovingBox",
-    name: "MovingBox",
-    component: MovingBox
+    path: "/works/MovingBoxes",
+    name: "MovingBoxes",
+    component: MovingBoxes
   },
   {
     path: "/works/RoomSmart",
@@ -53,6 +53,10 @@ const routes = [
 
 const router = new VueRouter({
   routes
+});
+
+router.afterEach(() => {
+  window.scrollTo(0, 0);
 });
 
 export default router;

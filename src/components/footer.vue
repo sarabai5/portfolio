@@ -1,20 +1,18 @@
 <template>
   <div class="footer fade-content">
-    <div class="footer--l">
-      <div class="desc-1">If you would like to..</div>
-      <div class="desc-2">
-        work with an enthutiastic individual, grab a coffee with a big cat
-        lover, talk about the crazy stuff going on in this world…
-      </div>
-
-      <div class="right">© Sara Jinfan Bai.</div>
+    <div class="desc">
+      If you would like to work with an enthutiastic individual, grab a coffee
+      with a<br />big cat lover, talk about the crazy stuff going on in this
+      world…
     </div>
 
-    <div class="footer--r">
-      <div class="media-title">Let’s connect !</div>
-      <div class="medias">
+    <div class="finger">👇</div>
+
+    <div class="media">
+      <div class="media-title">Connect with me:</div>
+      <div class="media-list">
         <img
-          class="media"
+          class="media-item"
           v-for="(item, i) in medias"
           :key="i"
           :src="item.icon"
@@ -22,6 +20,8 @@
         />
       </div>
     </div>
+
+    <div class="right">© Sara Jinfan Bai.</div>
   </div>
 </template>
 
@@ -62,79 +62,74 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .footer {
-  margin: 221px 0 0 0;
+  // margin: 221px 0 0 0;
+  position: relative;
   width: 100%;
-  height: 517px;
   box-sizing: border-box;
-  padding: 142px 117px 44px;
+  // padding: 325px 0 150px;
+  padding: 150px 0 150px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-  &--l {
+  .desc {
+    width: 840px;
+    color: #101010;
+    font-size: 24px;
+    font-family: "Avenir", serif;
+    line-height: 36px;
+    text-align: left;
+  }
+
+  .finger {
+    margin: 24px 0 29px 0;
+    color: #101010;
+    font-size: 36px;
+    font-family: "AppleColorEmoji", serif;
+    line-height: 36px;
+    text-align: center;
+  }
+
+  .media {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
 
-    .desc-1 {
-      width: 569px;
-      height: 64px;
-      overflow: hidden;
-      color: #101010;
-      font-size: 48px;
-      font-family: "Avenir-Heavy", serif;
-      line-height: 42px;
-      text-align: left;
-    }
-
-    .desc-2 {
-      margin: 10px 0 0 0;
-      width: 569px;
-      height: 108px;
+    &-title {
+      margin: 0 0 0 -234px;
+      width: 234px;
       color: #101010;
       font-size: 24px;
-      font-family: "Avenir", serif;
+      font-family: "TsukuARdGothic-Bold", serif;
+      font-weight: bold;
       line-height: 36px;
       text-align: left;
     }
 
-    .right {
-      margin: 106px 0 0 0;
-      color: #101010;
-      font-size: 18px;
-      font-family: "AndaleMono", monospace;
-    }
-  }
-
-  &--r {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-
-    .media-title {
-      margin: -15px 0 0 0;
-      height: 57px;
-      color: #101010;
-      font-size: 48px;
-      font-family: "Avenir-Heavy", serif;
-    }
-
-    .medias {
-      margin: 43px 0 0 0;
-      width: 200px;
+    &-list {
+      width: 190px;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-
-      .media {
-        width: 40px;
-        height: 40px;
-      }
     }
+
+    &-item {
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .right {
+    position: absolute;
+    left: 117px;
+    bottom: 50px;
+    color: #101010;
+    font-size: 18px;
+    font-family: "AndaleMono", monospace;
   }
 }
 </style>

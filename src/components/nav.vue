@@ -28,10 +28,10 @@ export default {
           name: "Works",
           path: "/Works"
         },
-        {
-          name: "Sides",
-          path: "/Sides"
-        },
+        // {
+        //   name: "Sides",
+        //   path: "/Sides"
+        // },
         {
           name: "Resume",
           path: "/Resume"
@@ -63,12 +63,10 @@ export default {
     scrollListener() {
       var scroll = this.scrollTop() - this.offset;
       if (!this.showNav && scroll < 0) {
-        console.log("up");
         this.showNav = true;
         //添加你想要的事件
       } else if (this.showNav && scroll > 0) {
         //添加你想要的事件
-        console.log("down");
         this.showNav = false;
       }
     },

@@ -3,10 +3,14 @@
     <div class="head">
       <div class="desc">and her fun facts</div>
       <div class="name">Sara Bai</div>
-      <div class="slogan">Enbraces change.</div>
+      <div class="slogan">{{ slogan }}</div>
       <div class="buttons">
-        <button class="buttons-btn buttons--l">More About Me.</button>
-        <button class="buttons-btn buttons--r">Email Me</button>
+        <button class="buttons-btn buttons--l" @click="clickMore()">
+          More About Me.
+        </button>
+        <button class="buttons-btn buttons--r" @click="clickEmail()">
+          Email Me
+        </button>
       </div>
     </div>
     <Projects />
@@ -18,8 +22,77 @@ import Projects from "@/components/projects.vue";
 
 export default {
   name: "Home",
+  data: () => {
+    return {
+      slogan: "",
+      slogans: [
+        "Is value-driven.",
+        "Enbraces change.",
+        "But missed old times.",
+        "Loves tennis.",
+        "Not very good at it tho.",
+        "Moves around a lot."
+      ],
+      sloganHandler: null,
+      typeHandler: null
+    };
+  },
   components: {
     Projects
+  },
+  mounted() {
+    this.setSloganInterval();
+  },
+  methods: {
+    setSloganInterval() {
+      this.clearSloganHandler();
+
+      this.typewriter(this.slogans[0]);
+
+      let i = 1;
+      this.sloganHandler = setInterval(() => {
+        if (i >= this.slogans.length) {
+          i = 0;
+        }
+
+        this.typewriter(this.slogans[i]);
+        i++;
+      }, 3000);
+    },
+    clearSloganHandler() {
+      if (this.sloganHandler) {
+        clearInterval(this.sloganHandler);
+        this.sloganHandler = null;
+      }
+    },
+    typewriter(text) {
+      this.clearTypeHandler();
+
+      let i = 1;
+      this.typeHandler = setInterval(() => {
+        if (i > text.length) {
+          this.clearTypeHandler();
+          return;
+        }
+
+        this.slogan = text.substring(0, i);
+        i++;
+      }, 80);
+    },
+    clearTypeHandler() {
+      if (this.typeHandler) {
+        clearInterval(this.typeHandler);
+        this.typeHandler = null;
+      }
+    },
+    clickMore() {
+      this.$router.push("/Resume");
+    },
+    clickEmail() {
+      window.open(
+        "https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&source=mailto&to=jinfanb@andrew.cmu.edu"
+      );
+    }
   }
 };
 </script>
@@ -38,7 +111,7 @@ export default {
   position: relative;
   width: 100%;
   box-sizing: border-box;
-  padding: 304px 0 0 117px;
+  padding: 224px 0 0 117px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
