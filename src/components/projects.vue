@@ -22,10 +22,10 @@ export default {
     return {
       projects: [
         {
-          name: "Roomsmart",
-          desc: "UI / UX Design / Architecture | Individual Project",
-          img: "/assets/works/covers/project_1.png",
-          path: "/works/RoomSmart"
+          name: "FurGo Pet Tracker & Monitor",
+          desc: "UI / UX / Product Design | Individual Project",
+          img: "/assets/works/covers/project_3.png",
+          path: "/works/FurGo"
         },
         {
           name: "Moving Boxes",
@@ -34,9 +34,10 @@ export default {
           path: "/works/MovingBoxes"
         },
         {
-          // name: "StaySound",
-          // desc: "UI / UX Design | Individual Project",
-          img: "/assets/works/covers/project_3.png"
+          name: "Roomsmart",
+          desc: "UI / UX Design / Architecture | Individual Project",
+          img: "/assets/works/covers/project_1.png",
+          path: "/works/RoomSmart"
         },
         {
           // name: "StaySound",

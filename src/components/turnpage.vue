@@ -2,7 +2,12 @@
   <div
     class="turnpage"
     :style="{
-      'justify-content': previous && next ? 'space-between' : 'flex-end'
+      'justify-content':
+        previous && next
+          ? 'space-between'
+          : previous
+          ? 'flex-start'
+          : 'flex-end'
     }"
   >
     <button
@@ -25,7 +30,7 @@
         Previous: {{ previous.title }}
       </div>
     </button>
-    <button class="turnpage-item" @click="clickItem(next.name)">
+    <button v-if="next" class="turnpage-item" @click="clickItem(next.name)">
       <!-- Graphic -->
 
       <div class="turnpage-title" style="margin: 0 10px 0 0">
@@ -71,7 +76,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .turnpage {
-  margin: 300px 0 0 0;
+  margin: 100px 0 0 0;
   position: relative;
   width: 100%;
   box-sizing: border-box;

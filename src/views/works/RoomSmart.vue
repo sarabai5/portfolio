@@ -554,7 +554,7 @@
         <span class="span1">Architecture Design COMING SOON...</span>
       </div>
     </div>
-    <Turnpage :next="next"></Turnpage>
+    <Turnpage :previous="previous"></Turnpage>
   </div>
 </template>
 
@@ -568,7 +568,7 @@ export default {
   },
   data: () => {
     return {
-      next: {
+      previous: {
         title: "Produc Design | Moving Boxes",
         name: "MovingBoxes"
       },

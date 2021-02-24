@@ -6,6 +6,7 @@ import Sides from "../views/Sides.vue";
 
 import MovingBoxes from "../views/works/MovingBoxes.vue";
 import RoomSmart from "../views/works/RoomSmart.vue";
+import FurGo from "../views/works/FurGo.vue";
 
 Vue.use(VueRouter);
 
@@ -39,6 +40,11 @@ const routes = [
     path: "/works/RoomSmart",
     name: "RoomSmart",
     component: RoomSmart
+  },
+  {
+    path: "/works/FurGo",
+    name: "FurGo",
+    component: FurGo
   }
   // {
   //   path: "/resume",

@@ -27,7 +27,7 @@ export default {
       slogan: "",
       slogans: [
         "Is value-driven.",
-        "Enbraces change.",
+        "Embraces change.",
         "But missed old times.",
         "Loves tennis.",
         "Not very good at it tho.",
