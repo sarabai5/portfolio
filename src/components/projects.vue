@@ -114,7 +114,8 @@ export default {
     height: 30px;
     color: #101010;
     font-size: 24px;
-    font-family: "Avenir-Heavy", serif;
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
   }
 
   &-desc {
@@ -122,7 +123,7 @@ export default {
     height: 38px;
     color: #101010;
     font-size: 16px;
-    font-family: "TsukuARdGothic-Regular", serif;
+    font-family: "Nunito", sans-serif;
     line-height: 24px;
   }
 }

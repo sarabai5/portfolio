@@ -113,7 +113,7 @@ export default {
   .icon {
     color: #101010;
     font-size: 24px;
-    font-family: "TsukuARdGothic-Regular", serif;
+    font-family: "VT323", monospace;
   }
 
   .links {
@@ -127,7 +127,7 @@ export default {
       width: 97px;
       color: #7e7e7e;
       font-size: 16px;
-      font-family: "TsukuARdGothic-Regular", serif;
+      font-family: "Nunito", sans-serif;
 
       &--active {
         color: #826feb;

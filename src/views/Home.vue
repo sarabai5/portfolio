@@ -1,7 +1,11 @@
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;400;600&family=Nunito:wght@200;400;600;700&display=swap&family=VT323&display=swap");
+</style>
+
 <template>
   <div class="home">
     <div class="head">
-      <div class="desc">and her fun facts</div>
+      <!-- <div class="desc">and her fun facts</div> -->
       <div class="name">Sara Bai</div>
       <div class="slogan">{{ slogan }}</div>
       <div class="buttons">
@@ -29,9 +33,10 @@ export default {
         "Is value-driven.",
         "Embraces change.",
         "But missed old times.",
+        "Moves around a lot.",
+        "Is adaptive and brave.",
         "Loves tennis.",
-        "Not very good at it tho.",
-        "Moves around a lot."
+        "And plays piano."
       ],
       sloganHandler: null,
       typeHandler: null
@@ -125,16 +130,18 @@ export default {
     transform: rotate(-90deg);
     color: #101010;
     font-size: 21px;
-    font-family: "TsukuARdGothic-Regular", serif;
+    font-family: "Dosis", sans-serif;
+    font-weight: 400;
   }
 
   .name {
     height: 110px;
     overflow: visible;
     color: #826feb;
-    font-size: 110px;
-    font-family: "TsukuARdGothic-Bold", serif;
-    font-weight: bold;
+    font-size: 120px;
+    font-family: "Dosis", sans-serif;
+    letter-spacing: 5px;
+    font-weight: 600;
   }
 
   .slogan {
@@ -142,9 +149,10 @@ export default {
     height: 110px;
     overflow: visible;
     color: #101010;
-    font-size: 110px;
-    font-family: "TsukuARdGothic-Bold", serif;
-    font-weight: bold;
+    font-size: 120px;
+    font-family: "Dosis", sans-serif;
+    letter-spacing: 5px;
+    font-weight: 600;
   }
 
   .buttons {

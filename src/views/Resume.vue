@@ -84,8 +84,10 @@ export default {
       &-row-1 {
         height: 36px;
         color: #101010;
-        font-size: 24px;
-        font-family: "TsukuARdGothic-Bold", serif;
+        font-size: 28px;
+        font-family: "Dosis", sans-serif;
+        font-weight: 400;
+        letter-spacing: 2px;
         font-weight: bold;
 
         &--name {
@@ -97,7 +99,9 @@ export default {
 
       &-row-2 {
         width: 545px;
-        font-family: "TsukuARdGothic-Regular", serif;
+        font-family: "Nunito", sans-serif;
+        font-weight: 400;
+        letter-spacing: 1px;
         font-size: 18px;
         color: #101010;
         line-height: 36px;
@@ -153,7 +157,7 @@ export default {
             height: 36px;
             color: #101010;
             font-size: 18px;
-            font-family: "TsukuARdGothic-Regular", serif;
+            font-family: "Nunito", sans-serif;
             line-height: 36px;
             text-decoration: underline;
           }

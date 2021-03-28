@@ -77,7 +77,7 @@ export default {
     width: 840px;
     color: #101010;
     font-size: 24px;
-    font-family: "Avenir", serif;
+    font-family: "Nunito", sans-serif;
     line-height: 36px;
     text-align: left;
   }
@@ -102,8 +102,8 @@ export default {
       width: 234px;
       color: #101010;
       font-size: 24px;
-      font-family: "TsukuARdGothic-Bold", serif;
-      font-weight: bold;
+      font-family: "Nunito", sans-serif;
+      font-weight: 700;
       line-height: 36px;
       text-align: left;
     }
