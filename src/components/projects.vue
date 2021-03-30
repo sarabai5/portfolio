@@ -4,9 +4,16 @@
       class="project"
       v-for="(item, i) in projects"
       :key="i"
-      @click="clickItem(item.path)"
+      @click="clickItem(item)"
     >
-      <img class="project-img" :src="item.img" />
+      <img v-if="item.gif" class="project-img" :src="item.gif" />
+      <img
+        class="project-img"
+        :class="{ 'project-img--hover': item.gif && hoverIndex == i }"
+        :src="item.img"
+        @mouseover="onHover(i)"
+        @mouseout="onOut()"
+      />
       <div v-if="item.name" class="project-content">
         <div class="project-name">{{ item.name }}</div>
         <div class="project-desc">{{ item.desc }}</div>
@@ -20,41 +27,62 @@ export default {
   name: "projects",
   data: () => {
     return {
+      hoverIndex: -1,
       projects: [
         {
           name: "FurGo Pet Tracker & Monitor",
           desc: "UI / UX / Product Design | Individual Project",
           img: "/assets/works/covers/project_3.png",
-          path: "/works/FurGo"
+          path: "/works/FurGo",
+          isHover: false
         },
         {
           name: "Moving Boxes",
           desc: "Product Design | Individual Project",
           img: "/assets/works/covers/project_2.png",
-          path: "/works/MovingBoxes"
+          path: "/works/MovingBoxes",
+          isHover: false
+        },
+        {
+          name: "Cinnamon Roll Specialty Bakery",
+          desc: "UI / UX Design / Coding | Academic Project",
+          img: "/assets/works/covers/roll-static.png",
+          gif: "/assets/works/covers/roll-animation.gif",
+          link: "https://sarabai5.github.io/cinna.github.io/homework_5/",
+          isHover: false
         },
         {
           name: "Roomsmart",
           desc: "UI / UX Design / Architecture | Individual Project",
           img: "/assets/works/covers/project_1.png",
-          path: "/works/RoomSmart"
+          path: "/works/RoomSmart",
+          isHover: false
         },
         {
           // name: "StaySound",
           // desc: "UI / UX Design | Individual Project",
-          img: "/assets/works/covers/project_4.png"
+          img: "/assets/works/covers/project_4.png",
+          isHover: false
         },
         {
           // name: "StaySound",
           // desc: "UI / UX Design | Individual Project",
-          img: "/assets/works/covers/project_5.png"
+          img: "/assets/works/covers/project_5.png",
+          isHover: false
         }
       ]
     };
   },
   methods: {
-    clickItem(path) {
-      if (path) this.$router.push(path);
+    clickItem(item) {
+      if (item.path) this.$router.push(item.path);
+      else window.open(item.link);
+    },
+    onHover(index) {
+      this.hoverIndex = index;
+    },
+    onOut() {
+      this.hoverIndex = -1;
     }
   }
 };
@@ -71,7 +99,6 @@ export default {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  cursor: pointer;
 }
 
 .project {
@@ -86,15 +113,18 @@ export default {
   border-radius: 30px;
   overflow: hidden;
   box-shadow: 0px 2px 8px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 
   &-img {
-    // width: 100%;
-    // height: 348px;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+
+    &--hover {
+      opacity: 0;
+    }
   }
 
   &-content {
