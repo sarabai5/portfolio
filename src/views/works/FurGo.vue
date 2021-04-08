@@ -14,9 +14,17 @@
     <img class="item-7" src="/assets/project/P3/7.png" />
     <img class="item-8" src="/assets/project/P3/8.png" />
     <img class="item-9" src="/assets/project/P3/9.png" />
-
     <img class="item-10" src="/assets/project/P3/10.png" />
     <img class="item-11" src="/assets/project/P3/11.png" />
+
+    <div class="item-block-2">
+      <img class="item-scroll-head" src="/assets/project/P3/scroll-head.png" />
+      <img
+        class="item-scroll-content"
+        src="/assets/project/P3/scroll-content.png"
+      />
+    </div>
+
     <img class="item-12" src="/assets/project/P3/12.png" />
     <img class="item-13" src="/assets/project/P3/13.png" />
     <img class="item-14" src="/assets/project/P3/14.png" />
@@ -132,9 +140,28 @@ export default {
 
   &11 {
     margin: 180px 0 0 0;
-
     width: 1038px;
     height: 609px;
+  }
+
+  &block-2 {
+    margin: 170px 0 0 0;
+    width: 100%;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &scroll-head {
+    width: 272px;
+    height: 727px;
+  }
+
+  &scroll-content {
+    width: 4770px;
+    height: 1456px;
   }
 
   &12 {

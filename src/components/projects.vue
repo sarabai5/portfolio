@@ -1,22 +1,48 @@
 <template>
-  <div class="projects fade-content">
+  <div class="projects">
     <div
       class="project"
       v-for="(item, i) in projects"
       :key="i"
-      @click="clickItem(item)"
+      :style="{ opacity: item.opacity || 1 }"
     >
-      <img v-if="item.gif" class="project-img" :src="item.gif" />
-      <img
-        class="project-img"
-        :class="{ 'project-img--hover': item.gif && hoverIndex == i }"
-        :src="item.img"
+      <div class="head">
+        <div class="title">{{ item.title }}</div>
+        <div v-if="item.status" class="status">{{ item.status }}</div>
+      </div>
+
+      <div
+        class="project-content"
+        :style="{ background: item.background }"
         @mouseover="onHover(i)"
-        @mouseout="onOut()"
-      />
-      <div v-if="item.name" class="project-content">
-        <div class="project-name">{{ item.name }}</div>
-        <div class="project-desc">{{ item.desc }}</div>
+        @mouseout="onOut(i)"
+      >
+        <div
+          v-show="hoverIndex == i"
+          class="project-prefix"
+          :style="{ background: item.color || item.background }"
+        ></div>
+        <div class="project-content-l">
+          <div class="project-label">{{ item.label }}</div>
+          <div class="project-name">{{ item.name }}</div>
+          <div class="project-desc">{{ item.desc }}</div>
+          <button
+            v-if="item.button"
+            class="project-button"
+            @click="clickItem(item)"
+          >
+            {{ item.button }}
+          </button>
+        </div>
+
+        <div class="project-content-r">
+          <img
+            v-if="item.img"
+            class="project-img"
+            :class="{ 'project-img--hover': item.gif && hoverIndex == i }"
+            :src="item.img"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -30,44 +56,70 @@ export default {
       hoverIndex: -1,
       projects: [
         {
-          name: "FurGo Pet Tracker & Monitor",
-          desc: "UI / UX / Product Design | Individual Project",
-          img: "/assets/works/covers/project_3.png",
+          title: "FURGO PET",
+          label: "Know What Your Pet’s Up To",
+          name: "PET  TRACKER | MONITOR | APP",
+          desc: "App Design | IoT Design | User Research",
+          button: "Discover",
+          img: "/assets/works/covers/cover1.png",
+          background: "#FEDCCC",
           path: "/works/FurGo",
           isHover: false
         },
         {
-          name: "Moving Boxes",
-          desc: "Product Design | Individual Project",
-          img: "/assets/works/covers/project_2.png",
+          title: "CINNAMON ROLL BAKERY",
+          label: "Customize Rolls with Fun",
+          name: "BAKERY SHOP WEBSITE",
+          desc: "Web Design | User Testing | Usability Test | Front-End Coding",
+          button: "Go Play",
+          img: "/assets/works/covers/cover2.gif",
+          link: "https://sarabai5.github.io/cinna.github.io/homework_5/",
+          background: "#8393EC",
+          isHover: false
+        },
+        {
+          title: "MAKE SERIES 2 DESIGN COMPETITION  🏆 2ND PLACE FINALIST",
+          label: "Make the Studio A Better Place!",
+          name: "INSTALLATION DESIGN",
+          desc: "User Study | Architecture Design | 3D Modeling",
+          button: "Discover",
+          img: "/assets/works/covers/cover3.png",
+          background: "#EEE2E4",
           path: "/works/MovingBoxes",
           isHover: false
         },
         {
-          name: "Cinnamon Roll Specialty Bakery",
-          desc: "UI / UX Design / Coding | Academic Project",
-          img: "/assets/works/covers/roll-static.png",
-          gif: "/assets/works/covers/roll-animation.gif",
-          link: "https://sarabai5.github.io/cinna.github.io/homework_5/",
-          isHover: false
-        },
-        {
-          name: "Roomsmart",
-          desc: "UI / UX Design / Architecture | Individual Project",
-          img: "/assets/works/covers/project_1.png",
+          title: "ROOMSMART",
+          label: "One Stop Solution for Students",
+          name: "SIMPLE ROOM RESERVATION SYSTEM ",
+          desc: "App Design | User Study",
+          button: "Discover",
+          img: "/assets/works/covers/cover4.png",
           path: "/works/RoomSmart",
+          background:
+            "linear-gradient(90deg, #FFD88C 0%, #FBD690 39.58%, #E7CFA2 59.37%, #D2C7B5 79.17%, #C0C0C5 90.62%, #9FB3E3 100%)",
+          color: "#FFD97F",
           isHover: false
         },
         {
-          // name: "StaySound",
-          // desc: "UI / UX Design | Individual Project",
-          img: "/assets/works/covers/project_4.png",
+          title: "CLIENT: NATIONAL FOUNDATION FOR CREDIT COUNSELING (NFCC)",
+          status: "In working progress",
+          label: "How Can We Help Minority Small Business Owner succeed",
+          name: "FINTECH PRODUCT OPPORTUNITIES",
+          desc: "In-depth User Research | Team project | Pitch Deck",
+          button: "Case Study",
+          img: "/assets/works/covers/cover5.png",
+          background: "#C7EAE8",
+          path: "/works/MovingBoxes",
           isHover: false
         },
         {
-          // name: "StaySound",
-          // desc: "UI / UX Design | Individual Project",
-          img: "/assets/works/covers/project_5.png",
+          title: "IN SECRET",
+          label: "DancinCloud Website Solution Tool",
+          name: "COMING SOON...",
+          desc: "In Secret| In Mystery",
+          background: "#5AB5C9",
+          opacity: 0.5,
           isHover: false
         }
       ]
@@ -91,70 +143,159 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .projects {
+  position: relative;
   width: 100%;
   box-sizing: border-box;
-  padding: 0 117px;
+  padding: 45px 0 0 117px;
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
 }
 
 .project {
   position: relative;
-  margin: 49px 0 0 0;
-  width: 564px;
-  height: 479px;
+  margin: 45px 0 0 0;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  border-radius: 30px;
-  overflow: hidden;
-  box-shadow: 0px 2px 8px 4px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  &-prefix {
+    z-index: -1;
+    position: absolute;
+    width: 117px;
+    height: 100%;
+    top: 0;
+    left: -117px;
+    animation: moveIn 0.5s ease-in-out 0s 1 normal forwards running;
+  }
+
+  @keyframes moveIn {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: -117px;
+    }
+  }
+
+  @keyframes moveOut {
+    100% {
+      left: 0;
+    }
+  }
+
+  .head {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    .title {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 26px;
+      line-height: 30px;
+      letter-spacing: -0.02em;
+      color: #101010;
+    }
+
+    .status {
+      margin: 0 0 0 24px;
+      box-sizing: border-box;
+      padding: 0 26px;
+      width: auto;
+      height: 32px;
+      line-height: 32px;
+      background-color: rgba(131, 147, 236, 0.52);
+      border-radius: 16px;
+      font-family: Nunito;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      color: #404040;
+    }
+  }
+
+  &-content {
+    position: relative;
+    margin: 12px 0 0 0;
+    width: 1323px;
+    height: 550px;
+    box-sizing: border-box;
+    padding: 0 0 0 67px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    &-l {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  }
+
+  &-label {
+    max-width: 589px;
+    text-align: left;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 48px;
+    color: #ffffff;
+  }
+
+  &-name {
+    margin: 10px 0 0 0;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: -0.02em;
+    color: #101010;
+  }
+
+  &-desc {
+    margin: 20px 0 0 0;
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #58585b;
+  }
+
+  &-button {
+    margin: 48px 0 0 0;
+    width: 160px;
+    height: 62px;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 100px;
+    font-family: Andale Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    color: #826feb;
+  }
 
   &-img {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
+    right: 0;
+    width: auto;
     height: 100%;
 
     &--hover {
       opacity: 0;
     }
-  }
-
-  &-content {
-    z-index: 1;
-    position: relative;
-    width: 100%;
-    height: 132px;
-    box-sizing: border-box;
-    padding: 0 51px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-  }
-
-  &-name {
-    height: 30px;
-    color: #101010;
-    font-size: 24px;
-    font-family: "Nunito", sans-serif;
-    font-weight: 700;
-  }
-
-  &-desc {
-    margin: 5px 0 0 0;
-    height: 38px;
-    color: #101010;
-    font-size: 16px;
-    font-family: "Nunito", sans-serif;
-    line-height: 24px;
   }
 }
 </style>

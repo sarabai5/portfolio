@@ -7,6 +7,7 @@ import Sides from "../views/Sides.vue";
 import MovingBoxes from "../views/works/MovingBoxes.vue";
 import RoomSmart from "../views/works/RoomSmart.vue";
 import FurGo from "../views/works/FurGo.vue";
+import Capstone from "../views/works/Capstone.vue";
 
 Vue.use(VueRouter);
 
@@ -45,6 +46,11 @@ const routes = [
     path: "/works/FurGo",
     name: "FurGo",
     component: FurGo
+  },
+  {
+    path: "/works/Capstone",
+    name: "Capstone",
+    component: Capstone
   }
   // {
   //   path: "/resume",

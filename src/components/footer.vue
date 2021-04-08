@@ -1,15 +1,13 @@
 <template>
   <div class="footer fade-content">
     <div class="desc">
-      If you would like to work with an enthutiastic individual, grab a coffee
-      with a<br />big cat lover, talk about the crazy stuff going on in this
-      world…
+      If you’d like to work together or just talk about anything fun! 🥳
+      <br />Connect with me:
     </div>
 
     <div class="finger">👇</div>
 
     <div class="media">
-      <div class="media-title">Connect with me:</div>
       <div class="media-list">
         <img
           class="media-item"
@@ -74,12 +72,13 @@ export default {
   align-items: center;
 
   .desc {
-    width: 840px;
-    color: #101010;
-    font-size: 24px;
-    font-family: "Nunito", sans-serif;
-    line-height: 36px;
-    text-align: left;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 45px;
+    text-align: center;
+    color: #9281ec;
   }
 
   .finger {

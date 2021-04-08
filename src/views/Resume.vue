@@ -26,15 +26,25 @@
         </div>
       </div>
     </div>
-    <img class="resume" src="/assets/info/resume.jpg" />
+    <pdf class="resume" ref="pdf" :src="url"> </pdf>
+    <!-- <img class="resume" src="/assets/info/resume.jpg" /> -->
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
+import pdf from "vue-pdf";
 
 export default {
   name: "Resume",
+  components: {
+    pdf
+  },
+  data: () => {
+    return {
+      url: "/assets/info/Sara Bai's Resume.pdf"
+    };
+  },
   methods: {
     open(index) {
       if (index == 1) {
@@ -167,9 +177,9 @@ export default {
   }
 
   .resume {
-    margin: 86px 0 0 0;
-    width: 1161px;
-    height: 1458px;
+    // margin: 86px 0 0 0;
+    width: 80%;
+    height: auto;
   }
 }
 </style>

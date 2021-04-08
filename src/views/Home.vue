@@ -1,7 +1,3 @@
-<style>
-@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;400;600&family=Nunito:wght@200;400;600;700&display=swap&family=VT323&display=swap");
-</style>
-
 <template>
   <div class="home">
     <div class="head">
