@@ -1,7 +1,7 @@
 <template>
   <div class="page">
     <iframe
-      src="https://docs.google.com/presentation/d/e/2PACX-1vQJF-bU7CQPePSOa20HRp3IMMhCBy9Rb6wk0Jrlp5BQucuT0ArlMIPWGZyhf6qJ5HOF60rHx8drI2Rw/embed?start=false&loop=false&delayms=3000"
+      :src="url"
       frameborder="0"
       width="1440"
       height="839"
@@ -25,10 +25,11 @@ export default {
   data: () => {
     return {
       previous: {
-        title: "Produc Design | Moving Boxes",
-        name: "MovingBoxes"
+        title: "SIMPLE ROOM RESERVATION SYSTEM",
+        name: "RoomSmart"
       },
-      url: "/assets/info/Sara Bai's Resume.pdf",
+      url:
+        "https://docs.google.com/presentation/d/e/2PACX-1vQJF-bU7CQPePSOa20HRp3IMMhCBy9Rb6wk0Jrlp5BQucuT0ArlMIPWGZyhf6qJ5HOF60rHx8drI2Rw/embed?start=false&loop=false&delayms=3000",
       handler: null
     };
   }

@@ -50,8 +50,9 @@ export default {
     return {
       previous: null,
       next: {
-        title: "Produc Design | Moving Boxes",
-        name: "MovingBoxes"
+        title: "BAKERY SHOP WEBSITE",
+        // name: "MovingBoxes"
+        link: "https://sarabai5.github.io/cinna.github.io/homework_5/menu.html"
       },
       handler: null
     };

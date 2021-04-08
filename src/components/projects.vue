@@ -73,7 +73,8 @@ export default {
           desc: "Web Design | User Testing | Usability Test | Front-End Coding",
           button: "Go Play",
           img: "/assets/works/covers/cover2.gif",
-          link: "https://sarabai5.github.io/cinna.github.io/homework_5/",
+          link:
+            "https://sarabai5.github.io/cinna.github.io/homework_5/menu.html",
           background: "#8393EC",
           isHover: false
         },
@@ -91,7 +92,7 @@ export default {
         {
           title: "ROOMSMART",
           label: "One Stop Solution for Students",
-          name: "SIMPLE ROOM RESERVATION SYSTEM ",
+          name: "SIMPLE ROOM RESERVATION SYSTEM",
           desc: "App Design | User Study",
           button: "Discover",
           img: "/assets/works/covers/cover4.png",
@@ -110,7 +111,7 @@ export default {
           button: "Case Study",
           img: "/assets/works/covers/cover5.png",
           background: "#C7EAE8",
-          path: "/works/MovingBoxes",
+          path: "/works/Capstone",
           isHover: false
         },
         {

@@ -42,7 +42,7 @@ export default {
   },
   data: () => {
     return {
-      url: "/assets/info/Sara Bai's Resume.pdf"
+      url: "/assets/info/resume-embed.pdf"
     };
   },
   methods: {

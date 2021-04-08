@@ -10,11 +10,7 @@
           : 'flex-end'
     }"
   >
-    <button
-      v-if="previous"
-      class="turnpage-item"
-      @click="clickItem(previous.name)"
-    >
+    <button v-if="previous" class="turnpage-item" @click="clickItem(previous)">
       <!-- Graphic -->
       <div class="arrow">
         <svg width="100%" height="100%" viewBox="0,0,15,28">
@@ -30,7 +26,7 @@
         Previous: {{ previous.title }}
       </div>
     </button>
-    <button v-if="next" class="turnpage-item" @click="clickItem(next.name)">
+    <button v-if="next" class="turnpage-item" @click="clickItem(next)">
       <!-- Graphic -->
 
       <div class="turnpage-title" style="margin: 0 10px 0 0">
@@ -64,10 +60,14 @@ export default {
     }
   },
   methods: {
-    clickItem(name) {
-      this.$router.push({
-        name: name
-      });
+    clickItem(item) {
+      if (item.link) {
+        window.open(item.link);
+      } else {
+        this.$router.push({
+          name: item.name
+        });
+      }
     }
   }
 };

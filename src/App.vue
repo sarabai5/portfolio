@@ -60,6 +60,7 @@ export default {
 
 body {
   margin: 0;
+  font-family: "Nunito", sans-serif;
 }
 
 button {
