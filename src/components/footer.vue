@@ -19,7 +19,10 @@
       </div>
     </div>
 
-    <div class="right">© Sara Jinfan Bai.</div>
+    <div @click="clickGitHub()" class="right">
+      © Designed by Sara | Developed by Sara<br />
+      <p class="right-link">https://github.com/sarabai5</p>
+    </div>
   </div>
 </template>
 
@@ -52,6 +55,9 @@ export default {
   methods: {
     openWeb(url) {
       window.open(url);
+    },
+    clickGitHub() {
+      window.open("https://github.com/sarabai5");
     }
   }
 };
@@ -123,12 +129,19 @@ export default {
   }
 
   .right {
-    position: absolute;
-    left: 117px;
-    bottom: 50px;
+    margin: 90px 0 0 0;
+    position: relative;
     color: #101010;
     font-size: 18px;
     font-family: "AndaleMono", monospace;
+    font-style: normal;
+    font-weight: normal;
+    text-align: center;
+    cursor: pointer;
+
+    &-link {
+      text-decoration: underline;
+    }
   }
 }
 </style>
