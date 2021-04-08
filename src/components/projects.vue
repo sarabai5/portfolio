@@ -74,7 +74,7 @@ export default {
           button: "Go Play",
           img: "/assets/works/covers/cover2.gif",
           link:
-            "https://sarabai5.github.io/cinna.github.io/homework_5/menu.html",
+            "https://sarabai5.github.io/cinna.github.io/homework_6/menu.html",
           background: "#8393EC",
           isHover: false
         },
