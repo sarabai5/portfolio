@@ -147,7 +147,7 @@ export default {
   position: relative;
   width: 100%;
   box-sizing: border-box;
-  padding: 45px 0 0 117px;
+  padding: 0 0 0 117px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

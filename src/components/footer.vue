@@ -71,7 +71,7 @@ export default {
   width: 100%;
   box-sizing: border-box;
   // padding: 325px 0 150px;
-  padding: 150px 0 150px;
+  padding: 150px 0 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;

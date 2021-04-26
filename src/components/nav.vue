@@ -1,25 +1,35 @@
 <template>
-  <div class="nav">
-    <div class="nav-fixed" :class="showNav ? 'showNav' : 'hideNav'">
-      <button class="icon" @click="clickHome()">[ S ]</button>
-      <div class="links">
-        <button
-          class="links-item"
-          v-for="(item, i) in links"
-          :key="i"
-          :class="active == item.name ? 'links-item--active' : ''"
-          @click="clickItem(item.path)"
-        >
-          {{ item.name }}
-        </button>
-      </div>
+  <!-- <div class="nav"> -->
+  <div
+    class="nav-fixed"
+    :class="showNav ? 'showNav' : 'hideNav'"
+    :style="outstyle"
+  >
+    <button class="icon" @click="clickHome()">[ S ]</button>
+    <div class="links">
+      <button
+        class="links-item"
+        v-for="(item, i) in links"
+        :key="i"
+        :class="active == item.name ? 'links-item--active' : ''"
+        @click="clickItem(item.path)"
+      >
+        {{ item.name }}
+      </button>
     </div>
   </div>
+  <!-- </div> -->
 </template>
 
 <script>
 export default {
   name: "navigation",
+  props: {
+    outstyle: {
+      type: String,
+      default: ""
+    }
+  },
   data: () => {
     return {
       showNav: true,
@@ -97,14 +107,18 @@ export default {
 
 .nav-fixed {
   z-index: 999;
-  position: fixed;
+  // position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
   height: 83px;
   box-sizing: border-box;
   padding: 0 90px 0 121px;
-  background-color: #ffffff;
+  // background-color: #ffffff;
+  background: hsla(0, 0%, 100%, 0.5);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
   display: flex;
   flex-direction: row;
   justify-content: space-between;

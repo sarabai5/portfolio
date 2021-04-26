@@ -101,6 +101,7 @@
 </template>
 
 <script>
+import Bus from "@/bus";
 import Turnpage from "@/components/turnpage.vue";
 export default {
   name: "MovingBoxes",
@@ -117,6 +118,14 @@ export default {
       },
       handler: null
     };
+  },
+  beforeCreate() {
+    Bus.$emit("navstyle", "background-color: rgba(251, 251, 251, 0.7);");
+    Bus.$emit("bodystyle", "background-color: #fbfbfb;");
+  },
+  beforeDestroy() {
+    Bus.$emit("navstyle", "");
+    Bus.$emit("bodystyle", "");
   }
 };
 </script>
@@ -270,12 +279,12 @@ export default {
   }
 
   &6-2 {
-    width: 294px;
-    height: 604px;
+    width: 200px;
+    height: auto;
   }
 
   &6 {
-    width: 387px;
+    width: 520px;
     height: auto;
   }
 

@@ -1,6 +1,6 @@
 <template>
-  <div id="app">
-    <Nav />
+  <div id="app" :style="bodystyle">
+    <Nav :outstyle="navstyle" />
     <!-- <keep-alive> -->
     <router-view />
     <!-- </keep-alive> -->
@@ -12,11 +12,28 @@
 import Nav from "@/components/nav.vue";
 import Footer from "@/components/footer.vue";
 
+import Bus from "./bus";
+
 export default {
   name: "App",
+  data() {
+    return {
+      bodystyle: "",
+      navstyle: ""
+    };
+  },
   components: {
     Nav,
     Footer
+  },
+  created() {
+    Bus.$on("bodystyle", s => {
+      this.bodystyle = s;
+    });
+
+    Bus.$on("navstyle", s => {
+      this.navstyle = s;
+    });
   },
   mounted() {
     var window_bottom = window.pageYOffset + window.screen.height;

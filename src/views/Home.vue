@@ -2,8 +2,27 @@
   <div class="home">
     <div class="head">
       <!-- <div class="desc">and her fun facts</div> -->
-      <div class="name">Sara Bai</div>
-      <div class="slogan">{{ slogan }}</div>
+      <div class="name">{{ name }}</div>
+      <div class="slogan">
+        I’m a passionate UX/product designer with
+        <span class="purpli">work experience</span>
+        , currently studying
+        <a class="link" href="https://www.cmu.edu/iii/degrees/miips/index.html"
+          ><span class="purpli">Product Design Innovation</span>
+        </a>
+        at
+        <a class="link" href="https://www.cmu.edu/iii/degrees/miips/index.html">
+          <span class="purpli">Carnegie Mellon University</span></a
+        >. Recently I’ve been designing dashboard
+        <span class="purpli">interface UI</span>
+        and
+        <span class="purpli">user flows</span>
+        for drug users at a start-up. Feel free to explore my projects 👇 and
+        reach out.
+      </div>
+      <div class="desc">
+        #emphathetic #value-driven #change-maker #no-stereotype
+      </div>
       <div class="buttons">
         <button class="buttons-btn buttons--l" @click="clickMore()">
           More About Me.
@@ -24,16 +43,16 @@ export default {
   name: "Home",
   data: () => {
     return {
-      slogan: "",
-      slogans: [
-        "Is value-driven.",
-        "Embraces change.",
-        "But missed old times.",
-        "Moves around a lot.",
-        "Is adaptive and brave.",
-        "Loves tennis.",
-        "And plays piano."
-      ],
+      name: "",
+      // slogans: [
+      //   "Is value-driven.",
+      //   "Embraces change.",
+      //   "But missed old times.",
+      //   "Moves around a lot.",
+      //   "Is adaptive and brave.",
+      //   "Loves tennis.",
+      //   "And plays piano."
+      // ],
       sloganHandler: null,
       typeHandler: null
     };
@@ -42,30 +61,31 @@ export default {
     Projects
   },
   mounted() {
-    this.setSloganInterval();
+    // this.setSloganInterval();
+    this.typewriter("Hi, I’m Sara Bai :)");
   },
   methods: {
-    setSloganInterval() {
-      this.clearSloganHandler();
+    // setSloganInterval() {
+    //   this.clearSloganHandler();
 
-      this.typewriter(this.slogans[0]);
+    //   this.typewriter(this.slogans[0]);
 
-      let i = 1;
-      this.sloganHandler = setInterval(() => {
-        if (i >= this.slogans.length) {
-          i = 0;
-        }
+    //   let i = 1;
+    //   this.sloganHandler = setInterval(() => {
+    //     if (i >= this.slogans.length) {
+    //       i = 0;
+    //     }
 
-        this.typewriter(this.slogans[i]);
-        i++;
-      }, 3000);
-    },
-    clearSloganHandler() {
-      if (this.sloganHandler) {
-        clearInterval(this.sloganHandler);
-        this.sloganHandler = null;
-      }
-    },
+    //     this.typewriter(this.slogans[i]);
+    //     i++;
+    //   }, 3000);
+    // },
+    // clearSloganHandler() {
+    //   if (this.sloganHandler) {
+    //     clearInterval(this.sloganHandler);
+    //     this.sloganHandler = null;
+    //   }
+    // },
     typewriter(text) {
       this.clearTypeHandler();
 
@@ -76,9 +96,11 @@ export default {
           return;
         }
 
-        this.slogan = text.substring(0, i);
+        // this.slogan = text.substring(0, i);
+        this.name = text.substring(0, i);
+
         i++;
-      }, 80);
+      }, 100);
     },
     clearTypeHandler() {
       if (this.typeHandler) {
@@ -108,51 +130,71 @@ export default {
 }
 
 .head {
-  margin: 0 0 8px 0;
+  // margin: 0 0 8px 0;
   position: relative;
   width: 100%;
   box-sizing: border-box;
-  padding: 224px 0 0 117px;
+  padding: 0 0 40px 117px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
 
-  .desc {
-    position: absolute;
-    top: 70px;
-    left: 60px;
-    height: 35px;
-    transform: rotate(-90deg);
-    color: #101010;
-    font-size: 21px;
-    font-family: "Dosis", sans-serif;
-    font-weight: 400;
-  }
+  // .desc {
+  //   position: absolute;
+  //   top: 70px;
+  //   left: 60px;
+  //   height: 35px;
+  //   transform: rotate(-90deg);
+  //   color: #101010;
+  //   font-size: 21px;
+  //   font-family: "Dosis", sans-serif;
+  //   font-weight: 400;
+  // }
 
   .name {
-    height: 110px;
-    overflow: visible;
+    margin: 60px 0 0 0;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 70px;
+    line-height: 82px;
     color: #826feb;
-    font-size: 120px;
-    font-family: "Dosis", sans-serif;
-    letter-spacing: 5px;
-    font-weight: 600;
   }
 
   .slogan {
-    margin: 27px 0 0 0;
-    height: 110px;
-    overflow: visible;
+    margin: 37px 0 0 0;
+    width: 1213px;
+    height: 248px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 62px;
     color: #101010;
-    font-size: 120px;
-    font-family: "Dosis", sans-serif;
-    letter-spacing: 5px;
-    font-weight: 600;
+    text-align: left;
+  }
+
+  .purpli {
+    color: #826feb;
+  }
+
+  .link {
+    text-decoration: none;
+  }
+
+  .desc {
+    margin: 54px 0 0 0;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 62px;
+    color: #58595b;
   }
 
   .buttons {
-    margin: 75px 0 0 0;
+    margin: 30px 0 0 0;
     height: 58px;
     display: flex;
     flex-direction: row;
