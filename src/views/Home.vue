@@ -5,8 +5,7 @@
       <div class="name">{{ name }}</div>
       <div class="slogan">
         I’m a passionate UX/product designer with
-        <span class="purpli">work experience</span>
-        , currently studying
+        <span class="purpli">work experience</span>, currently studying
         <a class="link" href="https://www.cmu.edu/iii/degrees/miips/index.html"
           ><span class="purpli">Product Design Innovation</span>
         </a>
@@ -39,6 +38,8 @@
 <script>
 import Projects from "@/components/projects.vue";
 
+// const WORDS = ["work experience"];
+
 export default {
   name: "Home",
   data: () => {
@@ -53,6 +54,8 @@ export default {
       //   "Loves tennis.",
       //   "And plays piano."
       // ],
+      // words: [],
+      wordsHandler: null,
       sloganHandler: null,
       typeHandler: null
     };
@@ -60,11 +63,56 @@ export default {
   components: {
     Projects
   },
+  created() {
+    // for (let i in WORDS) {
+    //   this.words[i] = WORDS[i].replace(/\S/g, "  ");
+    // }
+  },
   mounted() {
     // this.setSloganInterval();
     this.typewriter("Hi, I’m Sara Bai :)");
+
+    // let index = 0;
+    // let i = 0;
+    // this.wordsHandler = setInterval(() => {
+    //   if (i > this.words[index].length) {
+    //     this.clearWordsHandler();
+    //     return;
+    //   }
+
+    //   // this.slogan = text.substring(0, i);
+    //   let ch = WORDS[index].substring(i, i + 1);
+
+    //   this.words[index] =
+    //     this.words[index].substring(0, i) +
+    //     ch +
+    //     this.words[index].substring(ch == " " ? i + 1 : i + 2);
+    //   i++;
+    // }, 100);
+
+    let words = document.getElementsByClassName("purpli");
+
+    let index = 0;
+    this.wordsHandler = setInterval(() => {
+      if (index >= words.length) {
+        this.clearWordsHandler();
+        return;
+      }
+
+      // this.slogan = text.substring(0, i);
+      document
+        .getElementsByClassName("purpli")
+        [index].setAttribute("class", "purpli purpli-show");
+      index++;
+    }, 500);
   },
   methods: {
+    clearWordsHandler() {
+      if (this.wordsHandler) {
+        clearInterval(this.wordsHandler);
+        this.wordsHandler = null;
+      }
+    },
     // setSloganInterval() {
     //   this.clearSloganHandler();
 
@@ -176,7 +224,23 @@ export default {
   }
 
   .purpli {
+    white-space: pre;
     color: #826feb;
+    opacity: 0;
+  }
+
+  .purpli-show {
+    animation: 500ms ease-in-out 0s normal forwards 1 running purpliAnimation;
+  }
+
+  @keyframes purpliAnimation {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
   }
 
   .link {
