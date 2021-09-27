@@ -1,48 +1,15 @@
 <template>
   <div class="projects">
-    <div
-      class="project"
-      v-for="(item, i) in projects"
-      :key="i"
-      :style="{ opacity: item.opacity || 1 }"
-    >
-      <div class="head">
+    <div class="project" v-for="(item, i) in projects" :key="i">
+      <img class="cover" :src="item.img" />
+      <div class="info">
+        <div class="subtitle">{{ item.subtitle }}</div>
         <div class="title">{{ item.title }}</div>
-        <div v-if="item.status" class="status">{{ item.status }}</div>
-      </div>
+        <div class="tags">{{ item.tags }}</div>
 
-      <div
-        class="project-content"
-        :style="{ background: item.background }"
-        @mouseover="onHover(i)"
-        @mouseout="onOut(i)"
-      >
-        <div
-          v-show="hoverIndex == i"
-          class="project-prefix"
-          :style="{ background: item.color || item.background }"
-        ></div>
-        <div class="project-content-l">
-          <div class="project-label">{{ item.label }}</div>
-          <div class="project-name">{{ item.name }}</div>
-          <div class="project-desc">{{ item.desc }}</div>
-          <button
-            v-if="item.button"
-            class="project-button"
-            @click="clickItem(item)"
-          >
-            {{ item.button }}
-          </button>
-        </div>
-
-        <div class="project-content-r">
-          <img
-            v-if="item.img"
-            class="project-img"
-            :class="{ 'project-img--hover': item.gif && hoverIndex == i }"
-            :src="item.img"
-          />
-        </div>
+        <button class="visit" @click="clickItem(item)">
+          {{ item.button }}
+        </button>
       </div>
     </div>
   </div>
@@ -53,89 +20,110 @@ export default {
   name: "projects",
   data: () => {
     return {
-      hoverIndex: -1,
       projects: [
         {
-          title: "FURGO PET",
-          label: "Know What Your Pet’s Up To",
-          name: "PET  TRACKER | MONITOR | APP",
-          desc: "App Design | IoT Design | User Research",
-          button: "Discover",
-          img: "/assets/works/covers/cover1.png",
-          background: "#FEDCCC",
-          path: "/works/FurGo",
-          isHover: false
+          img: "/assets/works/covers/cover_1.png",
+          subtitle: "Design for electric engineers @ S&C",
+          title: "Desktop Software Product Design",
+          tags:
+            "Desktop Application Design | User Testings | Design System | UI/UX",
+          button: "Coming Soon"
         },
         {
-          title: "CINNAMON ROLL BAKERY",
-          label: "Customize Rolls with Fun",
-          name: "BAKERY SHOP WEBSITE",
-          desc: "Web Design | User Testing | Usability Test | Front-End Coding",
+          img: "/assets/works/covers/cover_2.png",
+          subtitle: "AAPI Alliance #hackforchange \n🏆 2nd place",
+          title: "Political Engagement Website for Minorities",
+          tags:
+            "Tead Lead & Initiator | Web Design | UI/UX | 2-week Completion",
           button: "Go Play",
-          img: "/assets/works/covers/cover2.gif",
-          link:
-            "https://sarabai5.github.io/cinna.github.io/homework_6/menu.html",
-          background: "#8393EC",
-          isHover: false
+          path: "/works/FurGo"
         },
         {
-          title: "MAKE SERIES 2 DESIGN COMPETITION  🏆 2ND PLACE FINALIST",
-          label: "Make the Studio A Better Place!",
-          name: "INSTALLATION DESIGN",
-          desc: "User Study | Architecture Design | 3D Modeling",
+          img: "/assets/works/covers/cover_3.png",
+          subtitle: "Know what your pets are up to",
+          title: "Pet Tracker | Moniter | Mobile App",
+          tags: "App Design | IoT Design | User Research",
           button: "Discover",
-          img: "/assets/works/covers/cover3.png",
-          background: "#EEE2E4",
-          path: "/works/MovingBoxes",
-          isHover: false
+          path: "/works/FurGo"
         },
         {
-          title: "ROOMSMART",
-          label: "One Stop Solution for Students",
-          name: "SIMPLE ROOM RESERVATION SYSTEM",
-          desc: "App Design | User Study",
+          img: "/assets/works/covers/cover_4.png",
+          subtitle: "Make Series II design competition \n🏆 2nd place finalist",
+          title: "Studio Installation Design",
+          tags: "User Study | Architecture Design | 3D Modeling",
           button: "Discover",
-          img: "/assets/works/covers/cover4.png",
-          path: "/works/RoomSmart",
-          background:
-            "linear-gradient(90deg, #FFD88C 0%, #FBD690 39.58%, #E7CFA2 59.37%, #D2C7B5 79.17%, #C0C0C5 90.62%, #9FB3E3 100%)",
-          color: "#FFD97F",
-          isHover: false
-        },
-        {
-          title: "CLIENT: NATIONAL FOUNDATION FOR CREDIT COUNSELING (NFCC)",
-          status: "In working progress",
-          label: "How Can We Help Minority Small Business Owner succeed",
-          name: "FINTECH PRODUCT OPPORTUNITIES",
-          desc: "In-depth User Research | Team project | Pitch Deck",
-          button: "Case Study",
-          img: "/assets/works/covers/cover5.png",
-          background: "#C7EAE8",
-          path: "/works/Capstone",
-          isHover: false
-        },
-        {
-          title: "IN SECRET",
-          label: "DancinCloud Website Solution Tool",
-          name: "COMING SOON...",
-          desc: "In Secret| In Mystery",
-          background: "#5AB5C9",
-          opacity: 0.5,
-          isHover: false
+          path: "/works/MovingBoxes"
         }
+        // {
+        //   title: "CINNAMON ROLL BAKERY",
+        //   label: "Customize Rolls with Fun",
+        //   name: "BAKERY SHOP WEBSITE",
+        //   desc: "Web Design | User Testing | Usability Test | Front-End Coding",
+        //   button: "Go Play",
+        //   img: "/assets/works/covers/cover2.gif",
+        //   link:
+        //     "https://sarabai5.github.io/cinna.github.io/homework_6/menu.html",
+        //   background: "#8393EC",
+        //   isHover: false
+        // },
+        // {
+        //   title: "MAKE SERIES 2 DESIGN COMPETITION  🏆 2ND PLACE FINALIST",
+        //   label: "Make the Studio A Better Place!",
+        //   name: "INSTALLATION DESIGN",
+        //   desc: "User Study | Architecture Design | 3D Modeling",
+        //   button: "Discover",
+        //   img: "/assets/works/covers/cover3.png",
+        //   background: "#EEE2E4",
+        //   path: "/works/MovingBoxes",
+        //   isHover: false
+        // },
+        // {
+        //   title: "ROOMSMART",
+        //   label: "One Stop Solution for Students",
+        //   name: "SIMPLE ROOM RESERVATION SYSTEM",
+        //   desc: "App Design | User Study",
+        //   button: "Discover",
+        //   img: "/assets/works/covers/cover4.png",
+        //   path: "/works/RoomSmart",
+        //   background:
+        //     "linear-gradient(90deg, #FFD88C 0%, #FBD690 39.58%, #E7CFA2 59.37%, #D2C7B5 79.17%, #C0C0C5 90.62%, #9FB3E3 100%)",
+        //   color: "#FFD97F",
+        //   isHover: false
+        // },
+        // {
+        //   title: "CLIENT: NATIONAL FOUNDATION FOR CREDIT COUNSELING (NFCC)",
+        //   status: "In working progress",
+        //   label: "How Can We Help Minority Small Business Owner succeed",
+        //   name: "FINTECH PRODUCT OPPORTUNITIES",
+        //   desc: "In-depth User Research | Team project | Pitch Deck",
+        //   button: "Case Study",
+        //   img: "/assets/works/covers/cover5.png",
+        //   background: "#C7EAE8",
+        //   path: "/works/Capstone",
+        //   isHover: false
+        // },
+        // {
+        //   title: "IN SECRET",
+        //   label: "DancinCloud Website Solution Tool",
+        //   name: "COMING SOON...",
+        //   desc: "In Secret| In Mystery",
+        //   background: "#5AB5C9",
+        //   opacity: 0.5,
+        //   isHover: false
+        // }
       ]
     };
   },
   methods: {
     clickItem(item) {
-      if (item.path) this.$router.push(item.path);
-      else window.open(item.link);
-    },
-    onHover(index) {
-      this.hoverIndex = index;
-    },
-    onOut() {
-      this.hoverIndex = -1;
+      if (item.path) {
+        this.$router.push(item.path);
+        return;
+      }
+
+      if (item.url) {
+        window.open(item.link);
+      }
     }
   }
 };
@@ -147,155 +135,86 @@ export default {
   position: relative;
   width: 100%;
   box-sizing: border-box;
-  padding: 0 0 0 117px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-end;
-}
-
-.project {
-  position: relative;
-  margin: 45px 0 0 0;
+  padding: 0 0 0 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+}
 
-  &-prefix {
-    z-index: -1;
-    position: absolute;
-    width: 117px;
-    height: 100%;
-    top: 0;
-    left: -117px;
-    animation: moveIn 0.5s ease-in-out 0s 1 normal forwards running;
+.project {
+  position: relative;
+  margin: 0 0 160px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+
+  .cover {
+    width: 815px;
+    height: 500px;
+    border-radius: 40px;
   }
 
-  @keyframes moveIn {
-    0% {
-      left: 0;
-    }
-    100% {
-      left: -117px;
-    }
-  }
-
-  @keyframes moveOut {
-    100% {
-      left: 0;
-    }
-  }
-
-  .head {
+  .info {
+    margin: 0 0 0 40px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
+
+    .subtitle {
+      width: 410px;
+      text-align: left;
+      font-family: Rubik;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 180%;
+      color: #918eb5;
+    }
 
     .title {
-      font-family: Roboto;
+      margin: 39px 0 0 0;
+      width: 410px;
+      text-align: left;
+      // font-family: Futura;
       font-style: normal;
-      font-weight: bold;
-      font-size: 26px;
-      line-height: 30px;
-      letter-spacing: -0.02em;
-      color: #101010;
+      font-weight: 900;
+      font-size: 36px;
+      line-height: 48px;
+      color: #67648b;
     }
 
-    .status {
-      margin: 0 0 0 24px;
+    .tags {
+      margin: 16px 0 0 0;
+      width: 350px;
+      text-align: left;
+      font-family: Rubik;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: 0.02em;
+      color: #67648b;
+    }
+
+    .visit {
+      margin: 50px 0 0 0;
+      width: 186px;
+      height: 64px;
+      line-height: 64px;
+      background-color: #fbfbfb;
+      border: 1px solid #826feb;
       box-sizing: border-box;
-      padding: 0 26px;
-      width: auto;
-      height: 32px;
-      line-height: 32px;
-      background-color: rgba(131, 147, 236, 0.52);
-      border-radius: 16px;
-      font-family: Nunito;
+      box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
+      border-radius: 100px;
+      font-family: Roboto Mono;
       font-style: normal;
-      font-weight: bold;
-      font-size: 18px;
-      color: #404040;
-    }
-  }
-
-  &-content {
-    position: relative;
-    margin: 12px 0 0 0;
-    width: 1323px;
-    height: 550px;
-    box-sizing: border-box;
-    padding: 0 0 0 67px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-
-    &-l {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-start;
-    }
-  }
-
-  &-label {
-    max-width: 589px;
-    text-align: left;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 48px;
-    color: #ffffff;
-  }
-
-  &-name {
-    margin: 10px 0 0 0;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 48px;
-    letter-spacing: -0.02em;
-    color: #101010;
-  }
-
-  &-desc {
-    margin: 20px 0 0 0;
-    font-family: Noto Sans;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 22px;
-    color: #58585b;
-  }
-
-  &-button {
-    margin: 48px 0 0 0;
-    width: 160px;
-    height: 62px;
-    background-color: #ffffff;
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
-    border-radius: 100px;
-    font-family: Andale Mono;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 18px;
-    color: #826feb;
-  }
-
-  &-img {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: auto;
-    height: 100%;
-
-    &--hover {
-      opacity: 0;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 21px;
+      color: #826feb;
     }
   }
 }

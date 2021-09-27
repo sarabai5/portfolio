@@ -1,6 +1,29 @@
 <template>
   <div class="footer fade-content">
-    <div class="desc">
+    <div class="footer-l">
+      <div class="title">Thank you for scrolling!</div>
+      <div class="desc">
+        If you’d like to work together or just talk about our shared passion in
+        design!<br />Connect with me: 👇
+      </div>
+
+      <div class="media">
+        <img
+          class="media-item"
+          v-for="(item, i) in medias"
+          :key="i"
+          :src="item.icon"
+          @click="openWeb(item.url)"
+        />
+      </div>
+    </div>
+    <div class="footer-r">
+      <img class="footer-icon" src="/assets/icons/footer_note.png" />
+      <div class="footer-note">
+        © Designed by Sara | Developed by Sara <br />https://github.com/sarabai5
+      </div>
+    </div>
+    <!-- <div class="desc">
       If you’d like to work together or just talk about anything fun! 🥳
       <br />Connect with me:
     </div>
@@ -22,7 +45,7 @@
     <div @click="clickGitHub()" class="right">
       © Designed by Sara | Developed by Sara<br />
       <p class="right-link">https://github.com/sarabai5</p>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -66,60 +89,52 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .footer {
-  // margin: 221px 0 0 0;
   position: relative;
   width: 100%;
   box-sizing: border-box;
-  // padding: 325px 0 150px;
-  padding: 150px 0 80px;
+  padding: 90px 145px 52px 144px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
+  background-color: #edebf7;
+  border-radius: 16px;
 
-  .desc {
-    font-family: Nunito;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 30px;
-    line-height: 45px;
-    text-align: center;
-    color: #9281ec;
+  &-l {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 
-  .finger {
-    margin: 24px 0 29px 0;
-    color: #101010;
-    font-size: 36px;
-    font-family: "AppleColorEmoji", serif;
-    line-height: 36px;
-    text-align: center;
+  .title {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 32px;
+    color: #897ec1;
+    text-align: left;
+  }
+
+  .desc {
+    max-width: 539px;
+    margin: 50px 0 0 0;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 26px;
+    color: #897ec1;
+    text-align: left;
+    line-height: 150%;
   }
 
   .media {
+    margin: 61px 0 0 0;
+    width: 200px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-
-    &-title {
-      margin: 0 0 0 -234px;
-      width: 234px;
-      color: #101010;
-      font-size: 24px;
-      font-family: "Nunito", sans-serif;
-      font-weight: 700;
-      line-height: 36px;
-      text-align: left;
-    }
-
-    &-list {
-      width: 190px;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    }
 
     &-item {
       cursor: pointer;
@@ -128,20 +143,28 @@ export default {
     }
   }
 
-  .right {
-    margin: 90px 0 0 0;
-    position: relative;
-    color: #101010;
-    font-size: 18px;
-    font-family: "AndaleMono", monospace;
+  &-r {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+
+  &-icon {
+    margin: 0 34px 0 0;
+    width: 191px;
+    height: auto;
+  }
+
+  &-note {
+    margin: 57px 0 0 0;
+    font-family: Andale Mono;
     font-style: normal;
     font-weight: normal;
-    text-align: center;
-    cursor: pointer;
-
-    &-link {
-      text-decoration: underline;
-    }
+    font-size: 18px;
+    text-align: right;
+    color: #897ec1;
+    text-align: right;
   }
 }
 </style>

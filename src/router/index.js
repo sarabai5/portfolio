@@ -8,6 +8,7 @@ import MovingBoxes from "../views/works/MovingBoxes.vue";
 import RoomSmart from "../views/works/RoomSmart.vue";
 import FurGo from "../views/works/FurGo.vue";
 import Capstone from "../views/works/Capstone.vue";
+import SmartConnect from "../views/works/SmartConnect";
 
 Vue.use(VueRouter);
 
@@ -51,6 +52,11 @@ const routes = [
     path: "/works/Capstone",
     name: "Capstone",
     component: Capstone
+  },
+  {
+    path: "/works/SmartConnect",
+    name: "SmartConnect",
+    component: SmartConnect
   }
   // {
   //   path: "/resume",

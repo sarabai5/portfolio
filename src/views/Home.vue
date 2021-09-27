@@ -1,67 +1,53 @@
 <template>
   <div class="home">
     <div class="head">
-      <!-- <div class="desc">and her fun facts</div> -->
-      <div class="name">{{ name }}</div>
-      <div class="slogan">
-        I’m a passionate UX/product designer with
-        <span class="purpli">work experience</span>, currently studying
-        <a class="link" href="https://www.cmu.edu/iii/degrees/miips/index.html"
-          ><span class="purpli">Product Design Innovation</span>
-        </a>
-        at
-        <a class="link" href="https://www.cmu.edu/iii/degrees/miips/index.html">
-          <span class="purpli">Carnegie Mellon University</span></a
-        >. Recently I’ve been designing dashboard
-        <span class="purpli">interface UI</span>
-        and
-        <span class="purpli">user flows</span>
-        for drug users at a start-up. Feel free to explore my projects 👇 and
-        reach out.
+      <div class="head-l">
+        <div class="welcome">Hi, I’m Sara Bai :)</div>
+
+        <div class="intro">
+          I am a passionate product designer studying Product Design Innovation
+          at Carnegie Mellon University. <br /><br />I previously interned at
+          S&C and BioMotivate, crafting meaningful
+          <span class="intro-purple">web</span> and
+          <span class="intro-purple">mobile</span> experiences for complex
+          systems and issues.
+        </div>
+
+        <div class="buttons">
+          <button class="buttons-btn buttons--l" @click="clickMore()">
+            More About Me.
+          </button>
+          <button class="buttons-btn buttons--r" @click="clickEmail()">
+            Email Me
+          </button>
+        </div>
       </div>
-      <div class="desc">
-        #emphathetic #value-driven #change-maker #no-stereotype
-      </div>
-      <div class="buttons">
-        <button class="buttons-btn buttons--l" @click="clickMore()">
-          More About Me.
-        </button>
-        <button class="buttons-btn buttons--r" @click="clickEmail()">
-          Email Me
-        </button>
-      </div>
+
+      <img class="avatar" src="/assets/info/avatar.png" />
     </div>
     <Projects />
+    <Sides />
+    <div class="block"></div>
   </div>
 </template>
 
 <script>
 import Projects from "@/components/projects.vue";
-
-// const WORDS = ["work experience"];
+import Sides from "@/components/sides.vue";
 
 export default {
   name: "Home",
   data: () => {
     return {
       name: "",
-      // slogans: [
-      //   "Is value-driven.",
-      //   "Embraces change.",
-      //   "But missed old times.",
-      //   "Moves around a lot.",
-      //   "Is adaptive and brave.",
-      //   "Loves tennis.",
-      //   "And plays piano."
-      // ],
-      // words: [],
       wordsHandler: null,
       sloganHandler: null,
       typeHandler: null
     };
   },
   components: {
-    Projects
+    Projects,
+    Sides
   },
   created() {
     // for (let i in WORDS) {
@@ -69,26 +55,7 @@ export default {
     // }
   },
   mounted() {
-    // this.setSloganInterval();
     this.typewriter("Hi, I’m Sara Bai :)");
-
-    // let index = 0;
-    // let i = 0;
-    // this.wordsHandler = setInterval(() => {
-    //   if (i > this.words[index].length) {
-    //     this.clearWordsHandler();
-    //     return;
-    //   }
-
-    //   // this.slogan = text.substring(0, i);
-    //   let ch = WORDS[index].substring(i, i + 1);
-
-    //   this.words[index] =
-    //     this.words[index].substring(0, i) +
-    //     ch +
-    //     this.words[index].substring(ch == " " ? i + 1 : i + 2);
-    //   i++;
-    // }, 100);
 
     let words = document.getElementsByClassName("purpli");
 
@@ -99,7 +66,6 @@ export default {
         return;
       }
 
-      // this.slogan = text.substring(0, i);
       document
         .getElementsByClassName("purpli")
         [index].setAttribute("class", "purpli purpli-show");
@@ -113,27 +79,6 @@ export default {
         this.wordsHandler = null;
       }
     },
-    // setSloganInterval() {
-    //   this.clearSloganHandler();
-
-    //   this.typewriter(this.slogans[0]);
-
-    //   let i = 1;
-    //   this.sloganHandler = setInterval(() => {
-    //     if (i >= this.slogans.length) {
-    //       i = 0;
-    //     }
-
-    //     this.typewriter(this.slogans[i]);
-    //     i++;
-    //   }, 3000);
-    // },
-    // clearSloganHandler() {
-    //   if (this.sloganHandler) {
-    //     clearInterval(this.sloganHandler);
-    //     this.sloganHandler = null;
-    //   }
-    // },
     typewriter(text) {
       this.clearTypeHandler();
 
@@ -171,95 +116,74 @@ export default {
 <style lang="scss" scoped>
 .home {
   width: 100%;
+  box-sizing: border-box;
+  padding: 0 0 0 144px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 }
 
+.block {
+  position: relative;
+  height: 226px;
+}
+
 .head {
-  // margin: 0 0 8px 0;
+  margin: 143px 0 120px 0;
   position: relative;
   width: 100%;
   box-sizing: border-box;
-  padding: 0 0 40px 117px;
+  padding: 0 0 40px 0;
+
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
 
-  // .desc {
-  //   position: absolute;
-  //   top: 70px;
-  //   left: 60px;
-  //   height: 35px;
-  //   transform: rotate(-90deg);
-  //   color: #101010;
-  //   font-size: 21px;
-  //   font-family: "Dosis", sans-serif;
-  //   font-weight: 400;
-  // }
+  &-l {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 
-  .name {
-    margin: 60px 0 0 0;
-    font-family: Roboto;
+  .avatar {
+    margin: 20px 144px 0 0;
+    position: relative;
+    width: 266px;
+    height: auto;
+  }
+
+  .welcome {
+    position: relative;
+    // font-family: Roboto;
     font-style: normal;
-    font-weight: 500;
-    font-size: 70px;
-    line-height: 82px;
+    font-weight: 300;
+    font-size: 60px;
+    line-height: 70px;
     color: #826feb;
   }
 
-  .slogan {
-    margin: 37px 0 0 0;
-    width: 1213px;
-    height: 248px;
-    font-family: Roboto;
+  .intro {
+    margin: 41px 0 0 0;
+    width: 827px;
+    // font-family: Rubik;
     font-style: normal;
-    font-weight: 500;
-    font-size: 36px;
-    line-height: 62px;
-    color: #101010;
+    font-weight: bold;
+    font-size: 30px;
     text-align: left;
-  }
+    line-height: 150%;
+    color: #67648b;
 
-  .purpli {
-    white-space: pre;
-    color: #826feb;
-    opacity: 0;
-  }
-
-  .purpli-show {
-    animation: 500ms ease-in-out 0s normal forwards 1 running purpliAnimation;
-  }
-
-  @keyframes purpliAnimation {
-    from {
-      opacity: 0;
+    &-purple {
+      color: #826feb;
     }
-
-    to {
-      opacity: 1;
-    }
-  }
-
-  .link {
-    text-decoration: none;
-  }
-
-  .desc {
-    margin: 54px 0 0 0;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 28px;
-    line-height: 62px;
-    color: #58595b;
   }
 
   .buttons {
-    margin: 30px 0 0 0;
-    height: 58px;
+    margin: 68px 0 0 0;
+    height: 56px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -268,12 +192,12 @@ export default {
     &-btn {
       box-sizing: border-box;
       height: 100%;
-      box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.3);
       background-color: #ffffff;
-      border-radius: 20px;
+      box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
+      border-radius: 30px;
       border: 1px solid #826feb;
       color: #826feb;
-      font-size: 18px;
+      font-size: 16px;
       font-family: "AndaleMono", monospace;
       text-align: center;
     }
@@ -283,7 +207,7 @@ export default {
     }
 
     &--r {
-      margin: 0 0 0 40px;
+      margin: 0 0 0 32px;
       width: 155px;
     }
   }
