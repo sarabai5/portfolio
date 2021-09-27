@@ -51,14 +51,15 @@ export default {
             "Web Design",
             "Usability Test"
           ],
-          path: ""
+          link:
+            "https://sarabai5.github.io/cinna.github.io/homework_6/menu.html"
         },
         {
           img: "/assets/sides/cover/cover_3.png",
           title: "Fintech Case Study",
           desc: "How can we help minority small \nbusiness owners succeed",
           tags: ["In-depth User Research", "Team project", "Pitch Deck"],
-          path: ""
+          path: "/works/Capstone"
         }
       ]
     };

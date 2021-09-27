@@ -73,13 +73,19 @@
       </div>
     </div>
 
-    <div class="block block-4">
+    <div class="block-4">
       <img class="img-5" src="/assets/works/SmartConnect/img-5.png" />
       <div class="block-title block-4-title">
         Solutions Targeting Pain Points
       </div>
 
-      <div class="swipe"></div>
+      <div class="swipe">
+        <div class="swipe-item" v-for="(item, i) in solutions" :key="i">
+          <img class="swipe-item-img" :src="item.img" />
+          <div class="swipe-item-title">{{ item.title }}</div>
+          <div class="swipe-item-desc">{{ item.desc }}</div>
+        </div>
+      </div>
     </div>
 
     <div class="block">
@@ -244,6 +250,39 @@
         </div>
         <img class="img-23" src="/assets/works/SmartConnect/img-23.png" />
       </div>
+
+      <div class="block-11-title">
+        Testing-based Iteration Highlights
+      </div>
+      <div class="block-11-head">
+        <div class="block-11-head-text block-11-head-l">#Proposed Solution</div>
+        <div class="block-11-head-text block-11-head-r">
+          #Iterative Solution
+        </div>
+      </div>
+      <!-- @mouseout="onOut()" -->
+      <div class="block-11-list">
+        <div v-for="(item, i) in highlights" :key="i">
+          <div
+            v-if="item"
+            class="block-11-item"
+            :style="{ backgroundImage: `url('${item.normal}')` }"
+            @mouseenter="onHover(i)"
+          >
+            <img
+              v-if="hoverIndex == i"
+              class="block-11-item-hover"
+              :src="item.hover"
+            />
+          </div>
+          <!-- :src="hoverIndex == i ? item.normal : item.normal" -->
+          <img
+            v-else
+            class="arrow"
+            src="/assets/works/SmartConnect/arrow.png"
+          />
+        </div>
+      </div>
     </div>
 
     <div class="block block-12">
@@ -281,6 +320,38 @@ export default {
         link: "https://sarabai5.github.io/cinna.github.io/homework_5/menu.html"
       },
       handler: null,
+      solutions: [
+        {
+          img: "/assets/works/SmartConnect/1.GIF",
+          title: "Customizable Data Table ",
+          desc:
+            "Users from 5 different user groups can now select table header items for searching and filtering in device list and prioritize items based on their daily job needs."
+        },
+        {
+          img: "/assets/works/SmartConnect/2.GIF",
+          title: "Onboarding for Guidance",
+          desc:
+            "Guide first-time users through some critical aspects of the software. Encourage and guide users to configure some important settings upon adding a new device."
+        },
+        {
+          img: "/assets/works/SmartConnect/3.GIF",
+          title: "Task Work Flow Improving Efficiency ",
+          desc:
+            "Help users focus on one task at a time by removing distractions and building a user flow for layers of settings. Eliminate unused settings from views and only show the settings upon enabling. "
+        },
+        {
+          img: "/assets/works/SmartConnect/4.GIF",
+          title: "Efficient “Validate/Apply” User Flow",
+          desc:
+            "Make validation result to a retrievable and collapsable pop-up window and improve work efficiency with validate-apply-reconfigurate user flow and linkage."
+        },
+        {
+          img: "/assets/works/SmartConnect/5.GIF",
+          title: "Quick Multi-device Comparison",
+          desc:
+            "Engineers often need to cross check settings on different devices"
+        }
+      ],
       participants: [
         {
           name: "3 Quality Assuarance",
@@ -313,6 +384,36 @@ export default {
           img: "/assets/works/SmartConnect/img-27.png",
           desc: "Combination iteration"
         }
+      ],
+      hoverIndex: -1,
+      highlights: [
+        {
+          normal: "/assets/works/SmartConnect/img-29-0.png",
+          hover: "/assets/works/SmartConnect/img-29-1.png"
+        },
+        null,
+        {
+          normal: "/assets/works/SmartConnect/img-30-0.png",
+          hover: "/assets/works/SmartConnect/img-30-1.GIF"
+        },
+        {
+          normal: "/assets/works/SmartConnect/img-31-0.png",
+          hover: "/assets/works/SmartConnect/img-31-1.png"
+        },
+        null,
+        {
+          normal: "/assets/works/SmartConnect/img-32-0.png",
+          hover: "/assets/works/SmartConnect/img-32-1.GIF"
+        },
+        {
+          normal: "/assets/works/SmartConnect/img-33-0.png",
+          hover: "/assets/works/SmartConnect/img-33-1.png"
+        },
+        null,
+        {
+          normal: "/assets/works/SmartConnect/img-34-0.png",
+          hover: "/assets/works/SmartConnect/img-34-1.GIF"
+        }
       ]
     };
   },
@@ -323,6 +424,15 @@ export default {
   beforeDestroy() {
     Bus.$emit("navstyle", "");
     Bus.$emit("bodystyle", "");
+  },
+  methods: {
+    onHover(i) {
+      console.log("onHover " + i);
+      this.hoverIndex = i;
+    },
+    onOut() {
+      this.hoverIndex = -1;
+    }
   }
 };
 </script>
@@ -554,21 +664,69 @@ export default {
 }
 
 .block-4 {
-  padding: 83px 144px 142px;
+  box-sizing: border-box;
+  padding: 83px 0 142px 0;
+  position: relative;
+  overflow: hidden;
 
   &-title {
-    margin: 50px 0 65px 0;
+    margin: 50px 0 65px 144px;
     align-self: flex-start;
   }
 }
 
 .swipe {
   position: relative;
-  width: 754px;
-  height: 440px;
+  width: 100vw;
+  box-sizing: border-box;
+  padding: 0 0 0 144px;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  &-item {
+    position: relative;
+    margin: 0 150px 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    &-img {
+      width: 754px;
+      height: 441px;
+    }
+
+    &-title {
+      margin: 50px 0 0 0;
+      font-family: Rubik;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 130%;
+      text-align: center;
+      color: #67648b;
+    }
+
+    &-desc {
+      max-width: 754px;
+      margin: 16px 0 0 0;
+      font-family: Rubik;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 150%;
+      text-align: center;
+      color: #67648b;
+    }
+  }
 }
 
 .img-5 {
+  margin: 0 0 0 144px;
   position: relative;
   width: 316px;
   height: 79px;
@@ -863,6 +1021,85 @@ export default {
       line-height: 150%;
       color: #67648b;
     }
+  }
+
+  &-title {
+    margin: 150px 0 0 0;
+    align-self: flex-start;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 150%;
+    color: #67648b;
+  }
+
+  &-head {
+    margin: 80px 0 20px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    &-text {
+      width: 457px;
+      text-align: center;
+      font-family: Open Sans;
+      font-style: italic;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 150%;
+    }
+
+    &-l {
+      color: #67648b;
+    }
+
+    &-r {
+      color: #509daf;
+    }
+  }
+
+  &-list {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+
+  &-item {
+    position: relative;
+    margin: 0 0 70px 0;
+    width: 480px;
+    height: 283px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // border: 1px solid rgba(103, 100, 139, 0.3);
+    // box-sizing: border-box;
+    // filter: drop-shadow(0px 4px 25px rgba(59, 108, 119, 0.2));
+    // border-radius: 8px;
+
+    &-hover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 480px;
+      height: 300px;
+    }
+  }
+
+  .arrow {
+    margin: 0 0 35px 0;
+    position: relative;
+    width: 81px;
+    height: 111px;
+    // background-image: url("/assets/works/SmartConnect/arrow.png");
+    // background-size: 100% auto;
+    // background-repeat: no-repeat;
   }
 }
 

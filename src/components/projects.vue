@@ -27,7 +27,8 @@ export default {
           title: "Desktop Software Product Design",
           tags:
             "Desktop Application Design | User Testings | Design System | UI/UX",
-          button: "Coming Soon"
+          button: "Discover",
+          path: "/works/SmartConnect"
         },
         {
           img: "/assets/works/covers/cover_2.png",
