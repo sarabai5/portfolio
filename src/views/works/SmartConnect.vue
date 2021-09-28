@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-    <div class="block block-0">
+    <div class="block block-0 div-gray">
       <div class="block-0-subtitle">
         Help the engineers to focus on one task at a time
       </div>
@@ -13,9 +13,9 @@
       </div>
     </div>
     <div class="block block-1">
-      <img class="gif-1" src="/assets/works/SmartConnect/gif-1.GIF" />
+      <img class="gif-1" src="/assets/works/SmartConnect/main.gif" />
     </div>
-    <div class="block block-2">
+    <div id="0" class="block block-2">
       <div class="block-2-l">
         <img class="img-0" src="/assets/works/SmartConnect/img-0.png" />
         <div class="block-title">Background</div>
@@ -31,7 +31,7 @@
       </div>
       <img class="img-1" src="/assets/works/SmartConnect/img-1.png" />
     </div>
-    <div class="block">
+    <div class="block margin-5">
       <div class="block-start">
         <div class="block-title margin-1">Challenge</div>
       </div>
@@ -73,22 +73,41 @@
       </div>
     </div>
 
-    <div class="block-4">
+    <!-- <div class="div-gray"> -->
+    <div id="1" class="block-4 div-gray">
       <img class="img-5" src="/assets/works/SmartConnect/img-5.png" />
       <div class="block-title block-4-title">
         Solutions Targeting Pain Points
       </div>
-
-      <div class="swipe">
-        <div class="swipe-item" v-for="(item, i) in solutions" :key="i">
-          <img class="swipe-item-img" :src="item.img" />
-          <div class="swipe-item-title">{{ item.title }}</div>
-          <div class="swipe-item-desc">{{ item.desc }}</div>
-        </div>
+      <div class="block-swiper">
+        <button
+          class="block-swiper-arrow block-swiper-arrow-l"
+          slot="button-prev"
+        ></button>
+        <swiper class="swiper" ref="mySwiper" :options="swiperOptions">
+          <swiper-slide
+            class="swiper-item"
+            v-for="(item, i) in solutions"
+            :key="i"
+          >
+            <img class="swiper-item-img" :src="item.img" />
+            <div class="swiper-item-title">{{ item.title }}</div>
+            <div class="swiper-item-desc">{{ item.desc }}</div>
+          </swiper-slide>
+          <div
+            class="swiper-pagination swiper-indicator"
+            slot="pagination"
+          ></div>
+        </swiper>
+        <button
+          class="block-swiper-arrow block-swiper-arrow-r"
+          slot="button-next"
+        ></button>
       </div>
     </div>
+    <!-- </div> -->
 
-    <div class="block">
+    <div class="block div-gray">
       <div class="block-title">Proposed Design System</div>
       <div class="block-row margin-2">
         <img class="img-6" src="/assets/works/SmartConnect/img-6.png" />
@@ -107,12 +126,12 @@
       </div>
     </div>
 
-    <div class="block">
+    <div class="block div-gray">
       <div class="block-title margin-3">Design Process & Timeline</div>
       <img class="img-7" src="/assets/works/SmartConnect/img-7.png" />
     </div>
 
-    <div class="block block-7">
+    <div id="2" class="block block-7">
       <img class="img-10" src="/assets/works/SmartConnect/img-10.png" />
       <div class="block-row">
         <div class="block-7-item">
@@ -161,9 +180,9 @@
       <img class="img-16" src="/assets/works/SmartConnect/img-16.png" />
     </div>
 
-    <div class="block block-9">
+    <div id="3" class="block block-9 div-gray">
       <img class="img-17" src="/assets/works/SmartConnect/img-17.png" />
-      <div class="block-nopadding">
+      <div class="block-nopadding margin-7">
         <div class="block-9-title block-9-title-1">
           Affinity Diagram
         </div>
@@ -230,7 +249,7 @@
       </div>
     </div>
 
-    <div class="block block-11">
+    <div id="4" class="block block-11">
       <img class="img-21" src="/assets/works/SmartConnect/img-21.png" />
       <img class="img-22" src="/assets/works/SmartConnect/img-22.png" />
 
@@ -269,13 +288,13 @@
             :style="{ backgroundImage: `url('${item.normal}')` }"
             @mouseenter="onHover(i)"
           >
-            <img
-              v-if="hoverIndex == i"
-              class="block-11-item-hover"
-              :src="item.hover"
-            />
+            <div v-if="hoverIndex == i" class="block-11-item-hover">
+              <img class="block-11-item-hover-img" :src="item.hover" />
+              <div class="block-11-item-hover-desc">
+                {{ item.desc }}
+              </div>
+            </div>
           </div>
-          <!-- :src="hoverIndex == i ? item.normal : item.normal" -->
           <img
             v-else
             class="arrow"
@@ -285,7 +304,7 @@
       </div>
     </div>
 
-    <div class="block block-12">
+    <div id="5" class="block block-12 div-gray">
       <img class="img-24" src="/assets/works/SmartConnect/img-24.png" />
 
       <div class="block-12-title block-12-title-1">Hi-fi Explorations</div>
@@ -299,20 +318,44 @@
       <div class="block-12-title block-12-title-2">Final Design</div>
       <img class="img-28" src="/assets/works/SmartConnect/img-28.png" />
     </div>
-    <Turnpage :next="next"></Turnpage>
+    <Turnpage class="div-gray margin-6" :next="next"></Turnpage>
+
+    <div class="quick">
+      <div v-if="canQuick" class="quick-unfold">
+        <div class="quick-arrow" @click="clickQuice(false)"></div>
+        <button
+          class="quick-item"
+          v-for="(item, i) in quicklinks"
+          :key="i"
+          @click="clickQuick(item)"
+        >
+          {{ item.title }}
+        </button>
+      </div>
+      <div v-else class="quick-fold" @click="clickQuice(true)"></div>
+    </div>
   </div>
 </template>
 
 <script>
 import Bus from "@/bus";
 import Turnpage from "@/components/turnpage.vue";
+import { Swiper, SwiperSlide, directive } from "vue-awesome-swiper";
+import "swiper/css/swiper.css";
+
 export default {
   name: "SmartConnect",
   components: {
-    Turnpage
+    Turnpage,
+    Swiper,
+    SwiperSlide
+  },
+  directives: {
+    swiper: directive
   },
   data: () => {
     return {
+      canQuick: false,
       previous: null,
       next: {
         title: "BAKERY SHOP WEBSITE",
@@ -320,33 +363,68 @@ export default {
         link: "https://sarabai5.github.io/cinna.github.io/homework_5/menu.html"
       },
       handler: null,
+      swiperOptions: {
+        pagination: {
+          el: ".swiper-pagination"
+        },
+        navigation: {
+          prevEl: ".block-swiper-arrow-l",
+          nextEl: ".block-swiper-arrow-r"
+        }
+      },
+      quicklinks: [
+        {
+          title: "Overview",
+          id: "0"
+        },
+        {
+          title: "Highlights",
+          id: "1"
+        },
+        {
+          title: "Research",
+          id: "2"
+        },
+        {
+          title: "Synthesis",
+          id: "3"
+        },
+        {
+          title: "User Testings",
+          id: "4"
+        },
+        {
+          title: "Hi-Fi",
+          id: "5"
+        }
+      ],
       solutions: [
         {
-          img: "/assets/works/SmartConnect/1.GIF",
+          img: "/assets/works/SmartConnect/1.gif",
           title: "Customizable Data Table ",
           desc:
             "Users from 5 different user groups can now select table header items for searching and filtering in device list and prioritize items based on their daily job needs."
         },
         {
-          img: "/assets/works/SmartConnect/2.GIF",
+          img: "/assets/works/SmartConnect/2.gif",
           title: "Onboarding for Guidance",
           desc:
             "Guide first-time users through some critical aspects of the software. Encourage and guide users to configure some important settings upon adding a new device."
         },
         {
-          img: "/assets/works/SmartConnect/3.GIF",
+          img: "/assets/works/SmartConnect/3.gif",
           title: "Task Work Flow Improving Efficiency ",
           desc:
             "Help users focus on one task at a time by removing distractions and building a user flow for layers of settings. Eliminate unused settings from views and only show the settings upon enabling. "
         },
         {
-          img: "/assets/works/SmartConnect/4.GIF",
+          img: "/assets/works/SmartConnect/4.gif",
           title: "Efficient “Validate/Apply” User Flow",
           desc:
             "Make validation result to a retrievable and collapsable pop-up window and improve work efficiency with validate-apply-reconfigurate user flow and linkage."
         },
         {
-          img: "/assets/works/SmartConnect/5.GIF",
+          img: "/assets/works/SmartConnect/5.gif",
           title: "Quick Multi-device Comparison",
           desc:
             "Engineers often need to cross check settings on different devices"
@@ -389,33 +467,54 @@ export default {
       highlights: [
         {
           normal: "/assets/works/SmartConnect/img-29-0.png",
-          hover: "/assets/works/SmartConnect/img-29-1.png"
+          hover: "/assets/works/SmartConnect/img-29-1.png",
+          desc:
+            "While preserving cybersecurity, we incorporated device management so that users only log in once to manage all on homepage, which enables comparision function."
         },
         null,
         {
           normal: "/assets/works/SmartConnect/img-30-0.png",
-          hover: "/assets/works/SmartConnect/img-30-1.GIF"
+          hover: "/assets/works/SmartConnect/img-30-1.GIF",
+          desc:
+            "Added data table filtering and customization funtion for different user groups, and additional compare function for cross devices monitoring."
         },
         {
           normal: "/assets/works/SmartConnect/img-31-0.png",
-          hover: "/assets/works/SmartConnect/img-31-1.png"
+          hover: "/assets/works/SmartConnect/img-31-1.png",
+          desc:
+            "Create a user flow to notify users of the validation result. Unsuccessful result window guides users directly to error input locations."
         },
         null,
         {
           normal: "/assets/works/SmartConnect/img-32-0.png",
-          hover: "/assets/works/SmartConnect/img-32-1.GIF"
+          hover: "/assets/works/SmartConnect/img-32-1.GIF",
+          desc:
+            "Improve the UI and user flow in making pop-up window retrievable and collapsable for easier configuration."
         },
         {
           normal: "/assets/works/SmartConnect/img-33-0.png",
-          hover: "/assets/works/SmartConnect/img-33-1.png"
+          hover: "/assets/works/SmartConnect/img-33-1.png",
+          desc:
+            "Collapse to hide unused settings in default and reorganize settings into better groupings."
         },
         null,
         {
           normal: "/assets/works/SmartConnect/img-34-0.png",
-          hover: "/assets/works/SmartConnect/img-34-1.GIF"
+          hover: "/assets/works/SmartConnect/img-34-1.GIF",
+          desc:
+            "Create a work flow for the unused settings by reorganizing them into a more modular based and task based configuration experience."
         }
       ]
     };
+  },
+  computed: {
+    swiper() {
+      return this.$refs.mySwiper.$swiper;
+    }
+  },
+  mounted() {
+    console.log("Current Swiper instance object", this.swiper);
+    // this.swiper.slideTo(3, 1000, false);
   },
   beforeCreate() {
     Bus.$emit("navstyle", "background-color: rgba(251, 251, 251, 0.7);");
@@ -426,6 +525,12 @@ export default {
     Bus.$emit("bodystyle", "");
   },
   methods: {
+    clickQuick(item) {
+      document.getElementById(item.id).scrollIntoView();
+    },
+    clickQuice(res) {
+      this.canQuick = res;
+    },
     onHover(i) {
       console.log("onHover " + i);
       this.hoverIndex = i;
@@ -438,13 +543,82 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+button:hover {
+  animation: none;
+  color: #826feb;
+}
+
 .page {
   position: relative;
   width: 100%;
   box-sizing: border-box;
-  padding: 0 0 100px 0;
-  background-color: #fbfbfb;
+  // padding: 0 0 100px 0;
+  background-color: #ffffff;
   text-align: left;
+  // scroll-behavior: smooth;
+}
+
+.div-gray {
+  background-color: #fbfbfb;
+  // background-color: red;
+}
+
+.quick {
+  position: fixed;
+  top: 300px;
+  left: 0;
+  z-index: 999;
+
+  &-fold {
+    position: relative;
+    width: 48px;
+    height: 44px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-image: url("/assets/works/SmartConnect/quick-icon.png");
+    cursor: pointer;
+  }
+
+  &-unfold {
+    position: relative;
+    box-sizing: border-box;
+    padding: 16px 18px;
+    background: rgba(255, 255, 255, 0.5);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0px 0px 8px rgba(103, 100, 139, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  &-arrow {
+    position: relative;
+    width: 9px;
+    height: 12.25px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-image: url("/assets/works/SmartConnect/quick-arrow.png");
+    cursor: pointer;
+  }
+
+  &-item {
+    margin: 16px 0 0 0;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #67648b;
+    cursor: pointer;
+
+    :hover {
+      color: #826feb;
+    }
+  }
 }
 
 .block {
@@ -503,10 +677,23 @@ export default {
   &-4 {
     margin: 150px 0 0 0;
   }
+
+  &-5 {
+    margin: 0 0 150px 0;
+  }
+
+  &-6 {
+    margin: 0 0 0 0;
+    padding-bottom: 100px;
+  }
+
+  &-7 {
+    margin: 0 0 0 99px;
+  }
 }
 
 .block-0 {
-  margin: 125px 0 0 0;
+  padding: 125px 144px 20px 144px;
 
   &-subtitle {
     font-family: Noto Sans;
@@ -547,19 +734,28 @@ export default {
 }
 
 .block-1 {
-  margin: 20px 0 0 0;
+  position: relative;
   height: 800px;
   background: linear-gradient(
-    270deg,
-    rgba(221, 236, 237, 0) 0%,
-    #ddeced 98.51%
+    252.85deg,
+    #e9e8f5 0%,
+    #edf3f8 19.79%,
+    #daeef2 49.37%,
+    #e3ebf1 67.71%,
+    #ddeced 100%
   );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .gif-1 {
   position: relative;
-  width: 1086px;
-  height: 638px;
+  width: 869px;
+  height: auto;
+  filter: drop-shadow(0px 4px 25px rgba(59, 108, 119, 0.2));
+  border-radius: 16px;
 }
 
 .img-0 {
@@ -648,7 +844,7 @@ export default {
 
     &-desc {
       margin: 12px 0 0 0;
-      width: 270px;
+      width: 311px;
       font-family: Rubik;
       font-style: normal;
       font-weight: normal;
@@ -664,9 +860,10 @@ export default {
 }
 
 .block-4 {
+  position: relative;
+  width: 100%;
   box-sizing: border-box;
   padding: 83px 0 142px 0;
-  position: relative;
   overflow: hidden;
 
   &-title {
@@ -675,21 +872,55 @@ export default {
   }
 }
 
-.swipe {
+.block-swiper {
   position: relative;
-  width: 100vw;
+  width: 100%;
   box-sizing: border-box;
-  padding: 0 0 0 144px;
-  overflow-y: hidden;
-  overflow-x: scroll;
+  padding: 0 50px;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
+
+  &-arrow {
+    position: absolute;
+    z-index: 12;
+    top: 200px;
+    width: 71px;
+    height: 71px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &-l {
+      left: 50px;
+      background-image: url("/assets/works/SmartConnect/swiper-l.png");
+    }
+
+    &-r {
+      right: 50px;
+      background-image: url("/assets/works/SmartConnect/swiper-r.png");
+    }
+  }
+}
+
+.swiper {
+  position: relative;
+  // width: 100vw;
+  // box-sizing: border-box;
+  // padding: 0 0 0 144px;
+  // overflow-y: hidden;
+  // overflow-x: scroll;
+  display: flex;
+  flex-direction: column;
+  // justify-content: flex-start;
+  align-items: center;
+  // overflow: hidden;
+  // width: 100%;
 
   &-item {
     position: relative;
-    margin: 0 150px 0 0;
+    // margin: 0 150px 0 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -698,6 +929,8 @@ export default {
     &-img {
       width: 754px;
       height: 441px;
+      filter: drop-shadow(0px 4px 25px rgba(59, 108, 119, 0.2));
+      border-radius: 16px;
     }
 
     &-title {
@@ -722,6 +955,12 @@ export default {
       text-align: center;
       color: #67648b;
     }
+  }
+
+  &-indicator {
+    position: relative;
+    width: 400px;
+    // margin: 43px 0 0 0;
   }
 }
 
@@ -836,7 +1075,7 @@ export default {
 }
 
 .block-8 {
-  margin: 85px 0 0 0;
+  margin: 85px 0 128px 0;
   &-title {
     align-self: center;
     font-family: Rubik;
@@ -884,6 +1123,11 @@ export default {
 }
 
 .block-9 {
+  padding: 78px 0 100px 144px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   &-title {
     font-family: Rubik;
     font-style: normal;
@@ -1073,9 +1317,9 @@ export default {
 
   &-item {
     position: relative;
-    margin: 0 0 70px 0;
-    width: 480px;
-    height: 283px;
+    margin: 75px 0;
+    width: 457px;
+    height: 249px;
     background-repeat: no-repeat;
     background-size: cover;
     // border: 1px solid rgba(103, 100, 139, 0.3);
@@ -1087,16 +1331,44 @@ export default {
       position: absolute;
       top: 0;
       left: 0;
-      width: 480px;
-      height: 300px;
+      width: 457px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      background-color: #f8f8f8;
+      // filter: drop-shadow(0px 4px 25px rgba(59, 108, 119, 0.2));
+      box-shadow: 0px 4px 15px 2px rgba(47, 85, 94, 0.2);
+      border: 1px solid rgba(103, 100, 139, 0.3);
+      box-sizing: border-box;
+      border-radius: 8px;
+      overflow: hidden;
+
+      &-img {
+        width: 457px;
+        height: 249px;
+      }
+
+      &-desc {
+        margin: 15px 0 0 0;
+        width: 428px;
+        height: 87px;
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 180%;
+        color: #67648b;
+        text-align: left;
+      }
     }
   }
 
   .arrow {
     margin: 0 0 35px 0;
     position: relative;
-    width: 81px;
-    height: 111px;
+    width: 111px;
+    height: 88px;
     // background-image: url("/assets/works/SmartConnect/arrow.png");
     // background-size: 100% auto;
     // background-repeat: no-repeat;
@@ -1126,7 +1398,6 @@ export default {
 
 .block-12 {
   padding: 100px 144px 229px;
-  background-color: #f8f8f8;
 
   &-title {
     align-self: flex-start;
@@ -1190,5 +1461,9 @@ export default {
   position: relative;
   width: 1152px;
   height: 864px;
+}
+
+:root {
+  --swiper-theme-color: red;
 }
 </style>

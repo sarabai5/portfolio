@@ -1,7 +1,7 @@
 <template>
   <div class="projects">
     <div class="project" v-for="(item, i) in projects" :key="i">
-      <img class="cover" :src="item.img" />
+      <img class="cover" :src="item.img" @click="clickItem(item)" />
       <div class="info">
         <div class="subtitle">{{ item.subtitle }}</div>
         <div class="title">{{ item.title }}</div>
@@ -31,21 +31,21 @@ export default {
           path: "/works/SmartConnect"
         },
         {
-          img: "/assets/works/covers/cover_2.png",
-          subtitle: "AAPI Alliance #hackforchange \n🏆 2nd place",
-          title: "Political Engagement Website for Minorities",
-          tags:
-            "Tead Lead & Initiator | Web Design | UI/UX | 2-week Completion",
-          button: "Go Play",
-          path: "/works/FurGo"
-        },
-        {
           img: "/assets/works/covers/cover_3.png",
           subtitle: "Know what your pets are up to",
           title: "Pet Tracker | Moniter | Mobile App",
           tags: "App Design | IoT Design | User Research",
           button: "Discover",
           path: "/works/FurGo"
+        },
+        {
+          img: "/assets/works/covers/cover_2.png",
+          subtitle: "AAPI Alliance #hackforchange \n🏆 2nd place",
+          title: "Political Engagement Website for Minorities",
+          tags:
+            "Tead Lead & Initiator | Web Design | UI/UX | 2-week Completion",
+          button: "Go Play",
+          link: "http://www.wetheasians.com/#/"
         },
         {
           img: "/assets/works/covers/cover_4.png",
@@ -122,7 +122,7 @@ export default {
         return;
       }
 
-      if (item.url) {
+      if (item.link) {
         window.open(item.link);
       }
     }
@@ -152,9 +152,10 @@ export default {
   align-items: flex-start;
 
   .cover {
-    width: 815px;
+    width: 755px;
     height: 500px;
     border-radius: 40px;
+    cursor: pointer;
   }
 
   .info {
@@ -173,6 +174,7 @@ export default {
       font-size: 20px;
       line-height: 180%;
       color: #918eb5;
+      white-space: pre-wrap;
     }
 
     .title {

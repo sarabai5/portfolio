@@ -71,7 +71,7 @@ export default {
         return;
       }
 
-      if (item.url) {
+      if (item.link) {
         window.open(item.link);
       }
     }
@@ -147,6 +147,7 @@ export default {
     width: 357px;
     height: 277px;
     border-radius: 24px;
+    cursor: pointer;
   }
 
   .cover-gif {
@@ -158,6 +159,7 @@ export default {
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: center center;
+    cursor: pointer;
   }
 
   .info {

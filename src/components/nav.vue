@@ -5,7 +5,7 @@
     :class="showNav ? 'showNav' : 'hideNav'"
     :style="outstyle"
   >
-    <button class="icon" @click="clickHome()">[ S ]</button>
+    <button class="icon" @click="clickHome()"></button>
     <div class="links">
       <button
         class="links-item"
@@ -102,7 +102,7 @@ export default {
 .nav {
   position: relative;
   width: 100%;
-  height: 83px;
+  height: 72px;
 }
 
 .nav-fixed {
@@ -112,9 +112,9 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
-  height: 83px;
+  height: 72px;
   box-sizing: border-box;
-  padding: 0 90px 0 121px;
+  padding: 0 64px;
   // background-color: #ffffff;
   background: hsla(0, 0%, 100%, 0.5);
   -webkit-backdrop-filter: blur(5px);
@@ -125,9 +125,27 @@ export default {
   align-items: center;
 
   .icon {
-    color: #101010;
-    font-size: 24px;
-    font-family: "VT323", monospace;
+    position: relative;
+    width: 38px;
+    height: 38px;
+    background-image: url("/assets/icons/logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    // left: 64px;
+    // border: 2px solid #826feb;
+
+    // &-text {
+    //   position: absolute;
+    //   left: 6px;
+    //   top: 10px;
+    //   font-family: SF Pro Text;
+    //   font-style: normal;
+    //   font-weight: bold;
+    //   font-size: 20px;
+    //   line-height: 24px;
+    //   color: #826feb;
+    // }
   }
 
   .links {

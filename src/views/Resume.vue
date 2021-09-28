@@ -62,6 +62,8 @@ export default {
 <style lang="scss" scoped>
 .resume {
   width: 100%;
+  box-sizing: border-box;
+  padding: 0 0 100px 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

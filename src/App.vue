@@ -13,6 +13,7 @@ import Nav from "@/components/nav.vue";
 import Footer from "@/components/footer.vue";
 
 import Bus from "./bus";
+import "swiper/css/swiper.css";
 
 export default {
   name: "App",
@@ -64,7 +65,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;400;600&family=Nunito:wght@200;400;600;700&display=swap&family=VT323&display=swap&family=Noto+Sans&family=Roboto:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;400;600&family=Nunito:wght@200;400;600;700&display=swap&family=VT323&display=swap&family=Noto+Sans&family=Roboto:wght@700&display=swap&family=Noto+Sans:wght@700&family=Open+Sans:wght@400;500;600;700;800&family=Roboto+Mono:wght@500&family=Rubik:wght@400;500;600;700;800;900&display=swap");
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -89,6 +90,11 @@ button {
 
 button:hover {
   animation: 200ms ease-in-out 0s normal forwards 1 running buttonHover;
+  // background-color: #826feb;
+  // border: 1px solid #826feb;
+  // box-sizing: border-box;
+  // box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4);
+  // color: #ffffff;
 }
 
 @keyframes buttonHover {
@@ -97,7 +103,7 @@ button:hover {
   }
 
   to {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 }
 
@@ -136,4 +142,7 @@ button:hover {
 //     box-shadow: 3px 3px 7.5px 0px rgba(0, 0, 0, 0.4);
 //   }
 // }
+:root {
+  --swiper-theme-color: #5095a5;
+}
 </style>

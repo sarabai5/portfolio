@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="page">
     <div class="head">
       <div class="head-l">
         <div class="welcome">Hi, I’m Sara Bai :)</div>
@@ -9,7 +9,7 @@
           at Carnegie Mellon University. <br /><br />I previously interned at
           S&C and BioMotivate, crafting meaningful
           <span class="intro-purple">web</span> and
-          <span class="intro-purple">mobile</span> experiences for complex
+          <span class="intro-purple">mobile</span> experience for complex
           systems and issues.
         </div>
 
@@ -114,7 +114,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.home {
+.page {
+  position: relative;
   width: 100%;
   box-sizing: border-box;
   padding: 0 0 0 144px;
@@ -134,14 +135,16 @@ export default {
   position: relative;
   width: 100%;
   box-sizing: border-box;
-  padding: 0 0 40px 0;
+  padding: 0 144px 0 0;
 
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: flex-start;
 
   &-l {
+    position: relative;
+    width: 755px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -149,7 +152,7 @@ export default {
   }
 
   .avatar {
-    margin: 20px 144px 0 0;
+    margin: 20px 0 0 0;
     position: relative;
     width: 266px;
     height: auto;
@@ -167,11 +170,11 @@ export default {
 
   .intro {
     margin: 41px 0 0 0;
-    width: 827px;
-    // font-family: Rubik;
+    width: 100%;
+    font-family: Rubik;
     font-style: normal;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 28px;
     text-align: left;
     line-height: 150%;
     color: #67648b;
