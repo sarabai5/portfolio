@@ -17,7 +17,8 @@
     </div>
     <div id="0" class="block block-2">
       <div class="block-2-l">
-        <img class="img-0" src="/assets/works/SmartConnect/img-0.png" />
+        <!-- <img class="img-0" src="/assets/works/SmartConnect/img-0.png" /> -->
+        <div class="block-topic">OVERVIEW</div>
         <div class="block-title">Background</div>
         <div class="block-2-content">
           In this summer internship, I worked with the design team on their
@@ -37,36 +38,38 @@
       </div>
       <div class="block-3-list">
         <div class="block-3-item">
-          <img class="img-2" src="/assets/works/SmartConnect/img-2.png" />
-
+          <div class="block-3-img">
+            <img class="img-2" src="/assets/works/SmartConnect/img-2.png" />
+          </div>
           <div class="block-nopadding">
             <div class="block-3-item-title">Steep Learning Curve</div>
             <div class="block-3-item-desc">
-              We needed to comprehend how everything works in the very
-              complicated system that is full of professional electrical
-              engineering knowledge
+              Electric power knowledge and ecosystem of all related software and
+              hardware
             </div>
           </div>
         </div>
         <div class="block-3-item">
-          <img class="img-3" src="/assets/works/SmartConnect/img-3.png" />
-
+          <div class="block-3-img">
+            <img class="img-3" src="/assets/works/SmartConnect/img-3.png" />
+          </div>
           <div class="block-nopadding">
             <div class="block-3-item-title">Simplify the Complicated</div>
             <div class="block-3-item-desc">
-              Simplify the complicated system by making the application more
-              modular and resuable to improve user flow as well as developer
-              experience
+              Make the application more modular and reusable to improve the user
+              flow of long operation route with side tasks
             </div>
           </div>
         </div>
         <div class="block-3-item">
-          <img class="img-4" src="/assets/works/SmartConnect/img-4.png" />
+          <div class="block-3-img">
+            <img class="img-4" src="/assets/works/SmartConnect/img-4.png" />
+          </div>
           <div class="block-nopadding">
-            <div class="block-3-item-title">Demanding UI Requirement</div>
+            <div class="block-3-item-title">Multi User Groups & REQS</div>
             <div class="block-3-item-desc">
-              Innovate newer modern look while remaining professional for
-              engineers and consistent with company branding concept
+              Accommodate tasks of different user groups and innovate UI within
+              industry standards and consistency with company branding
             </div>
           </div>
         </div>
@@ -75,7 +78,7 @@
 
     <!-- <div class="div-gray"> -->
     <div id="1" class="block-4 div-gray">
-      <img class="img-5" src="/assets/works/SmartConnect/img-5.png" />
+      <div class="block-topic block-topic-4">HIGHLIGHTS</div>
       <div class="block-title block-4-title">
         Solutions Targeting Pain Points
       </div>
@@ -132,29 +135,37 @@
     </div>
 
     <div id="2" class="block block-7">
-      <img class="img-10" src="/assets/works/SmartConnect/img-10.png" />
-      <div class="block-row">
+      <div class="block-topic">USER RESEARCH</div>
+      <p class="block-7-intro">
+        Our first task was to conduct as many interviews as we could, so several
+        ones in each user group. Unlike customer-facing products, IntelliLink is
+        for professional electric engineers to perform daily checkups and
+        configurations. In order to create <span>improved user flow</span>, we
+        needed to conduct many interviews upfront to understand the ecosystem of
+        Smart Connect down to details including electric power terminology, how
+        the software operates on the devices, limitation, warning actions, etc.
+        In these interviews, engineers discussed the
+        <span>reasonings behind settings</span>, the
+        <span>settings and data that they want quick access to</span>, and the
+        <span>different goals they try to accomplish on each page</span> or
+        <span>based on their job funtions</span>.
+      </p>
+      <div class="block-7-row">
         <div class="block-7-item">
           <img class="img-8" src="/assets/works/SmartConnect/img-8.png" />
           <div class="block-7-title">Expert Interviews</div>
           <div class="block-7-desc">
-            Because we were new to the electric power industry, we conducted
-            interviews with expert engineers to understand more about the
-            IntelliLink system as well as the related products at S&C (Both
-            software and hardware), Details includes electric power terminology,
-            how the software operates on the devices, limitation, warning
-            actions, etc.
+            Understand IntelliLink system and the ecosystem of related products
+            at S&C. [Terminology, how the software operates on the devices,
+            limitation, warning actions, etc.]
           </div>
         </div>
-        <div class="block-7-item">
+        <div class="block-7-item block-7-item--r">
           <img class="img-9" src="/assets/works/SmartConnect/img-9.png" />
           <div class="block-7-title">Stakeholders Interviews</div>
           <div class="block-7-desc">
-            Unlike customer-facing products, IntelliLink is for professional
-            electric engineers to perform daily checkups and configurations. In
-            order to create improved user flow, we interviewed stakeholdedrs to
-            fully comprehend their use cases and pain points while operating
-            intelliLink.
+            Understand use cases and pain points in engineers’ daily checkups
+            and configurations.
           </div>
         </div>
       </div>
@@ -162,7 +173,7 @@
 
     <div class="block block-8">
       <div class="block-title block-8-title">
-        9 Participants | 15 Interviews
+        5 User Groups | 9 Participants | 15 Interviews
       </div>
       <div class="block-8-list">
         <div class="block-8-item" v-for="(item, i) in participants" :key="i">
@@ -172,50 +183,74 @@
       </div>
     </div>
 
-    <div class="block block-8">
-      <div class="block-title block-8-title">
+    <!-- <div class="block block-8">
+      
+    </div> -->
+
+    <div id="3" class="block block-9 div-gray">
+      <div class="block-topic">SYNTHESIS</div>
+
+      <div class="block-9-title block-9-title-2">6 Pain Points Identified</div>
+
+      <p class="block-9-intro">
+        Next, we did a themati analysis of the interviews conducted with the
+        in-house engineers and
+        <span>identify patterns across different user groups</span>. By
+        clustering the items that came up repeatedly within the interviews with
+        an affinity diagram, we were able to identify 6 main pain points that
+        our users wish for a fix.
+      </p>
+
+      <img class="img-19" src="/assets/works/SmartConnect/img-19.png" />
+
+      <div class="block-9-title">
         First-time Onboarding and Daily Tasks Outlining
       </div>
 
+      <p class="block-9-intro">
+        The <span>complicated system</span> and the
+        <span>multiple user groups</span> posed an difficulty in identifying a
+        general user flow. To aid in our understanding of their user flows for
+        our later ideation, we organized their common tasks into
+        <span>one simple overarching skeleton</span> so that we have a base
+        point for creating specific improvements targeting different user groups
+        in addition to their main work flow.
+      </p>
+
       <img class="img-16" src="/assets/works/SmartConnect/img-16.png" />
-    </div>
 
-    <div id="3" class="block block-9 div-gray">
-      <img class="img-17" src="/assets/works/SmartConnect/img-17.png" />
-      <div class="block-nopadding margin-7">
-        <div class="block-9-title block-9-title-1">
-          Affinity Diagram
-        </div>
-        <div class="block-row">
+      <div class="block-nopadding">
+        <div class="block-9-row">
           <img class="img-18" src="/assets/works/SmartConnect/img-18.png" />
-          <div class="block-9-content">
-            We gathered and categorized interview insights and pain points into
-            list of items in clusters.<br /><br />
-            The affinity diagram helped us identify 6 most complained pain
-            points and develop them into possible features to design for the
-            system.
+
+          <div class="block-9-column">
+            <div class="block-9-title block-9-title-3">Affinity Diagram</div>
+
+            <div class="block-9-content">
+              We gathered and categorized interview insights and pain points
+              into list of items in clusters.<br /><br />
+              The affinity diagram helped us identify 6 most complained pain
+              points and develop them into possible features to design for the
+              system.
+            </div>
           </div>
         </div>
 
-        <div class="block-9-title block-9-title-2">
-          Results - 6 Pain Points Identified
-        </div>
-        <img class="img-19" src="/assets/works/SmartConnect/img-19.png" />
+        <div class="block-9-row">
+          <div class="block-9-column">
+            <div class="block-9-title">Value-Effort Matrix</div>
 
-        <div class="block-9-title block-9-title-3">
-          Value-Effort Matrix
-        </div>
-        <div class="block-row">
+            <p class="block-9-intro block-9-content block-9-content-1">
+              Based on identified pain points, we developed a list of functions
+              and features to add or improve.<br /><br />
+
+              Then we mapped them onto a <span>value-effort matrix</span> to
+              help us identify the priority of improvements, which should
+              enhance the efficiency of the software while not costing too much
+              for both designers and developers.
+            </p>
+          </div>
           <img class="img-20" src="/assets/works/SmartConnect/img-20.png" />
-          <div class="block-9-content">
-            Based on identified pain points, we developed a list of functions
-            and features to add or improve.<br /><br />
-
-            Then we mapped them onto a value-effort matrix to help us identify
-            the priority of improvements, which should enhance the efficiency of
-            the software while not costing too much for both designers and
-            developers.
-          </div>
         </div>
 
         <div class="block-10">
@@ -250,7 +285,7 @@
     </div>
 
     <div id="4" class="block block-11">
-      <img class="img-21" src="/assets/works/SmartConnect/img-21.png" />
+      <div class="block-topic">USER TESTINGS</div>
       <img class="img-22" src="/assets/works/SmartConnect/img-22.png" />
 
       <div class="block-row margin-4">
@@ -270,9 +305,7 @@
         <img class="img-23" src="/assets/works/SmartConnect/img-23.png" />
       </div>
 
-      <div class="block-11-title">
-        Testing-based Iteration Highlights
-      </div>
+      <div class="block-11-title">Testing-based Iteration Highlights</div>
       <div class="block-11-head">
         <div class="block-11-head-text block-11-head-l">#Proposed Solution</div>
         <div class="block-11-head-text block-11-head-r">
@@ -305,7 +338,7 @@
     </div>
 
     <div id="5" class="block block-12 div-gray">
-      <img class="img-24" src="/assets/works/SmartConnect/img-24.png" />
+      <div class="block-topic">HI-FI DESIGNS</div>
 
       <div class="block-12-title block-12-title-1">Hi-fi Explorations</div>
       <div class="block-12-list">
@@ -347,10 +380,10 @@ export default {
   components: {
     Turnpage,
     Swiper,
-    SwiperSlide
+    SwiperSlide,
   },
   directives: {
-    swiper: directive
+    swiper: directive,
   },
   data: () => {
     return {
@@ -358,157 +391,146 @@ export default {
       previous: null,
       next: {
         title: "PET TRACKER",
-        name: "FurGo"
+        name: "FurGo",
       },
       handler: null,
       swiperOptions: {
         pagination: {
-          el: ".swiper-pagination"
+          el: ".swiper-pagination",
         },
         navigation: {
           prevEl: ".block-swiper-arrow-l",
-          nextEl: ".block-swiper-arrow-r"
-        }
+          nextEl: ".block-swiper-arrow-r",
+        },
       },
       quicklinks: [
         {
           title: "Overview",
-          id: "0"
+          id: "0",
         },
         {
           title: "Highlights",
-          id: "1"
+          id: "1",
         },
         {
           title: "Research",
-          id: "2"
+          id: "2",
         },
         {
           title: "Synthesis",
-          id: "3"
+          id: "3",
         },
         {
           title: "User Testings",
-          id: "4"
+          id: "4",
         },
         {
           title: "Hi-Fi",
-          id: "5"
-        }
+          id: "5",
+        },
       ],
       solutions: [
         {
           img: "/assets/works/SmartConnect/1.gif",
           title: "Customizable Data Table ",
-          desc:
-            "Users from 5 different user groups can now select table header items for searching and filtering in device list and prioritize items based on their daily job needs."
+          desc: "Users from 5 different user groups can now select table header items for searching and filtering in device list and prioritize items based on their daily job needs.",
         },
         {
           img: "/assets/works/SmartConnect/2.gif",
           title: "Onboarding for Guidance",
-          desc:
-            "Guide first-time users through some critical aspects of the software. Encourage and guide users to configure some important settings upon adding a new device."
+          desc: "Guide first-time users through some critical aspects of the software. Encourage and guide users to configure some important settings upon adding a new device.",
         },
         {
           img: "/assets/works/SmartConnect/3.gif",
           title: "Task Work Flow Improving Efficiency ",
-          desc:
-            "Help users focus on one task at a time by removing distractions and building a user flow for layers of settings. Eliminate unused settings from views and only show the settings upon enabling. "
+          desc: "Help users focus on one task at a time by removing distractions and building a user flow for layers of settings. Eliminate unused settings from views and only show the settings upon enabling. ",
         },
         {
           img: "/assets/works/SmartConnect/4.gif",
           title: "Efficient “Validate/Apply” User Flow",
-          desc:
-            "Make validation result to a retrievable and collapsable pop-up window and improve work efficiency with validate-apply-reconfigurate user flow and linkage."
+          desc: "Make validation result to a retrievable and collapsable pop-up window and improve work efficiency with validate-apply-reconfigurate user flow and linkage.",
         },
         {
           img: "/assets/works/SmartConnect/5.gif",
           title: "Quick Multi-device Comparison",
-          desc:
-            "Engineers often need to cross check settings on different devices"
-        }
+          desc: "Engineers often need to cross check settings on different devices",
+        },
       ],
       participants: [
         {
           name: "3 Quality Assuarance",
-          avatar: "/assets/works/SmartConnect/img-11.png"
+          avatar: "/assets/works/SmartConnect/img-11.png",
         },
         { name: "2 PSS", avatar: "/assets/works/SmartConnect/img-12.png" },
         {
           name: "1 Developer",
-          avatar: "/assets/works/SmartConnect/img-13.png"
+          avatar: "/assets/works/SmartConnect/img-13.png",
         },
         {
           name: "2 Product Manager",
-          avatar: "/assets/works/SmartConnect/img-14.png"
+          avatar: "/assets/works/SmartConnect/img-14.png",
         },
         {
           name: "2 Design Engineers",
-          avatar: "/assets/works/SmartConnect/img-15.png"
-        }
+          avatar: "/assets/works/SmartConnect/img-15.png",
+        },
       ],
       explorations: [
         {
           img: "/assets/works/SmartConnect/img-25.png",
-          desc: "Professional take"
+          desc: "Professional take",
         },
         {
           img: "/assets/works/SmartConnect/img-26.png",
-          desc: "Bold take"
+          desc: "Bold take",
         },
         {
           img: "/assets/works/SmartConnect/img-27.png",
-          desc: "Combination iteration"
-        }
+          desc: "Combination iteration",
+        },
       ],
       hoverIndex: -1,
       highlights: [
         {
           normal: "/assets/works/SmartConnect/img-29-0.png",
           hover: "/assets/works/SmartConnect/img-29-1.png",
-          desc:
-            "While preserving cybersecurity, we incorporated device management so that users only log in once to manage all on homepage, which enables comparision function."
+          desc: "While preserving cybersecurity, we incorporated device management so that users only log in once to manage all on homepage, which enables comparision function.",
         },
         null,
         {
           normal: "/assets/works/SmartConnect/img-30-0.png",
           hover: "/assets/works/SmartConnect/img-30-1.GIF",
-          desc:
-            "Added data table filtering and customization funtion for different user groups, and additional compare function for cross devices monitoring."
+          desc: "Added data table filtering and customization funtion for different user groups, and additional compare function for cross devices monitoring.",
         },
         {
           normal: "/assets/works/SmartConnect/img-31-0.png",
           hover: "/assets/works/SmartConnect/img-31-1.png",
-          desc:
-            "Create a user flow to notify users of the validation result. Unsuccessful result window guides users directly to error input locations."
+          desc: "Create a user flow to notify users of the validation result. Unsuccessful result window guides users directly to error input locations.",
         },
         null,
         {
           normal: "/assets/works/SmartConnect/img-32-0.png",
           hover: "/assets/works/SmartConnect/img-32-1.GIF",
-          desc:
-            "Improve the UI and user flow in making pop-up window retrievable and collapsable for easier configuration."
+          desc: "Improve the UI and user flow in making pop-up window retrievable and collapsable for easier configuration.",
         },
         {
           normal: "/assets/works/SmartConnect/img-33-0.png",
           hover: "/assets/works/SmartConnect/img-33-1.png",
-          desc:
-            "Collapse to hide unused settings in default and reorganize settings into better groupings."
+          desc: "Collapse to hide unused settings in default and reorganize settings into better groupings.",
         },
         null,
         {
           normal: "/assets/works/SmartConnect/img-34-0.png",
           hover: "/assets/works/SmartConnect/img-34-1.GIF",
-          desc:
-            "Create a work flow for the unused settings by reorganizing them into a more modular based and task based configuration experience."
-        }
-      ]
+          desc: "Create a work flow for the unused settings by reorganizing them into a more modular based and task based configuration experience.",
+        },
+      ],
     };
   },
   computed: {
     swiper() {
       return this.$refs.mySwiper.$swiper;
-    }
+    },
   },
   mounted() {
     console.log("Current Swiper instance object", this.swiper);
@@ -535,8 +557,8 @@ export default {
     },
     onOut() {
       this.hoverIndex = -1;
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -638,6 +660,29 @@ button:hover {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+  }
+
+  &-topic {
+    margin: 0 0 46px 0;
+    position: relative;
+    box-sizing: border-box;
+    padding: 0 5px;
+    width: auto;
+    height: 38px;
+    line-height: 38px;
+    background: linear-gradient(90deg, #8b85d2 0%, #84c4c8 100%);
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 32px;
+    text-transform: uppercase;
+    color: #ffffff;
+    align-self: flex-start;
+
+    &-4 {
+      margin: 0 0 0 144px;
+      width: 208px;
+    }
   }
 
   &-title {
@@ -792,22 +837,22 @@ button:hover {
 .img-1 {
   margin: 71px 0 0 0;
   position: relative;
-  width: 466px;
+  width: 405px;
   height: auto;
 }
 
 .img-2 {
-  width: 212px;
+  width: 88px;
   height: auto;
 }
 
 .img-3 {
-  width: 187px;
+  width: 81px;
   height: auto;
 }
 
 .img-4 {
-  width: 259px;
+  width: 82px;
   height: auto;
 }
 
@@ -820,39 +865,46 @@ button:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+  }
+
+  &-img {
+    width: auto;
+    height: 88px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
   }
 
   &-item {
-    height: 372px;
+    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
 
     &-title {
+      margin: 30px 0 0 0;
       font-family: Rubik, sans-serif;
       font-style: normal;
       font-weight: bold;
-      font-size: 22px;
+      font-size: 20px;
       line-height: 150%;
-      text-align: center;
+      text-align: left;
       color: #67648b;
     }
 
     &-desc {
-      margin: 12px 0 0 0;
-      width: 311px;
+      margin: 10px 0 0 0;
+      width: 271px;
       font-family: Rubik, sans-serif;
       font-style: normal;
       font-weight: normal;
       font-size: 16px;
       line-height: 150%;
-      /* or 24px */
-
-      text-align: center;
-
-      color: #67648b;
+      text-align: left;
+      color: rgba(103, 100, 139, 0.6);
     }
   }
 }
@@ -962,14 +1014,6 @@ button:hover {
   }
 }
 
-.img-5 {
-  margin: 0 0 0 144px;
-  position: relative;
-  width: 316px;
-  height: 79px;
-  align-self: flex-start;
-}
-
 .img-6 {
   position: relative;
   width: 755px;
@@ -1014,15 +1058,43 @@ button:hover {
 .block-7 {
   padding: 100px 144px 0 144px;
 
+  &-intro {
+    margin: 58px 0 99px 0;
+    align-self: center;
+    width: 954px;
+    text-align: left;
+    font-family: Rubik, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 150%;
+    color: #67648b;
+
+    span {
+      font-weight: bold;
+    }
+  }
+
+  &-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
   &-item {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+
+    &--r {
+      margin: 0 0 0 40px;
+    }
   }
 
   &-title {
-    margin: 25px 0 0 0;
+    margin: 22px 0 0 0;
     font-family: Rubik, sans-serif;
     font-style: normal;
     font-weight: bold;
@@ -1034,27 +1106,27 @@ button:hover {
 
   &-desc {
     margin: 16px 0 0 0;
-    width: 556px;
+    width: 356px;
     font-family: Rubik, sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 150%;
-    color: #67648b;
-    text-align: left;
+    text-align: center;
+    color: rgba(103, 100, 139, 0.6);
   }
 }
 
 .img-8 {
   position: relative;
-  width: 157px;
-  height: 157px;
+  width: auto;
+  height: 167px;
 }
 
 .img-9 {
   position: relative;
-  width: 157px;
-  height: 157px;
+  width: auto;
+  height: 167px;
 }
 
 .img-10 {
@@ -1063,13 +1135,6 @@ button:hover {
   position: relative;
   width: 286px;
   height: 73px;
-}
-
-.img-16 {
-  margin: 50px 0 0 0;
-  position: relative;
-  width: 1168px;
-  height: 607px;
 }
 
 .block-8 {
@@ -1087,11 +1152,11 @@ button:hover {
 
   &-list {
     margin: 51px 0 0 0;
-    width: 742px;
+    width: 761px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
   }
 
   &-item {
@@ -1102,30 +1167,30 @@ button:hover {
 
     &-avatar {
       position: relative;
-      width: 102px;
-      height: 102px;
+      width: 90px;
+      height: 90px;
     }
 
     &-name {
-      width: 102px;
-      margin: 14px 0 0 0;
+      width: 107px;
+      margin: 28px 0 0 0;
       font-family: Rubik, sans-serif;
       font-style: normal;
       font-weight: normal;
-      font-size: 18px;
+      font-size: 16px;
       line-height: 150%;
       text-align: center;
-      color: #67648b;
+      color: rgba(103, 100, 139, 0.6);
     }
   }
 }
 
 .block-9 {
-  padding: 78px 0 100px 144px;
+  padding: 78px 144px 100px 144px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   &-title {
     font-family: Rubik, sans-serif;
     font-style: normal;
@@ -1140,15 +1205,47 @@ button:hover {
   }
 
   &-title-2 {
-    margin: 150px 0 0 0;
+    margin: 65px 0 0 0;
   }
 
   &-title-3 {
-    margin: 110px 0 40px 0;
+    margin: 5px 0 0 0;
+  }
+
+  &-intro {
+    margin: 40px 0 0 0;
+    width: 954px;
+    text-align: left;
+    font-family: Rubik, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 150%;
+    color: #67648b;
+
+    span {
+      font-weight: bold;
+    }
+  }
+
+  &-row {
+    margin: 200px 0 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-column {
+    margin: 0 0 0 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 
   &-content {
-    margin: 0 0 0 40px;
+    margin: 43px 0 0 0;
     width: 358px;
     font-family: Rubik, sans-serif;
     font-style: normal;
@@ -1156,7 +1253,18 @@ button:hover {
     font-size: 18px;
     line-height: 150%;
     color: #67648b;
+
+    &-1 {
+      margin: 35px 0 0 0;
+    }
   }
+}
+
+.img-16 {
+  margin: 69px 0 0 0;
+  position: relative;
+  width: 956px;
+  height: 529px;
 }
 
 .img-17 {
@@ -1173,13 +1281,14 @@ button:hover {
 }
 
 .img-19 {
-  margin: 40px 0 0 0;
+  margin: 69px 0 136px 0;
   position: relative;
   width: 954px;
-  height: 800px;
+  height: auto;
 }
 
 .img-20 {
+  margin: 0 0 0 40px;
   position: relative;
   width: 556px;
   height: 364px;
@@ -1383,8 +1492,8 @@ button:hover {
 .img-22 {
   margin: 50px 0 0 0;
   position: relative;
-  width: 1152px;
-  height: 785px;
+  width: 954px;
+  height: 650px;
 }
 
 .img-23 {
