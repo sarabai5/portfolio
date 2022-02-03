@@ -110,11 +110,15 @@ export default {
   },
   data: () => {
     return {
-      previous: null,
-      next: {
-        title: "BAKERY SHOP WEBSITE",
+      previous: {
+        title: "Desktop Software Product Design",
         // name: "MovingBoxes"
-        link: "https://sarabai5.github.io/cinna.github.io/homework_5/menu.html"
+        name: "SmartConnect"
+      },
+      next: {
+        title: "Political Engagement Website for Minorities",
+        // name: "MovingBoxes"
+        link: "http://www.wetheasians.com"
       },
       handler: null
     };

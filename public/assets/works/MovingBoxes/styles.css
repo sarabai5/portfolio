@@ -1146,7 +1146,7 @@ only screen and (min-device-pixel-ratio: 3) {
 .checklist-title {
 	color: #58595b;
 	font-size: 21px;
-	font-family: "TsukuARdGothic-Bold", serif;
+	font-family: "TsukuARdGothic-Bold", sans-serif, serif;
 	font-weight: bold;
 	text-align: left;
 }
@@ -1857,7 +1857,7 @@ only screen and (min-device-pixel-ratio: 3) {
 }
 
 .sk-asset.sk-155-773F136E-4F02-4206-8927-1D3E3DF03D4E {
-	font-family: "Yantramanav" ;
+	font-family: "Yantramanav", sans-serif ;
 	font-stretch: "undefined" ;
 	font-weight: 200 ;
 	font-style: undefined ;
@@ -1871,7 +1871,7 @@ only screen and (min-device-pixel-ratio: 3) {
 }
 
 .sk-asset.sk-155-773F136E-4F02-4206-8927-1D3E3DF03D4E .span1 {
-	font-family: "Yantramanav" ;
+	font-family: "Yantramanav", sans-serif ;
 	font-weight: 300 ;
 	display: table-cell;
 	vertical-align: top;
@@ -2316,7 +2316,7 @@ only screen and (min-device-pixel-ratio: 3) {
 }
 
 .sk-asset.sk-If-you-would-like-to-D941655C-6E52-4E8A-A029-CF59F75F650E {
-	font-family: "Avenir" ;
+	font-family: "Avenir", sans-serif ;
 	font-stretch: "undefined" ;
 	font-weight: 400 ;
 	font-style: undefined ;
@@ -2330,7 +2330,7 @@ only screen and (min-device-pixel-ratio: 3) {
 }
 
 .sk-asset.sk-If-you-would-like-to-D941655C-6E52-4E8A-A029-CF59F75F650E .span1 {
-	font-family: "Avenir" ;
+	font-family: "Avenir", sans-serif ;
 	font-weight: 400 ;
 	display: table-cell;
 	vertical-align: top;

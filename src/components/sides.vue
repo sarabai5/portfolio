@@ -2,7 +2,8 @@
   <div class="sides">
     <div class="sides-head">
       <div class="sides-title">Side Works</div>
-      <button class="sides-more">See More >></button>
+      <!-- <button class="sides-more">See More >></button> -->
+      <div></div>
     </div>
 
     <div class="sides-list">
@@ -40,7 +41,8 @@ export default {
           desc:
             "A little about myself in kinetic text.\n Working in process...",
           tags: ["Adobe After Effect", "Kinetic text design"],
-          path: ""
+          link:
+            "https://drive.google.com/file/d/14w_S1_5xJSXTp5P080D-ehZeSRptA8I7/view?usp=sharing"
         },
         {
           // img: "/assets/sides/cover/cover_2.gif",

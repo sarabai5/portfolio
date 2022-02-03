@@ -86,6 +86,7 @@ button {
   border: none;
   background-color: transparent;
   outline: none;
+  font-size: monospace;
 }
 
 button:hover {

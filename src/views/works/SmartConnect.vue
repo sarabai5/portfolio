@@ -341,7 +341,6 @@
 import Bus from "@/bus";
 import Turnpage from "@/components/turnpage.vue";
 import { Swiper, SwiperSlide, directive } from "vue-awesome-swiper";
-import "swiper/css/swiper.css";
 
 export default {
   name: "SmartConnect",
@@ -355,12 +354,11 @@ export default {
   },
   data: () => {
     return {
-      canQuick: false,
+      canQuick: true,
       previous: null,
       next: {
-        title: "BAKERY SHOP WEBSITE",
-        // name: "MovingBoxes"
-        link: "https://sarabai5.github.io/cinna.github.io/homework_5/menu.html"
+        title: "PET TRACKER",
+        name: "FurGo"
       },
       handler: null,
       swiperOptions: {
@@ -607,7 +605,7 @@ button:hover {
 
   &-item {
     margin: 16px 0 0 0;
-    font-family: Rubik;
+    font-family: Rubik, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -644,7 +642,7 @@ button:hover {
 
   &-title {
     align-self: flex-start;
-    font-family: Rubik;
+    font-family: Rubik, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 28px;
@@ -723,7 +721,7 @@ button:hover {
 
   &-note {
     margin: 141px 0 0 0;
-    font-family: Rubik;
+    font-family: Rubik, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -782,7 +780,7 @@ button:hover {
   &-content {
     margin: 32px 0 0 0;
     width: 655px;
-    font-family: Rubik;
+    font-family: Rubik, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -833,7 +831,7 @@ button:hover {
     align-items: center;
 
     &-title {
-      font-family: Rubik;
+      font-family: Rubik, sans-serif;
       font-style: normal;
       font-weight: bold;
       font-size: 22px;
@@ -845,7 +843,7 @@ button:hover {
     &-desc {
       margin: 12px 0 0 0;
       width: 311px;
-      font-family: Rubik;
+      font-family: Rubik, sans-serif;
       font-style: normal;
       font-weight: normal;
       font-size: 16px;
@@ -935,7 +933,7 @@ button:hover {
 
     &-title {
       margin: 50px 0 0 0;
-      font-family: Rubik;
+      font-family: Rubik, sans-serif;
       font-style: normal;
       font-weight: bold;
       font-size: 24px;
@@ -947,7 +945,7 @@ button:hover {
     &-desc {
       max-width: 754px;
       margin: 16px 0 0 0;
-      font-family: Rubik;
+      font-family: Rubik, sans-serif;
       font-style: normal;
       font-weight: normal;
       font-size: 16px;
@@ -997,7 +995,7 @@ button:hover {
   &-content {
     margin: 31px 0 0 0;
     width: 330px;
-    font-family: Rubik;
+    font-family: Rubik, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -1025,7 +1023,7 @@ button:hover {
 
   &-title {
     margin: 25px 0 0 0;
-    font-family: Rubik;
+    font-family: Rubik, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
@@ -1037,7 +1035,7 @@ button:hover {
   &-desc {
     margin: 16px 0 0 0;
     width: 556px;
-    font-family: Rubik;
+    font-family: Rubik, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -1078,7 +1076,7 @@ button:hover {
   margin: 85px 0 128px 0;
   &-title {
     align-self: center;
-    font-family: Rubik;
+    font-family: Rubik, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 28px;
@@ -1111,7 +1109,7 @@ button:hover {
     &-name {
       width: 102px;
       margin: 14px 0 0 0;
-      font-family: Rubik;
+      font-family: Rubik, sans-serif;
       font-style: normal;
       font-weight: normal;
       font-size: 18px;
@@ -1129,7 +1127,7 @@ button:hover {
   justify-content: flex-start;
   align-items: flex-start;
   &-title {
-    font-family: Rubik;
+    font-family: Rubik, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 28px;
@@ -1152,7 +1150,7 @@ button:hover {
   &-content {
     margin: 0 0 0 40px;
     width: 358px;
-    font-family: Rubik;
+    font-family: Rubik, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -1195,7 +1193,7 @@ button:hover {
   align-items: flex-start;
 
   &-title {
-    font-family: Rubik;
+    font-family: Rubik, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 28px;
@@ -1206,7 +1204,7 @@ button:hover {
   &-content {
     margin: 0 0 0 56px;
     width: 656px;
-    font-family: Rubik;
+    font-family: Rubik, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -1215,7 +1213,7 @@ button:hover {
     text-align: left;
 
     &-bold {
-      font-family: Rubik;
+      font-family: Rubik, sans-serif;
       font-style: normal;
       font-weight: bold;
       font-size: 22px;
@@ -1236,7 +1234,7 @@ button:hover {
     align-items: flex-start;
 
     &-note {
-      font-family: Rubik;
+      font-family: Rubik, sans-serif;
       font-style: normal;
       font-weight: normal;
       font-size: 16px;
@@ -1247,7 +1245,7 @@ button:hover {
 
     &-title {
       margin: 9px 0 0 0;
-      font-family: Rubik;
+      font-family: Rubik, sans-serif;
       font-style: normal;
       font-weight: bold;
       font-size: 28px;
@@ -1258,7 +1256,7 @@ button:hover {
     &-content {
       margin: 32px 0 0 0;
       width: 556px;
-      font-family: Rubik;
+      font-family: Rubik, sans-serif;
       font-style: normal;
       font-weight: normal;
       font-size: 18px;
@@ -1270,7 +1268,7 @@ button:hover {
   &-title {
     margin: 150px 0 0 0;
     align-self: flex-start;
-    font-family: Rubik;
+    font-family: Rubik, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 28px;
@@ -1353,7 +1351,7 @@ button:hover {
         margin: 15px 0 0 0;
         width: 428px;
         height: 87px;
-        font-family: Rubik;
+        font-family: Rubik, sans-serif;
         font-style: normal;
         font-weight: normal;
         font-size: 14px;
@@ -1401,7 +1399,7 @@ button:hover {
 
   &-title {
     align-self: flex-start;
-    font-family: Rubik;
+    font-family: Rubik, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 28px;
@@ -1439,7 +1437,7 @@ button:hover {
 
     &-desc {
       margin: 24px 0 0 0;
-      font-family: Rubik;
+      font-family: Rubik, sans-serif;
       font-style: normal;
       font-weight: bold;
       font-size: 20px;
@@ -1461,9 +1459,5 @@ button:hover {
   position: relative;
   width: 1152px;
   height: 864px;
-}
-
-:root {
-  --swiper-theme-color: red;
 }
 </style>

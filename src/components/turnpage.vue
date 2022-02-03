@@ -104,7 +104,7 @@ export default {
   &-title {
     color: #826feb;
     font-size: 18px;
-    font-family: "AndaleMono", monospace;
+    font-family: "AndaleMono", sans-serif, monospace;
     text-align: center;
     letter-spacing: -1px;
   }

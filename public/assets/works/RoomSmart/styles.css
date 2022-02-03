@@ -359,7 +359,7 @@ only screen and (min-device-pixel-ratio: 3) {
 }
 
 .sk-asset.sk-If-you-would-like-to-317E8168-B077-45E3-B550-8A53D4F13821 {
-	font-family: "Avenir" ;
+	font-family: "Avenir", sans-serif ;
 	font-stretch: "undefined" ;
 	font-weight: 400 ;
 	font-style: undefined ;
@@ -373,7 +373,7 @@ only screen and (min-device-pixel-ratio: 3) {
 }
 
 .sk-asset.sk-If-you-would-like-to-317E8168-B077-45E3-B550-8A53D4F13821 .span1 {
-	font-family: "Avenir" ;
+	font-family: "Avenir", sans-serif ;
 	font-weight: 400 ;
 	display: table-cell;
 	vertical-align: top;

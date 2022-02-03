@@ -31,14 +31,6 @@ export default {
           path: "/works/SmartConnect"
         },
         {
-          img: "/assets/works/covers/cover_3.png",
-          subtitle: "Know what your pets are up to",
-          title: "Pet Tracker | Moniter | Mobile App",
-          tags: "App Design | IoT Design | User Research",
-          button: "Discover",
-          path: "/works/FurGo"
-        },
-        {
           img: "/assets/works/covers/cover_2.png",
           subtitle: "AAPI Alliance #hackforchange \n🏆 2nd place",
           title: "Political Engagement Website for Minorities",
@@ -46,6 +38,14 @@ export default {
             "Tead Lead & Initiator | Web Design | UI/UX | 2-week Completion",
           button: "Go Play",
           link: "http://www.wetheasians.com/#/"
+        },
+        {
+          img: "/assets/works/covers/cover_3.png",
+          subtitle: "Know what your pets are up to",
+          title: "Pet Tracker | Moniter | Mobile App",
+          tags: "App Design | IoT Design | User Research",
+          button: "Discover",
+          path: "/works/FurGo"
         },
         {
           img: "/assets/works/covers/cover_4.png",
@@ -168,7 +168,7 @@ export default {
     .subtitle {
       width: 410px;
       text-align: left;
-      font-family: Rubik;
+      font-family: Rubik, sans-serif;
       font-style: normal;
       font-weight: bold;
       font-size: 20px;
@@ -181,9 +181,9 @@ export default {
       margin: 39px 0 0 0;
       width: 410px;
       text-align: left;
-      // font-family: Futura;
+      font-family: rubik, sans-serif;
       font-style: normal;
-      font-weight: 900;
+      font-weight: 800;
       font-size: 36px;
       line-height: 48px;
       color: #67648b;
@@ -193,7 +193,7 @@ export default {
       margin: 16px 0 0 0;
       width: 350px;
       text-align: left;
-      font-family: Rubik;
+      font-family: Rubik, sans-serif;
       font-style: normal;
       font-weight: normal;
       font-size: 16px;

@@ -91,7 +91,7 @@ export default {
     margin: 24px 0 29px 0;
     color: #101010;
     font-size: 36px;
-    font-family: "AppleColorEmoji", serif;
+    font-family: "AppleColorEmoji", sans-serif, serif;
     line-height: 36px;
     text-align: center;
   }
@@ -133,7 +133,7 @@ export default {
     position: relative;
     color: #101010;
     font-size: 18px;
-    font-family: "AndaleMono", monospace;
+    font-family: "AndaleMono", sans-serif, monospace;
     font-style: normal;
     font-weight: normal;
     text-align: center;

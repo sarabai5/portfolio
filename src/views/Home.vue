@@ -171,7 +171,7 @@ export default {
   .intro {
     margin: 41px 0 0 0;
     width: 100%;
-    font-family: Rubik;
+    font-family: Rubik, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 28px;
@@ -201,7 +201,7 @@ export default {
       border: 1px solid #826feb;
       color: #826feb;
       font-size: 16px;
-      font-family: "AndaleMono", monospace;
+      font-family: "AndaleMono", sans-serif, monospace;
       text-align: center;
     }
 
