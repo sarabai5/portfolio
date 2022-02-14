@@ -20,7 +20,7 @@
     <div class="footer-r">
       <img class="footer-icon" src="/assets/icons/footer_note.png" />
       <div class="footer-note">
-        © Designed by Sara | Developed by Sara <br />https://github.com/sarabai5
+        © Designed by Sara<br />https://github.com/sarabai5
       </div>
     </div>
     <!-- <div class="desc">
@@ -58,21 +58,20 @@ export default {
         {
           name: "email",
           icon: "/assets/icons/media_email.png",
-          url:
-            "https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&source=mailto&to=jinfanb@andrew.cmu.edu"
+          url: "https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&source=mailto&to=jinfanb@andrew.cmu.edu",
         },
         {
           name: "linkedin",
           icon: "/assets/icons/media_linkedin.png",
-          url: "https://www.linkedin.com/in/sara-jinfan-bai/"
+          url: "https://www.linkedin.com/in/sara-jinfan-bai/",
         },
         {
           name: "ins",
           icon: "/assets/icons/media_ins.png",
-          url: "https://www.instagram.com/sarainthesoda/"
-        }
+          url: "https://www.instagram.com/sarainthesoda/",
+        },
       ],
-      active: 0
+      active: 0,
     };
   },
   methods: {
@@ -81,8 +80,8 @@ export default {
     },
     clickGitHub() {
       window.open("https://github.com/sarabai5");
-    }
-  }
+    },
+  },
 };
 </script>
 

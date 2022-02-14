@@ -22,12 +22,14 @@
         <div class="block-title">Background</div>
         <div class="block-2-content">
           In this summer internship, I worked with the design team on their
-          engineering control system interface, focusing on streamlining UI and
-          improving work efficiency for the engineers.<br /><br />Since
-          IntelliLink was established in early 2000, the UI and the system has
-          been outdated, so we want to migrate to new technologies and make the
-          system modular and reusable, improving user interface as well as
-          developer experience.
+          engineering control system interface,
+          <span class="bold-700"
+            >focusing on streamlining UI and improving work efficiency for the
+            engineers</span
+          >.<br /><br />Since IntelliLink was established in early 2000, the UI
+          and the system has been outdated, so we want to migrate to new
+          technologies and make the system modular and reusable, improving user
+          interface as well as developer experience.
         </div>
       </div>
       <img class="img-1" src="/assets/works/SmartConnect/img-1.png" />
@@ -110,7 +112,7 @@
     </div>
     <!-- </div> -->
 
-    <div class="block div-gray">
+    <!-- <div class="block div-gray">
       <div class="block-title">Proposed Design System</div>
       <div class="block-row margin-2">
         <img class="img-6" src="/assets/works/SmartConnect/img-6.png" />
@@ -127,10 +129,10 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
-    <div class="block div-gray">
-      <div class="block-title margin-3">Design Process & Timeline</div>
+    <div class="block">
+      <!-- <div class="block-title margin-3">Design Process & Timeline</div> -->
       <img class="img-7" src="/assets/works/SmartConnect/img-7.png" />
     </div>
 
@@ -255,31 +257,36 @@
 
         <div class="block-10">
           <div class="block-10-title">Design Principles</div>
-          <p class="block-10-content">
-            <span class="block-10-content-bold"
-              >#1 Focus on one task at a time</span
-            ><br /><br />
-            The control system has hundreds of settings in which most requires
-            electricity professional knowledge and working experiences to use.
-            We can help users to more efficiently work with the settings in the
-            system by building user flows that focus on one task at time.
-            <br /><br /><span class="block-10-content-bold"
-              >#2 Be informative</span
-            ><br /><br />
-            Allow engineers to see a list of settings as comprehensive as
-            possible for configurations and navigation in one work session.
-            <br /><br /><span class="block-10-content-bold"
-              >#3 Be customizable</span
-            ><br /><br />
-            Accommodate different needs of multiple user groups by allowing more
-            customization in interface design.
-            <br /><br /><span class="block-10-content-bold"
-              >#4 Innovative while consistent visual branding</span
-            ><br /><br />
-            Propose design improvements based on design system and their other
-            software interfaces and find visual balance between modern and
-            professional.
-          </p>
+
+          <ul class="block-10-content mt-0">
+            <li class="block-10-content-bold mt-0-5">
+              #1 Focus on one task at a time
+            </li>
+            <li>
+              The control system has hundreds of settings in which most requires
+              electricity professional knowledge and working experiences to use.
+              We can help users to more efficiently work with the settings in
+              the system by building user flows that focus on one task at time.
+            </li>
+            <li class="block-10-content-bold">#2 Be informative</li>
+            <li>
+              Allow engineers to see a list of settings as comprehensive as
+              possible for configurations and navigation in one work session.
+            </li>
+            <li class="block-10-content-bold">#3 Be customizable</li>
+            <li>
+              Accommodate different needs of multiple user groups by allowing
+              more customization in interface design.
+            </li>
+            <li class="block-10-content-bold">
+              #4 Innovative while consistent visual branding
+            </li>
+            <li>
+              Propose design improvements based on design system and their other
+              software interfaces and find visual balance between modern and
+              professional.
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -288,31 +295,46 @@
       <div class="block-topic">USER TESTINGS</div>
       <img class="img-22" src="/assets/works/SmartConnect/img-22.png" />
 
-      <div class="block-row margin-4">
-        <div class="block-11-1">
-          <div class="block-11-1-note">
-            10 Participants | 13 Testing Sessions
+      <div class="block-11-1">
+        <div class="block-11-1-note">10 Participants | 13 Testing Sessions</div>
+        <div class="block-11-1-title">Testing Goal & Methods</div>
+        <div class="block-11-1-row">
+          <div class="block-11-1-stages">
+            <div class="block-11-1-stage bg-1">
+              <div class="block-11-1-stage-title">Stage 1</div>
+              <div class="block-11-1-stage-desc">
+                Correct our understanding errors with wireframes
+              </div>
+            </div>
+            <div class="block-11-1-stage bg-2">
+              <div class="block-11-1-stage-title block-11-1-stage-title-1">
+                Stage 2
+              </div>
+              <div class="block-11-1-stage-desc">
+                Test the improved but still rough user flow in lo-fi
+              </div>
+            </div>
+            <div class="block-11-1-stage bg-3">
+              <div class="block-11-1-stage-title block-11-1-stage-title-2">
+                Stage 3
+              </div>
+              <div class="block-11-1-stage-desc">
+                Test multiple versions of improved user flow and interaction
+                details in both mid-fi and hi-fi
+              </div>
+            </div>
           </div>
-          <div class="block-11-1-title">Testing Goal & Methods</div>
-          <div class="block-11-1-content">
-            Tested out the solutions and user flows we proposed based on
-            interview insights via Microsoft Teams by having users controlling
-            cursor and thinking out loud.<br /><br />
-            Moving on to the mid-fi and hi-fi phase, we conducted usability
-            testings for interaction design details.
-          </div>
+          <img class="img-23" src="/assets/works/SmartConnect/img-23.png" />
         </div>
-        <img class="img-23" src="/assets/works/SmartConnect/img-23.png" />
       </div>
 
-      <div class="block-11-title">Testing-based Iteration Highlights</div>
+      <!-- <div class="block-11-title">Testing-based Iteration Highlights</div>
       <div class="block-11-head">
         <div class="block-11-head-text block-11-head-l">#Proposed Solution</div>
         <div class="block-11-head-text block-11-head-r">
           #Iterative Solution
         </div>
       </div>
-      <!-- @mouseout="onOut()" -->
       <div class="block-11-list">
         <div v-for="(item, i) in highlights" :key="i">
           <div
@@ -334,6 +356,450 @@
             src="/assets/works/SmartConnect/arrow.png"
           />
         </div>
+      </div> -->
+    </div>
+
+    <div id="6" class="block pt-80">
+      <div class="block-topic">DESIGN ITERATIONS</div>
+
+      <div class="iteration">
+        <img
+          class="iteration-icon"
+          src="/assets/works/SmartConnect/iteration-1.png"
+        />
+        <div class="iteration-goal">GOAL #1</div>
+        <div class="iteration-h1">
+          Improve screen readability and make content learnable and digestible
+        </div>
+        <div class="iteration-h2 iteration-h2-1">
+          We created an intial flow in lo-fi prototype and validated the
+          redesign direction. Then as we moved on to mid-fi and hi-fi prototype,
+          we tested more on the detail interaction, color message, intuitiveness
+          of the interface, and completeness of information that they need. Some
+          methods we used in guiding user testing sessions include:
+        </div>
+        <div class="iteration-h3">
+          a. Walk through and think out loud.<br />
+          b. A/B testing<br />
+          c. First click
+        </div>
+        <div class="iteration-block">
+          <div class="iteration-ch-1">APPROACH #1</div>
+          <div class="iteration-h4">Use card design to categorize settings</div>
+          <div class="iteration-row">
+            <p class="iteration-h2 content-left">
+              When we first saw the complicated settings scattered on the pages
+              being very difficult to be located, we immediately thought of
+              using card design to group settings together to
+              <span class="bold black">trigger procedual memory</span> and
+              therefore
+              <span class="bold black">enable quick way-finding</span>.
+              According to Nielson Norman Group’s article, “cards work best for
+              <span class="bold black">collections of heterogeneous items</span
+              >, an excellent choice for dashboard applications”. Also, cards in
+              these screens can also be perfect replacement of the old style of
+              accordion, so that the entire application stays consistent in UI.
+            </p>
+            <div class="c-c-c">
+              <img
+                class="iteration-3"
+                src="/assets/works/SmartConnect/iteration-3.png"
+              />
+              <div class="iteration-h2 bold">Card design sample screen</div>
+            </div>
+          </div>
+
+          <p class="iteration-h2 content-left mt-60">
+            But in order to
+            <span class="bold black">organize the items together correctly</span
+            >, we conducted
+            <span class="bold black">many interviews with engineers</span> as
+            well as constantly reaching out to them with questions. All the
+            layout, new icons, button linkage, and page logic were confirmed by
+            engineers during our user testing sessions to make sure that they
+            <span class="bold black">don’t convey ambiguous message</span> or
+            cause too much extra effort in transitioning from old version to the
+            new design.
+          </p>
+
+          <div class="iteration-ch-2 mt-35">Pain points raised by users:</div>
+          <p class="iteration-h2 mt-5 a-s-s">
+            Users waste a lot of time finding settings even for the expert
+            users.
+          </p>
+
+          <div class="iteration-row mt-20">
+            <div class="content-left">
+              <div class="iteration-ch-2">Testing Insights:</div>
+              <p class="iteration-h2 mt-5 a-s-s">
+                Card design with subsets on more complicated pages can have too
+                much elevation and also lead to a lack of UI hierachy problem.
+              </p>
+            </div>
+            <img
+              class="iteration-4"
+              src="/assets/works/SmartConnect/iteration-4.png"
+            />
+          </div>
+
+          <div class="iteration-h4 mt-28">Final version</div>
+          <img
+            class="iteration-5 mt-20"
+            src="/assets/works/SmartConnect/iteration-5.png"
+          />
+
+          <div class="iteration-h4 mt-50">Pros</div>
+          <div class="iteration-box iteration-box-c2 mt-5">
+            Clear hierarchy of accordion, subcards and input field through added
+            color code, background color contrast, outlines, and less drop
+            shadow.
+          </div>
+        </div>
+
+        <div class="iteration-block">
+          <div class="iteration-ch-1">APPROACH #2</div>
+          <div class="iteration-h4">
+            Use different visual cues to indicate setting status to increase
+            scannability
+          </div>
+          <p class="iteration-h2">
+            In order to keep the interface less overwhelming, less information
+            heavy but informative enough. Settings are first, defaulted as
+            hidden or expanded based on their configuring status and priority,
+            and second, indicated with a good use of UI elements and color cues.
+          </p>
+
+          <div class="iteration-ch-2 mt-17">Pain points raised by users:</div>
+
+          <ul class="iteration-ul mt-5">
+            <li>
+              Some accordions are defaulted as collapsed while being expanded is
+              need and vice versa.
+            </li>
+            <li>
+              <span class="bold black">Improperly expanded accorions</span> and
+              settings fill the interface with
+              <span class="bold black">necessary information</span> and thus
+              lead to time-waste and frustration of engineers who try to figure
+              out what settings are configured on this device and what are left
+              undone. They want to be able to
+              <span class="bold black"
+                >know the setting situation at a quick glance</span
+              >. Different pages need different design solutions to tackle this
+              problem.
+            </li>
+          </ul>
+
+          <div class="iteration-ch-2 mt-20">
+            Initial design improvements for testing:
+          </div>
+          <ul class="iteration-ul mt-5">
+            <li>
+              Add a color dot indicator to inform users of the status of the
+              accordion, so purple for configured active settings, and grey for
+              unconfigured or inactive ones.
+            </li>
+            <li>Use only system color green and grey to indicate status.</li>
+          </ul>
+
+          <div class="iteration-h4 mt-50">Testing version #1</div>
+          <img
+            class="iteration-5 mt-10"
+            src="/assets/works/SmartConnect/iteration-6.png"
+          />
+
+          <div class="iteration-ch-2 mt-50">Testing Insights:</div>
+          <ul class="iteration-ul mt-5">
+            <li>
+              The green and grey checkboxes and accordion shows status a little
+              better but didn’t fully solve the information-heavy interface
+              problem when inactive settings are still on screen.
+            </li>
+            <li>
+              Different color dot for accordion send confusing message to users,
+              since some colors like red and yellow come with a meaning, such as
+              error.
+            </li>
+          </ul>
+
+          <div class="iteration-ch-2 mt-20">
+            Testing informed design improvements:
+          </div>
+          <ul class="iteration-ul mt-5">
+            <li>
+              Add checkbox system that allows quick glance for more setting
+              information without too much scrolling and searching.
+            </li>
+            <li>
+              Change the red and other colored dot in front to accordion to all
+              purple, which is a color carries no special meaning.
+            </li>
+          </ul>
+
+          <div class="iteration-h4 mt-50">Testing version #2</div>
+          <img
+            class="iteration-5 mt-10"
+            src="/assets/works/SmartConnect/iteration-7.png"
+          />
+
+          <div class="iteration-ch-2 mt-50">Testing Insights:</div>
+          <ul class="iteration-ul mt-5">
+            <li>
+              Checkbox system helped achieve the elimination of inactive
+              settings for interface simplification.
+            </li>
+            <li>
+              Same green color renders a UX problem: second subcard in the
+              accordion is not always the second checkbox item “Ground”. It
+              could leads to misreading and misconfiguration.
+            </li>
+            <li>
+              Purple dot for accordion is less confusing, but first-time users
+              might still not know what it indicates.
+            </li>
+          </ul>
+
+          <div class="iteration-ch-2 mt-20">
+            Testing informed design improvements:
+          </div>
+          <ul class="iteration-ul mt-5">
+            <li>
+              Add checkbox system that allows quick glance for more setting
+              information without too much scrolling and searching.
+            </li>
+            <li>
+              For the 4 modes in an electric trip, use matching colors for the
+              checkboxes and subcards so that users can quickly process the
+              information of each checkbox matching with its correct subcard.
+            </li>
+            <li>
+              Add additional text indicators to show the configured status
+              together with purple dots to avoid any confusion and ambiguity.
+            </li>
+          </ul>
+
+          <div class="iteration-h4 mt-50">Final version</div>
+          <img
+            class="iteration-8 mt-10"
+            src="/assets/works/SmartConnect/iteration-8.gif"
+          />
+
+          <div class="iteration-h4 mt-50">Pros</div>
+          <div class="iteration-box h-44 iteration-box-c1 mt-5">
+            Form procedual memory for quick access
+          </div>
+          <div class="iteration-box h-44 iteration-box-c2">
+            Checkboxes on top provide setting status for quick information
+            capture at a glance and save time
+          </div>
+          <div class="iteration-box h-44 iteration-box-c1">
+            Matching colored checkbox system avoids misreading and
+            misconfigurating of the 4 modes.
+          </div>
+          <div class="iteration-box h-44 iteration-box-c2">
+            Colored dots plus “configured” status sign elimiates any ambiguity,
+            and thus increase scannability.
+          </div>
+
+          <div class="iteration-h4 mt-30">Cons</div>
+          <div class="iteration-box h-44 iteration-box-c3 mt-5">
+            It might take some effort for the engineers to get used to the new
+            design
+          </div>
+        </div>
+      </div>
+
+      <div class="iteration mt-150">
+        <img
+          class="iteration-icon"
+          src="/assets/works/SmartConnect/iteration-2.png"
+        />
+        <div class="iteration-goal">GOAL #2</div>
+        <div class="iteration-h1">
+          Improve the work efficiency in daily setting validation and
+          application
+        </div>
+        <div class="iteration-block">
+          <div class="iteration-ch-1">APPROACH #1</div>
+          <div class="iteration-h4 bold-700">
+            Merge three buttons into one validate button and establishing a user
+            flow that starts with validation, and move the buttons from global
+            navigation to floating buttons for space saving and remaining
+            accessiable at any time
+          </div>
+
+          <div class="iteration-ch-2 mt-30">Pain points and concerns:</div>
+          <ul class="iteration-ul mt-5">
+            <li>
+              Three buttons on the top nav bar are mixed with a lot of other
+              useless widgets.
+            </li>
+            <li>
+              Users sometimes forgot validation and just hit “apply”, which also
+              contains validation function but it’s not encouraged work flow.
+            </li>
+            <li>
+              There’s not enough space on the top nav bar after reconstruction.
+            </li>
+          </ul>
+
+          <div class="iteration-ch-2 mt-20">
+            Initial design improvements for testing:
+          </div>
+          <ul class="iteration-ul mt-5">
+            <li>
+              Move the initial three button set from the top nav bar to floating
+              or merged into one dropdown button.
+            </li>
+            <li>A/B testing widget location, style, and function.</li>
+          </ul>
+
+          <div class="iteration-h4 mt-50">Testing version</div>
+          <img
+            class="iteration-8 mt-10"
+            src="/assets/works/SmartConnect/iteration-9.gif"
+          />
+
+          <div class="iteration-h4 mt-50">Pros</div>
+          <div class="iteration-box h-44 iteration-box-c1 mt-5">
+            Floating buttons save space for the crowded top nav bar
+          </div>
+          <div class="iteration-box h-44 iteration-box-c2">
+            Button noticeability ranking: 3 buttons on top nav bar > floating
+            buttons at top > floating at bottom
+          </div>
+          <div class="iteration-box h-44 iteration-box-c1">
+            Merged button with dropdown are achieved most goals with
+            compromising.
+          </div>
+          <div class="iteration-box iteration-box-c2">
+            Merged button featuring “validate” encourage users to always go
+            through the validation process and wait for validation completion to
+            proceed to the next step.
+          </div>
+
+          <div class="iteration-h4 mt-30">Cons</div>
+          <div class="iteration-box h-44 iteration-box-c3 mt-5">
+            It’s extra effort to collapse and expand the floating button
+          </div>
+          <div class="iteration-box h-44 iteration-box-c4">
+            Floating buttons could get in the way of content and are less
+            accessible than being on top nav bar
+          </div>
+          <div class="iteration-box h-44 iteration-box-c3">
+            Dropdown icon needs some redesign and testing to be intuitive
+          </div>
+
+          <div class="iteration-h4 mt-65">Final version</div>
+          <p class="iteration-h2 mt-5 a-s-s">
+            In the final version, we kept the strategy of having three buttons
+            merged down into one “validate” button with dropdown and sits on top
+            global nav bar, because it helps
+            <span class="bold black"
+              >encourage engineers to always follow the validate-apply work
+              flow, stays easily accessible at all time</span
+            >, and <span class="bold black">saves space</span>.
+          </p>
+          <img
+            class="iteration-8 mt-25"
+            src="/assets/works/SmartConnect/iteration-10.gif"
+          />
+        </div>
+
+        <div class="iteration-block">
+          <div class="iteration-ch-1">APPROACH #2</div>
+          <div class="iteration-h4 bold-700">
+            Put the validation process into a user flow with a pop-up window
+            format, which can be collapsed to the side for quick reference with.
+            Add an additional “result” tab inside of the “validate” button to
+            retrieve validation result at any time.
+          </div>
+
+          <div class="iteration-ch-2 mt-30">Pain points and concerns:</div>
+          <ul class="iteration-ul mt-5">
+            <li>Want to see the error settings highlighted in red.</li>
+            <li>Not enough result information.</li>
+            <li>“Historic log” is not something very important.</li>
+            <li>
+              The pop-up window should stay on screen while applying settings
+              because that’s the correct and encouraged procedure for engineers.
+            </li>
+          </ul>
+
+          <div class="iteration-ch-2 mt-20">
+            Initial design improvements for testing:
+          </div>
+          <ul class="iteration-ul mt-5">
+            <li>
+              Make the error window collapsible to the side so that the
+              engineers can configure the error settings while looking at
+              results, and easily go to next error setting after fixing one.
+            </li>
+            <li>
+              Add “result” tab to “validate” dropdown button to give users quick
+              retrievable access.
+            </li>
+            <li>
+              Ask software engineers for further guidance on results information
+              that can be detected and shown.
+            </li>
+            <li>
+              Reset of settings is something they perform currently, but they
+              don’t have the option to reset a specific error setting yet. It
+              can be added to the error window directly and takes the place of
+              the unimportant “historic log”.
+            </li>
+          </ul>
+
+          <div class="iteration-h4 mt-50">Error window iteration</div>
+          <p class="iteration-h2 mt-5 a-s-s">
+            · Improve the pop-up window to be collapsibe and retrievable.
+          </p>
+          <div class="r-b-c mt-30">
+            <img
+              class="iteration-12"
+              src="/assets/works/SmartConnect/iteration-12.png"
+            />
+            <img
+              class="iteration-13"
+              src="/assets/works/SmartConnect/iteration-13.png"
+            />
+            <img
+              class="iteration-14"
+              src="/assets/works/SmartConnect/iteration-14.png"
+            />
+            <img
+              class="iteration-15"
+              src="/assets/works/SmartConnect/iteration-15.png"
+            />
+          </div>
+
+          <div class="iteration-h4 mt-70">Pros and goals achieved</div>
+          <div class="iteration-box h-44 iteration-box-c1 mt-5">
+            No Interruption during configuration process
+          </div>
+          <div class="iteration-box h-44 iteration-box-c2">
+            Encouraged “validate” action by leaving the window uncollapsible.
+          </div>
+          <div class="iteration-box h-44 iteration-box-c1">
+            Errors are highlighted for quick finding
+          </div>
+          <div class="iteration-box iteration-box-c2">
+            Maximize control and actions allowed on one integrated screen
+          </div>
+          <div class="iteration-box h-44 iteration-box-c1">
+            Provides more clear information & UI cues
+          </div>
+          <div class="iteration-box iteration-box-c2">
+            Buttons linked to relevant pages/actions
+          </div>
+
+          <div class="iteration-h4 mt-65">Final version</div>
+          <img
+            class="iteration-8 mt-10"
+            src="/assets/works/SmartConnect/4.gif"
+          />
+        </div>
       </div>
     </div>
 
@@ -348,7 +814,27 @@
         </div>
       </div>
 
-      <div class="block-12-title block-12-title-2">Final Design</div>
+      <div class="r-b-s mt-200">
+        <img
+          class="iteration-16"
+          src="/assets/works/SmartConnect/iteration-16.png"
+        />
+
+        <div class="c-s-s w-290">
+          <div class="iteration-h5">Proposed Design System</div>
+          <p class="iteration-h2 mt-50">
+            A UI survey is designed particularly to find out how far the
+            engineers are willing to go in terms of interface modernization, as
+            some people shows the demand for newer-looking software for the
+            industry while some would like to remain the traditional
+            professionalism.
+            <br />The final design system has been tested with in-house
+            engineers and gone through multiple team critiques.
+          </p>
+        </div>
+      </div>
+
+      <div class="block-12-title mt-200">Final Design</div>
       <img class="img-28" src="/assets/works/SmartConnect/img-28.png" />
     </div>
     <Turnpage class="div-gray margin-6" :next="next"></Turnpage>
@@ -423,6 +909,10 @@ export default {
         {
           title: "User Testings",
           id: "4",
+        },
+        {
+          title: "Design Iterations",
+          id: "6",
         },
         {
           title: "Hi-Fi",
@@ -568,6 +1058,8 @@ button:hover {
   color: #826feb;
 }
 
+$px: 243px;
+
 .page {
   position: relative;
   width: 100%;
@@ -632,7 +1124,7 @@ button:hover {
     font-weight: normal;
     font-size: 14px;
     line-height: 17px;
-    color: #67648b;
+    color: #454262;
     cursor: pointer;
 
     :hover {
@@ -644,7 +1136,7 @@ button:hover {
 .block {
   width: 100%;
   box-sizing: border-box;
-  padding: 0 144px;
+  padding: 0 $px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -680,7 +1172,7 @@ button:hover {
     align-self: flex-start;
 
     &-4 {
-      margin: 0 0 0 144px;
+      margin: 0 0 0 $px;
       width: 208px;
     }
   }
@@ -692,7 +1184,7 @@ button:hover {
     font-weight: bold;
     font-size: 28px;
     line-height: 150%;
-    color: #67648b;
+    color: #454262;
   }
 
   &-start {
@@ -736,7 +1228,7 @@ button:hover {
 }
 
 .block-0 {
-  padding: 125px 144px 20px 144px;
+  padding: 125px $px 20px $px;
 
   &-subtitle {
     font-family: Noto Sans;
@@ -745,7 +1237,7 @@ button:hover {
     font-size: 24px;
     line-height: 48px;
     text-align: center;
-    color: #67648b;
+    color: rgba($color: #454262, $alpha: 0.5);
   }
 
   &-title {
@@ -757,7 +1249,7 @@ button:hover {
     font-size: 40px;
     line-height: 150%;
     text-align: center;
-    color: #67648b;
+    color: #454262;
   }
 
   &-title--color {
@@ -772,7 +1264,7 @@ button:hover {
     font-size: 16px;
     line-height: 19px;
     text-align: center;
-    color: #67648b;
+    color: rgba($color: #454262, $alpha: 0.5);
   }
 }
 
@@ -795,7 +1287,7 @@ button:hover {
 
 .gif-1 {
   position: relative;
-  width: 869px;
+  width: 867px;
   height: auto;
   filter: drop-shadow(0px 4px 25px rgba(59, 108, 119, 0.2));
   border-radius: 16px;
@@ -824,13 +1316,13 @@ button:hover {
 
   &-content {
     margin: 32px 0 0 0;
-    width: 655px;
+    width: 457px;
     font-family: Rubik, sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 150%;
-    color: #67648b;
+    color: rgba($color: #454262, $alpha: 0.6);
   }
 }
 
@@ -892,7 +1384,7 @@ button:hover {
       font-size: 20px;
       line-height: 150%;
       text-align: left;
-      color: #67648b;
+      color: #454262;
     }
 
     &-desc {
@@ -917,7 +1409,7 @@ button:hover {
   overflow: hidden;
 
   &-title {
-    margin: 50px 0 65px 144px;
+    margin: 50px 0 65px $px;
     align-self: flex-start;
   }
 }
@@ -958,7 +1450,7 @@ button:hover {
   position: relative;
   // width: 100vw;
   // box-sizing: border-box;
-  // padding: 0 0 0 144px;
+  // padding: 0 0 0 $px;
   // overflow-y: hidden;
   // overflow-x: scroll;
   display: flex;
@@ -991,7 +1483,7 @@ button:hover {
       font-size: 24px;
       line-height: 130%;
       text-align: center;
-      color: #67648b;
+      color: #454262;
     }
 
     &-desc {
@@ -1003,7 +1495,7 @@ button:hover {
       font-size: 16px;
       line-height: 150%;
       text-align: center;
-      color: #67648b;
+      color: #454262;
     }
   }
 
@@ -1033,7 +1525,7 @@ button:hover {
     font-weight: 800;
     font-size: 22px;
     line-height: 150%;
-    color: #67648b;
+    color: #454262;
   }
 
   &-content {
@@ -1044,22 +1536,22 @@ button:hover {
     font-weight: normal;
     font-size: 16px;
     line-height: 150%;
-    color: #67648b;
+    color: #454262;
   }
 }
 
 .img-7 {
-  margin: 40px 0 96px 0;
+  margin: 151px 0 96px 0;
   position: relative;
-  width: 1152px;
-  height: 554px;
+  width: 954px;
+  height: auto;
 }
 
 .block-7 {
-  padding: 100px 144px 0 144px;
+  padding: 100px $px 0 $px;
 
   &-intro {
-    margin: 58px 0 99px 0;
+    margin: 15px 0 99px 0;
     align-self: center;
     width: 954px;
     text-align: left;
@@ -1068,7 +1560,7 @@ button:hover {
     font-weight: normal;
     font-size: 18px;
     line-height: 150%;
-    color: #67648b;
+    color: #454262;
 
     span {
       font-weight: bold;
@@ -1101,7 +1593,7 @@ button:hover {
     font-size: 24px;
     line-height: 150%;
     text-align: center;
-    color: #67648b;
+    color: #454262;
   }
 
   &-desc {
@@ -1147,7 +1639,7 @@ button:hover {
     font-size: 28px;
     line-height: 150%;
     text-align: center;
-    color: #67648b;
+    color: #454262;
   }
 
   &-list {
@@ -1186,7 +1678,7 @@ button:hover {
 }
 
 .block-9 {
-  padding: 78px 144px 100px 144px;
+  padding: 78px $px 100px $px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -1197,7 +1689,7 @@ button:hover {
     font-weight: bold;
     font-size: 28px;
     line-height: 150%;
-    color: #67648b;
+    color: #454262;
   }
 
   &-title-1 {
@@ -1205,7 +1697,7 @@ button:hover {
   }
 
   &-title-2 {
-    margin: 65px 0 0 0;
+    margin: 15px 0 0 0;
   }
 
   &-title-3 {
@@ -1221,7 +1713,7 @@ button:hover {
     font-weight: normal;
     font-size: 18px;
     line-height: 150%;
-    color: #67648b;
+    color: #454262;
 
     span {
       font-weight: bold;
@@ -1252,7 +1744,7 @@ button:hover {
     font-weight: normal;
     font-size: 18px;
     line-height: 150%;
-    color: #67648b;
+    color: rgba($color: #454262, $alpha: 0.6);
 
     &-1 {
       margin: 35px 0 0 0;
@@ -1298,7 +1790,7 @@ button:hover {
   margin: 150px 0 0 0;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
 
   &-title {
@@ -1307,36 +1799,39 @@ button:hover {
     font-weight: bold;
     font-size: 28px;
     line-height: 150%;
-    color: #67648b;
+    color: #454262;
   }
 
   &-content {
-    margin: 0 0 0 56px;
     width: 656px;
     font-family: Rubik, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 150%;
-    color: #67648b;
+    color: rgba($color: #454262, $alpha: 0.6);
     text-align: left;
+    list-style-type: none;
 
     &-bold {
+      margin: 50px 0 15px 0;
       font-family: Rubik, sans-serif;
       font-style: normal;
       font-weight: bold;
       font-size: 22px;
       line-height: 150%;
-      color: #67648b;
+      color: #454262;
       text-align: left;
     }
   }
 }
 
 .block-11 {
-  padding: 156px 144px 180px 144px;
+  padding: 156px $px 100px $px;
 
   &-1 {
+    margin: 100px 0 0 0;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -1349,7 +1844,7 @@ button:hover {
       font-size: 16px;
       line-height: 150%;
       text-align: center;
-      color: #67648b;
+      color: #454262;
     }
 
     &-title {
@@ -1359,18 +1854,72 @@ button:hover {
       font-weight: bold;
       font-size: 28px;
       line-height: 150%;
-      color: #67648b;
+      color: #454262;
     }
 
-    &-content {
-      margin: 32px 0 0 0;
-      width: 556px;
-      font-family: Rubik, sans-serif;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 18px;
-      line-height: 150%;
-      color: #67648b;
+    &-row {
+      margin: 23px 0 0 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    &-stages {
+      width: 476px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .bg-1 {
+      background-color: #f1f6f8;
+    }
+
+    .bg-2 {
+      background-color: #e7f0f1;
+    }
+
+    .bg-3 {
+      background-color: #d0e2e6;
+    }
+
+    &-stage {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 16px 36px 19px 36px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      &-title {
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 150%;
+        color: #a4c7d0;
+
+        &-1 {
+          color: #79a7b5;
+        }
+
+        &-2 {
+          color: #5d8894;
+        }
+      }
+
+      &-desc {
+        width: 423px;
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 150%;
+        color: #454262;
+      }
     }
   }
 
@@ -1382,7 +1931,7 @@ button:hover {
     font-weight: bold;
     font-size: 28px;
     line-height: 150%;
-    color: #67648b;
+    color: #454262;
   }
 
   &-head {
@@ -1404,7 +1953,7 @@ button:hover {
     }
 
     &-l {
-      color: #67648b;
+      color: #454262;
     }
 
     &-r {
@@ -1465,7 +2014,7 @@ button:hover {
         font-weight: normal;
         font-size: 14px;
         line-height: 180%;
-        color: #67648b;
+        color: #454262;
         text-align: left;
       }
     }
@@ -1490,21 +2039,363 @@ button:hover {
 }
 
 .img-22 {
-  margin: 50px 0 0 0;
+  margin: 25px 0 0 0;
   position: relative;
   width: 954px;
   height: 650px;
 }
 
 .img-23 {
-  margin: 0 0 0 139px;
   position: relative;
-  width: 457px;
-  height: 247px;
+  width: 520px;
+  height: auto;
+}
+
+.iteration {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  &-icon {
+    width: 95px;
+    z-index: 1;
+  }
+
+  &-goal {
+    margin: -20px 0 0 0;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 100%;
+    text-align: center;
+    color: rgba(132, 196, 200, 0.3);
+  }
+
+  &-h1 {
+    margin: 14px 0 0 0;
+    width: 788px;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 100%;
+    color: #454262;
+  }
+
+  &-h2 {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+    color: rgba(69, 66, 98, 0.7);
+  }
+
+  &-ul {
+    // list-style-type: none;
+    margin-block-start: 0;
+    padding-inline-start: 20px;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+    color: rgba(69, 66, 98, 0.7);
+    align-self: flex-start;
+
+    // :before {
+    //   content: "\2022";
+    //   color: #148ae0;
+    //   font-size: 16px;
+    // }
+  }
+
+  &-h2-1 {
+    margin: 21px 0 0 0;
+    width: 788px;
+  }
+
+  &-h3 {
+    margin: 21px 0 0 0;
+    width: 679px;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: #454262;
+    text-align: left;
+  }
+
+  &-block {
+    margin: 45px 0 0 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 60px 83px 80px 83px;
+    border: 2px solid #6abfd2;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &-h4 {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 150%;
+    color: #454262;
+    align-self: flex-start;
+  }
+
+  &-h5 {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 150%;
+    color: #454262;
+  }
+
+  &-ch-1 {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 150%;
+    color: #7dc0c5;
+    align-self: flex-start;
+  }
+
+  &-ch-2 {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 150%;
+    color: #7dc0c5;
+    align-self: flex-start;
+  }
+
+  .c-c-c {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .content-left {
+      width: 374px;
+    }
+  }
+
+  .iteration-3 {
+    margin: 0 0 16.6px 0;
+    width: 376px;
+    height: auto;
+  }
+
+  .iteration-4 {
+    width: 376px;
+    height: auto;
+  }
+
+  .iteration-5 {
+    width: 810px;
+    height: auto;
+  }
+
+  .iteration-8 {
+    width: 100%;
+    height: auto;
+  }
+
+  .iteration-12 {
+    width: 376px;
+    height: auto;
+  }
+
+  .iteration-13 {
+    width: 34px;
+    height: auto;
+  }
+
+  .iteration-14 {
+    width: 207px;
+    height: auto;
+  }
+
+  .iteration-15 {
+    width: 100px;
+    height: auto;
+  }
+
+  &-box {
+    width: 100%;
+    box-sizing: border-box;
+    // padding: 10px 35px 13px 26px;
+    padding: 10px 26px;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+    color: #454262;
+
+    &-c1 {
+      background-color: #f1f6f8;
+    }
+
+    &-c2 {
+      background-color: #e7f0f1;
+    }
+
+    &-c3 {
+      background-color: #f8efee;
+    }
+
+    &-c4 {
+      background-color: #f5e6e4;
+    }
+  }
+}
+
+.iteration-16 {
+  width: 624px;
+  height: auto;
+}
+
+.h-44 {
+  height: 44px;
+}
+
+.a-s-s {
+  align-self: flex-start;
+}
+
+.r-b-c {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.r-b-s {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.c-s-s {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.w-290 {
+  width: 290px;
+}
+
+.mt-0 {
+  margin-top: 0px;
+}
+
+.mt-0-5 {
+  margin-top: 5px;
+}
+
+.mt-5 {
+  margin: 5px 0 0 0;
+}
+
+.mt-10 {
+  margin: 10px 0 0 0;
+}
+
+.mt-17 {
+  margin: 17px 0 0 0;
+}
+
+.mt-20 {
+  margin: 20px 0 0 0;
+}
+
+.mt-25 {
+  margin: 25px 0 0 0;
+}
+
+.mt-28 {
+  margin: 28px 0 0 0;
+}
+
+.mt-30 {
+  margin: 30px 0 0 0;
+}
+
+.mt-35 {
+  margin: 36px 0 0 0;
+}
+
+.mt-50 {
+  margin: 50px 0 0 0;
+}
+
+.mt-60 {
+  margin: 60px 0 0 0;
+}
+
+.mt-65 {
+  margin: 65px 0 0 0;
+}
+
+.mt-70 {
+  margin: 70px 0 0 0;
+}
+
+.mt-150 {
+  margin: 150px 0 0 0;
+}
+
+.mt-200 {
+  margin: 200px 0 0 0;
+}
+
+.pt-80 {
+  padding-top: 80px;
+}
+
+.bold {
+  font-weight: 500;
+}
+
+.bold-700 {
+  font-weight: 700;
+}
+
+.black {
+  color: #454262;
 }
 
 .block-12 {
-  padding: 100px 144px 229px;
+  padding: 100px $px 229px;
 
   &-title {
     align-self: flex-start;
@@ -1513,15 +2404,7 @@ button:hover {
     font-weight: bold;
     font-size: 28px;
     line-height: 150%;
-    color: #67648b;
-  }
-
-  &-title-1 {
-    margin: 50px 0 0 0;
-  }
-
-  &-title-2 {
-    margin: 100px 0 0 0;
+    color: #454262;
   }
 
   &-list {
@@ -1537,11 +2420,11 @@ button:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 
     &-img {
-      width: 357px;
-      height: 477px;
+      width: 295px;
+      height: 395px;
     }
 
     &-desc {
@@ -1551,7 +2434,7 @@ button:hover {
       font-weight: bold;
       font-size: 20px;
       line-height: 150%;
-      color: #67648b;
+      color: #454262;
     }
   }
 }
@@ -1566,7 +2449,7 @@ button:hover {
 .img-28 {
   margin: 40px 0 0 0;
   position: relative;
-  width: 1152px;
-  height: 864px;
+  width: 954px;
+  height: auto;
 }
 </style>
