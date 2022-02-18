@@ -10,7 +10,7 @@
     <div class="item-block-1">
       <img class="item-1" src="/assets/works/pet/1.png" />
     </div>
-    <div class="item-block">
+    <div class="item-block" id="1">
       <div class="item-title">BACKGROUND INFO</div>
       <div class="r-s-c mt-90">
         <div class="c-s-s">
@@ -35,7 +35,7 @@
       </div>
     </div>
 
-    <div class="item-block">
+    <div class="item-block" id="2">
       <div class="item-title">HOW IT WORKS</div>
       <div class="r-b-c w-full mt-46">
         <div class="c-s-s mt-10-">
@@ -96,7 +96,7 @@
       <img class="item-7 ml-78" src="/assets/works/pet/7.png" />
     </div>
 
-    <div class="c-s-s w-full item-block-5">
+    <div class="c-s-s w-full item-block-5" id="3">
       <div class="item-title">USER RESEARCH</div>
       <div class="r-c-c text-bottom self-center">
         <p class="text-bottom">
@@ -139,7 +139,7 @@
       <img class="item-9 self-center" src="/assets/works/pet/9.png" />
     </div>
 
-    <div class="c-s-s w-full item-block-6">
+    <div class="c-s-s w-full item-block-6" id="4">
       <div class="item-title">PERSONA + STORYBOARDING</div>
       <img class="item-10" src="/assets/works/pet/10.png" />
       <img class="item-11" src="/assets/works/pet/11.png" />
@@ -192,47 +192,75 @@
       </div>
     </div>
 
-    <div class="c-s-s w-full item-block-7">
+    <div class="c-s-s w-full item-block-7" id="5">
       <div class="item-title ml-100">IDEATION</div>
       <div class="h1 mt-100 ml-100">Functionality Map</div>
-      <img class="item-15 mt-80 self-center" src="/assets/works/pet/15.png" />
+      <img class="item-15 self-center" src="/assets/works/pet/15.png" />
 
       <div class="h1 ml-100">Wireframes + Heuristic Evaluation</div>
       <img class="item-16 self-center" src="/assets/works/pet/16.png" />
       <img class="item-17 self-center" src="/assets/works/pet/17.png" />
     </div>
 
-    <div class="c-s-s w-full item-block-6">
+    <div class="c-s-s w-full item-block-6" id="6">
       <div class="item-title">Hi-fidelity Mock-ups</div>
       <img class="item-18 mt-60 self-center" src="/assets/works/pet/18.png" />
     </div>
 
     <img class="item-19 self-center" src="/assets/works/pet/19.png" />
     <Turnpage :next="next"></Turnpage>
+    <Quicklinks :list="quicklinks"></Quicklinks>
   </div>
 </template>
 
 <script>
 import Bus from "@/bus";
 import Turnpage from "@/components/turnpage.vue";
+import Quicklinks from "@/components/quicklinks.vue";
+
 export default {
   name: "MovingBoxes",
   components: {
     Turnpage,
+    Quicklinks,
   },
   data: () => {
     return {
       previous: {
         title: "Desktop Software Product Design",
-        // name: "MovingBoxes"
         name: "SmartConnect",
       },
       next: {
-        title: "Political Engagement Website for Minorities",
-        // name: "MovingBoxes"
-        link: "http://www.wetheasians.com",
+        title: "Studio Installation Design",
+        name: "MovingBoxes",
       },
       handler: null,
+      quicklinks: [
+        {
+          title: "Background",
+          id: "1",
+        },
+        {
+          title: "How It Works",
+          id: "2",
+        },
+        {
+          title: "User Research",
+          id: "3",
+        },
+        {
+          title: "Persona + Storyboarding",
+          id: "4",
+        },
+        {
+          title: "Ideation",
+          id: "5",
+        },
+        {
+          title: "Hi-Fi",
+          id: "6",
+        },
+      ],
     };
   },
   beforeCreate() {
@@ -535,7 +563,7 @@ export default {
     line-height: 48px;
     text-align: center;
     letter-spacing: 0.02em;
-    color: #101010;
+    color: #454262;
 
     &--orange {
       color: #f1896d;
@@ -705,12 +733,12 @@ export default {
 
   &block-4 {
     box-sizing: border-box;
-    padding: 91px 244px 102px;
+    padding: 91px 244px 100px;
   }
 
   &block-5 {
     box-sizing: border-box;
-    padding: 250px 244px 100px 244px;
+    padding: 150px 244px 100px 244px;
   }
 
   &8-1 {
@@ -794,7 +822,7 @@ export default {
   }
 
   &15 {
-    margin: 0 0 216px 0;
+    margin: 80px 0 216px 0;
     width: 1152px;
     height: auto;
   }
