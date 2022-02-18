@@ -20,25 +20,25 @@ export default {
   data() {
     return {
       bodystyle: "",
-      navstyle: ""
+      navstyle: "",
     };
   },
   components: {
     Nav,
-    Footer
+    Footer,
   },
   created() {
-    Bus.$on("bodystyle", s => {
+    Bus.$on("bodystyle", (s) => {
       this.bodystyle = s;
     });
 
-    Bus.$on("navstyle", s => {
+    Bus.$on("navstyle", (s) => {
       this.navstyle = s;
     });
   },
   mounted() {
     var window_bottom = window.pageYOffset + window.screen.height;
-    document.querySelectorAll(".fade-content > *").forEach(ele => {
+    document.querySelectorAll(".fade-content > *").forEach((ele) => {
       if (ele.offsetTop > window_bottom) {
         ele.style.opacity = 0;
       } else {
@@ -54,19 +54,18 @@ export default {
   methods: {
     scrollListener() {
       let window_bottom = window.pageYOffset + window.screen.height;
-      document.querySelectorAll(".fade-content > *").forEach(ele => {
+      document.querySelectorAll(".fade-content > *").forEach((ele) => {
         if (ele.style.opacity == 0 && ele.offsetTop + 100 <= window_bottom) {
           ele.classList.add("fade-content--in");
         }
       });
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style lang="scss">
-@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;400;600&family=Nunito:wght@200;400;600;700&display=swap&family=VT323&display=swap&family=Noto+Sans&family=Roboto:wght@700&display=swap&family=Noto+Sans:wght@700&family=Open+Sans:wght@400;500;600;700;800&family=Roboto+Mono:wght@500&family=Rubik:wght@400;500;600;700;800;900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;400;600&family=Nunito:wght@200;400;600;700&display=swap&family=VT323&display=swap&family=Noto+Sans&family=Roboto:wght@700&display=swap&family=Noto+Sans:wght@700&family=Open+Sans:wght@400;500;600;700;800;900&family=Roboto+Mono:wght@500&family=Rubik:wght@400;500;600;700;800;900&display=swap&family=Fredoka+One&display=swap&family=Nunito+Sans:ital,wght@0,600;1,400&family=Roboto:wght@100&display=swap");
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
