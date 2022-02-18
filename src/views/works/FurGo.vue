@@ -98,12 +98,12 @@
 
     <div class="c-s-s w-full item-block-5" id="3">
       <div class="item-title">USER RESEARCH</div>
-      <div class="r-c-c text-bottom self-center">
-        <p class="text-bottom">
+      <div class="r-c-c text-bottom self-center no-p mt-46">
+        <p>
           <span class="h-b">20</span>
           <span class="h-s ml-17">Survey</span>
         </p>
-        <p class="text-bottom ml-92">
+        <p class="ml-92">
           <span class="h-b">5</span>
           <span class="h-s ml-17">Interviews</span>
         </p>
@@ -111,24 +111,31 @@
 
       <div class="h1 mt-50">Cases of Needs</div>
 
-      <div class="r-b-c w-full mt-60">
-        <div class="c-c-c w-300">
-          <img class="item-8-1" src="/assets/works/pet/8-1.png" />
+      <div class="r-b-s w-full mt-60 text-center">
+        <div class="c-s-c w-300">
+          <div class="item-8">
+            <img class="item-8-1" src="/assets/works/pet/8-1.png" />
+          </div>
+
           <div class="h3 mt-28">Pets missing from sight</div>
           <div class="h4 mt-8">
             Pet owners walk pets leashed and unleashed or let play on their own.
           </div>
         </div>
-        <div class="c-c-c w-300">
-          <img class="item-8-2" src="/assets/works/pet/8-2.png" />
+        <div class="c-s-c w-300">
+          <div class="item-8">
+            <img class="item-8-2" src="/assets/works/pet/8-2.png" />
+          </div>
           <div class="h3 mt-28">Interact while away</div>
           <div class="h4 mt-8">
             Pet owners are concerned and miss their pets while they’re gone on
             trips, and would like to monitor and play with pets.
           </div>
         </div>
-        <div class="c-c-c w-300">
-          <img class="item-8-3" src="/assets/works/pet/8-3.png" />
+        <div class="c-s-c w-300">
+          <div class="item-8">
+            <img class="item-8-3" src="/assets/works/pet/8-3.png" />
+          </div>
           <div class="h3 mt-28">Outdoor pets / alone activities</div>
           <div class="h4 mt-8">
             Pets who would be let out on themselves or some cats kept in the
@@ -275,6 +282,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.no-p {
+  p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+}
+
 .ml-78 {
   margin-left: 78px;
 }
@@ -371,6 +385,10 @@ export default {
   align-self: center;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .flex-center {
   display: flex;
   justify-content: center;
@@ -424,6 +442,13 @@ export default {
   flex-direction: column;
   justify-items: flex-start;
   align-items: flex-start;
+}
+
+.c-s-c {
+  display: flex;
+  flex-direction: column;
+  justify-items: flex-start;
+  align-items: center;
 }
 
 .w-full {
@@ -739,6 +764,15 @@ export default {
   &block-5 {
     box-sizing: border-box;
     padding: 150px 244px 100px 244px;
+  }
+
+  &8 {
+    width: auto;
+    height: 91px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
   }
 
   &8-1 {
