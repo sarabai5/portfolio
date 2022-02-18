@@ -87,6 +87,8 @@ export default {
 
   &-item {
     margin: 16px 0 0 0;
+    max-width: 111px;
+    text-align: left;
     font-family: Rubik, sans-serif;
     font-style: normal;
     font-weight: normal;
