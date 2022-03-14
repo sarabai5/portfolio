@@ -864,8 +864,8 @@ export default {
     return {
       previous: null,
       next: {
-        title: "PET TRACKER",
-        name: "FurGo",
+        title: "Class InSight",
+        name: "ClassInSight",
       },
       handler: null,
       swiperOptions: {

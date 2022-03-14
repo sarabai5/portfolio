@@ -25,19 +25,25 @@ export default {
           img: "/assets/works/covers/cover_1.png",
           subtitle: "Design for electric engineers @ S&C",
           title: "Desktop Software Product Design",
-          tags:
-            "Desktop Application Design | User Testings | Design System | UI/UX",
+          tags: "Desktop Application Design | User Testings | Design System | UI/UX",
           button: "Discover",
-          path: "/works/SmartConnect"
+          path: "/works/SmartConnect",
+        },
+        {
+          img: "/assets/works/covers/cover_5.png",
+          subtitle: "Dashboard Design @CMU Oh!Lab",
+          title: "Classroom Data Analysis Tool",
+          tags: "Desktop Application Design | UI/UX",
+          button: "Discover",
+          path: "/works/ClassInSight",
         },
         {
           img: "/assets/works/covers/cover_2.png",
           subtitle: "AAPI Alliance #hackforchange \n🏆 2nd place",
           title: "Political Engagement Website for Minorities",
-          tags:
-            "Tead Lead & Initiator | Web Design | UI/UX | 2-week Completion",
+          tags: "Tead Lead & Initiator | Web Design | UI/UX | 2-week Completion",
           button: "Go Play",
-          link: "http://www.wetheasians.com/#/"
+          link: "http://www.wetheasians.com/#/",
         },
         {
           img: "/assets/works/covers/cover_3.png",
@@ -45,7 +51,7 @@ export default {
           title: "Pet Tracker | Moniter | Mobile App",
           tags: "App Design | IoT Design | User Research",
           button: "Discover",
-          path: "/works/FurGo"
+          path: "/works/FurGo",
         },
         {
           img: "/assets/works/covers/cover_4.png",
@@ -53,8 +59,8 @@ export default {
           title: "Studio Installation Design",
           tags: "User Study | Architecture Design | 3D Modeling",
           button: "Discover",
-          path: "/works/MovingBoxes"
-        }
+          path: "/works/MovingBoxes",
+        },
         // {
         //   title: "CINNAMON ROLL BAKERY",
         //   label: "Customize Rolls with Fun",
@@ -112,7 +118,7 @@ export default {
         //   opacity: 0.5,
         //   isHover: false
         // }
-      ]
+      ],
     };
   },
   methods: {
@@ -125,8 +131,8 @@ export default {
       if (item.link) {
         window.open(item.link);
       }
-    }
-  }
+    },
+  },
 };
 </script>
 

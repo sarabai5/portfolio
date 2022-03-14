@@ -38,11 +38,9 @@ export default {
         {
           img: "/assets/sides/cover/cover_1.png",
           title: "Kinetic Text",
-          desc:
-            "A little about myself in kinetic text.\n Working in process...",
+          desc: "A little about myself in kinetic text.\n Working in process...",
           tags: ["Adobe After Effect", "Kinetic text design"],
-          link:
-            "https://drive.google.com/file/d/14w_S1_5xJSXTp5P080D-ehZeSRptA8I7/view?usp=sharing"
+          link: "https://drive.google.com/file/d/14w_S1_5xJSXTp5P080D-ehZeSRptA8I7/view?usp=sharing",
         },
         {
           // img: "/assets/sides/cover/cover_2.gif",
@@ -51,19 +49,18 @@ export default {
           tags: [
             "Coding in HTML | CSS | Javascript",
             "Web Design",
-            "Usability Test"
+            "Usability Test",
           ],
-          link:
-            "https://sarabai5.github.io/cinna.github.io/homework_6/menu.html"
+          link: "https://sarabai5.github.io/cinna.github.io/homework_6/menu.html",
         },
         {
           img: "/assets/sides/cover/cover_3.png",
           title: "Fintech Case Study",
           desc: "How can we help minority small \nbusiness owners succeed",
           tags: ["In-depth User Research", "Team project", "Pitch Deck"],
-          path: "/works/Capstone"
-        }
-      ]
+          path: "/works/Capstone",
+        },
+      ],
     };
   },
   methods: {
@@ -76,8 +73,8 @@ export default {
       if (item.link) {
         window.open(item.link);
       }
-    }
-  }
+    },
+  },
 };
 </script>
 

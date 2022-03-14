@@ -42,12 +42,12 @@ export default {
       name: "",
       wordsHandler: null,
       sloganHandler: null,
-      typeHandler: null
+      typeHandler: null,
     };
   },
   components: {
     Projects,
-    Sides
+    Sides,
   },
   created() {
     // for (let i in WORDS) {
@@ -102,14 +102,14 @@ export default {
       }
     },
     clickMore() {
-      this.$router.push("/Resume");
+      this.$router.push("/About");
     },
     clickEmail() {
       window.open(
         "https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&source=mailto&to=jinfanb@andrew.cmu.edu"
       );
-    }
-  }
+    },
+  },
 };
 </script>
 

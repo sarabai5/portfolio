@@ -14,7 +14,7 @@
         :class="active == item.name ? 'links-item--active' : ''"
         @click="clickItem(item.path)"
       >
-        {{ item.name }}
+        {{ item.title }}
       </button>
     </div>
   </div>
@@ -27,28 +27,31 @@ export default {
   props: {
     outstyle: {
       type: String,
-      default: ""
-    }
+      default: "",
+    },
   },
   data: () => {
     return {
       showNav: true,
       links: [
         {
+          title: "Works",
           name: "Works",
-          path: "/Works"
+          path: "/Works",
         },
-        // {
-        //   name: "Sides",
-        //   path: "/Sides"
-        // },
         {
+          title: "About me",
+          name: "About",
+          path: "/About",
+        },
+        {
+          title: "Resume",
           name: "Resume",
-          path: "/Resume"
-        }
+          path: "/Resume",
+        },
       ],
       offset: 0,
-      timer: null
+      timer: null,
     };
   },
   mounted() {
@@ -67,7 +70,7 @@ export default {
   computed: {
     active() {
       return this.$route.name;
-    }
+    },
   },
   methods: {
     scrollListener() {
@@ -92,8 +95,8 @@ export default {
         document.documentElement.scrollTop ||
         document.body.scrollTop
       );
-    }
-  }
+    },
+  },
 };
 </script>
 
